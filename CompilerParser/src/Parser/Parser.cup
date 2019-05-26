@@ -13,7 +13,7 @@ Hashtable table = new Hashtable();
 parser code {:
 private Scanner scanner;
 private File file;
-public parser (File file){
+parser (File file){
 this();
 this.file = file;
 try {
@@ -39,12 +39,88 @@ throw new Error( "Unable to open file \"" + file + "\"" );
  terminal sizeof;
 
  //OPERATORS
- terminal SEMI, COLEN, COMA, DOT, NOT, MINUS, TIMES, DIVIDE, PRECENTAGE, ASSIGN, AND, OR, HAT, not, and, or;
+ terminal SEMI, COLEN, COMA, DOT, NOT, MINUS,PLUSPLUS,MINUSMINUS,EPSILON, ASSIGN, AND, OR, HAT,NOT,GTE,GT,
+            LTE,LT,EQ,NEQ,PARANTHESIS_O,PARANTHESIS_C,BRACKET_O,BRACKET_C,BITWISE_AND,BITWISE_ORR,BITWISE_EOR;
 
 
- terminal LEFT, RIGHT, NEWLINE, PLUS, MINUS, TIMES, DIVIDE, ASSIGN;
+ terminal LEFT, RIGHT, NEWLINE, PLUS, MINUS, TIMES, DIVIDE,MODE, ASSIGN,UMINUS;
  terminal String NUMBER;
  terminal String IDENT;
+
+ nonterminal const_value, variable,arrayDtector,expr,arithmatic,conditional,
+            binary_operator;
+
+/*
+ * precedences and associativity
+*/
+
+precedence right ASSIGN;
+precedence left OR;
+precedence left AND;
+precedence left BITWISE_ORR;
+precedence left BITWISE_EOR;
+precedence left BITWISE_AND;
+precedence left EQ,NEQ;
+precedence left GTE,GT,LTE,LT;
+precedence left PLUS,MINUS;
+precedence left TIMES,DIVID,MODE;
+precedence left NOT;
+precedence left UMINUS;
+precedence left PLUSPLUS,MINUSMINUS,PARANTHESIS_O,PARANTHESIS_C;
+
+
+ stmt ::=
+                   assignExp COLEN;
+
+ variable ::=
+                   id arrayDtector
+                   |MINUSMINUS variable
+                   |PLUSPLUS  variable
+                   |variable PLUSPLUS
+                   |variable MINUSMINUS
+                   |variable DOT id;
+
+
+
+
+arrayDtector ::=     EPSILON
+                    |BRACKET_O expr BRACKET_C arrayDtector;
+
+
+arithmatic ::=
+                     MINUS
+                    |PLUS
+                    |TIMES
+                    |DIVIDE
+                    |MODE
+                    |BITWISE_AND
+                    |BITWISE_EOR
+                    |BITWISE_ORR;
+
+conditional ::=
+                    AND
+                    |OR
+                    |EQ
+                    |NEQ
+                    |GTE
+                    |GT
+                    |LT
+                    |LTE
+                    |NOT;
+
+binary_operator ::=
+                   arithmatic
+                   |conditional;
+
+expr            ::=
+                    PARANTHESIS_O expr PARANTHESIS_C
+                    |variable
+                    |expr binary_operator expr
+                    |const_value
+                    |NOT expr;
+                    // mrthod_call , sizeOf remaining
+
+
 
 
 

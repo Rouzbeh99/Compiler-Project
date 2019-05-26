@@ -1,6 +1,6 @@
-package symbol;
+package Scanner;
 
-import symbol.descriptor.Descriptor;
+import Scanner.descriptor.*;
 
 import java.util.HashMap;
 import java.util.Map;

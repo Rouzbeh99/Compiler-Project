@@ -1,4 +1,4 @@
-package symbol;
+package Scanner;
 
 public enum SymbolType {
 

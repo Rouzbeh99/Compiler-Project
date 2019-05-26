@@ -1,4 +1,4 @@
-package symbol.descriptor;
+package Scanner.descriptor;
 
 public abstract class Descriptor {
 }

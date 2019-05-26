@@ -17,14 +17,16 @@ import symbol.*;
 //Scanner class code includings
 %{
 
-    int ICV;
-    double RCV;
-    StringBuilder string = new StringBuilder();
+    public int ICV;
+    public double RCV;
+    public StringBuilder string = new StringBuilder();
+
+    private Symbol token(int code){
+        return new Symbol(code, yytext());
+    }
 
     private void generateText(String text){
         StringBuilder temp = new StringBuilder(text);
-        temp.deleteCharAt(0);
-        temp.deleteCharAt(temp.length()-1);
         string.setLength(0); string.append(temp);
     }
 
@@ -84,93 +86,93 @@ Identifier = [_\w][_\w\d]*
 {MultipleLineComment} {}
 
 /*type and variable keywords*/
-"const" { return new Symbol(Symbol.CONST); }
-"record" { return new Symbol(Symbol.RECORD); }
-"bool" { return new Symbol(Symbol.BOOL); }
-"char" { return new Symbol(Symbol.CHAR); }
-"int" { return new Symbol(Symbol.INT); }
-"long" { return new Symbol(Symbol.LONG); }
-"float" { return new Symbol(Symbol.FLOAT); }
-"double" { return new Symbol(Symbol.DOUBLE); }
-"string" { return new Symbol(Symbol.STRING); }
-"void" { return new Symbol(Symbol.VOID); }
-"true" { return new Symbol(Symbol.TRUE); }
-"false" { return new Symbol(Symbol.FALSE); }
-"extern" { return new Symbol(Symbol.EXTERN); }
-"auto" { return new Symbol(Symbol.AUTO); }
-"function" { return new Symbol(Symbol.FUNCTION); }
+"const" { return token(Symbol.CONST); }
+"record" { return token(Symbol.RECORD); }
+"bool" { return token(Symbol.BOOL); }
+"char" { return token(Symbol.CHAR); }
+"int" { return token(Symbol.INT); }
+"long" { return token(Symbol.LONG); }
+"float" { return token(Symbol.FLOAT); }
+"double" { return token(Symbol.DOUBLE); }
+"string" { return token(Symbol.STRING); }
+"void" { return token(Symbol.VOID); }
+"true" { return token(Symbol.TRUE); }
+"false" { return token(Symbol.FALSE); }
+"extern" { return token(Symbol.EXTERN); }
+"auto" { return token(Symbol.AUTO); }
+"function" { return token(Symbol.FUNCTION); }
 
 /*flow control keywords*/
-"begin" { return new Symbol(Symbol.BEGIN); }
-"end" { return new Symbol(Symbol.END); }
-"if" { return new Symbol(Symbol.IF); }
-"else" { return new Symbol(Symbol.ELSE); }
-"switch" { return new Symbol(Symbol.SWITCH); }
-"of" { return new Symbol(Symbol.OF); }
-"case" { return new Symbol(Symbol.CASE); }
-"default" { return new Symbol(Symbol.DEFAULT); }
-"for" { return new Symbol(Symbol.FOR); }
-"foreach" { return new Symbol(Symbol.FOR_EACH); }
-"in" { return new Symbol(Symbol.IN); }
-"repeat" { return new Symbol(Symbol.REPEAT); }
-"until" { return new Symbol(Symbol.UNTIL); }
-"break" { return new Symbol(Symbol.BREAK); }
-"continue" { return new Symbol(Symbol.CONTINUE); }
-"return" { return new Symbol(Symbol.RETURN); }
+"begin" { return token(Symbol.BEGIN); }
+"end" { return token(Symbol.END); }
+"if" { return token(Symbol.IF); }
+"else" { return token(Symbol.ELSE); }
+"switch" { return token(Symbol.SWITCH); }
+"of" { return token(Symbol.OF); }
+"case" { return token(Symbol.CASE); }
+"default" { return token(Symbol.DEFAULT); }
+"for" { return token(Symbol.FOR); }
+"foreach" { return token(Symbol.FOR_EACH); }
+"in" { return token(Symbol.IN); }
+"repeat" { return token(Symbol.REPEAT); }
+"until" { return token(Symbol.UNTIL); }
+"break" { return token(Symbol.BREAK); }
+"continue" { return token(Symbol.CONTINUE); }
+"return" { return token(Symbol.RETURN); }
 
 /*other keywords*/
 "sizeof" { return new Symbol(Symbol.SIZEOF); }
 
 /*operators*/
-";" { return new Symbol(Symbol.SEMI); }
-":" { return new Symbol(Symbol.COL); }
-"," { return new Symbol(Symbol.COMA); }
-"." { return new Symbol(Symbol.DOT); }
-"~" { return new Symbol(Symbol.BINEGATE); }
-"+" { return new Symbol(Symbol.PLUS); }
-"-" { return new Symbol(Symbol.MINUS); }
-"*" { return new Symbol(Symbol.STAR); }
-"/" { return new Symbol(Symbol.SLASH); }
-"%" { return new Symbol(Symbol.PREC); }
-"=" { return new Symbol(Symbol.EQ); }
-"&" { return new Symbol(Symbol.BIAND); }
-"|" { return new Symbol(Symbol.BIOR); }
-"^" { return new Symbol(Symbol.HAT); }
-"not" { return new Symbol(Symbol.NOT); }
-"and" { return new Symbol(Symbol.AND); }
-"or" { return new Symbol(Symbol.OR); }
-"<" { return new Symbol(Symbol.LT); }
-">" { return new Symbol(Symbol.GT); }
-"{" { return new Symbol(Symbol.CURBRACOP); }
-"}" { return new Symbol(Symbol.CURBRACCL); }
-"[" { return new Symbol(Symbol.BRACKOP); }
-"]" { return new Symbol(Symbol.BRACKCL); }
-"(" { return new Symbol(Symbol.PRANTOP); }
-")" { return new Symbol(Symbol.PRANTCL); }
-"++" { return new Symbol(Symbol.PLUS2); }
-"--" { return new Symbol(Symbol.MINUS2); }
-"+=" { return new Symbol(Symbol.PLUSEQ); }
-"-=" { return new Symbol(Symbol.MINUSEQ); }
-"*=" { return new Symbol(Symbol.STAREQ); }
-"/=" { return new Symbol(Symbol.SLASHEQ); }
-"!=" { return new Symbol(Symbol.NOTEQ); }
-"==" { return new Symbol(Symbol.EQEQ); }
-"<=" { return new Symbol(Symbol.LTEQ); }
-">=" { return new Symbol(Symbol.GTEQ); }
+";" { return token(Symbol.SEMI); }
+":" { return token(Symbol.COL); }
+"," { return token(Symbol.COMA); }
+"." { return token(Symbol.DOT); }
+"~" { return token(Symbol.BINEGATE); }
+"+" { return token(Symbol.PLUS); }
+"-" { return token(Symbol.MINUS); }
+"*" { return token(Symbol.STAR); }
+"/" { return token(Symbol.SLASH); }
+"%" { return token(Symbol.PREC); }
+"=" { return token(Symbol.EQ); }
+"&" { return token(Symbol.BIAND); }
+"|" { return token(Symbol.BIOR); }
+"^" { return token(Symbol.HAT); }
+"not" { return token(Symbol.NOT); }
+"and" { return token(Symbol.AND); }
+"or" { return token(Symbol.OR); }
+"<" { return token(Symbol.LT); }
+">" { return token(Symbol.GT); }
+"{" { return token(Symbol.CURBRACOP); }
+"}" { return token(Symbol.CURBRACCL); }
+"[" { return token(Symbol.BRACKOP); }
+"]" { return token(Symbol.BRACKCL); }
+"(" { return token(Symbol.PRANTOP); }
+")" { return token(Symbol.PRANTCL); }
+"++" { return token(Symbol.PLUS2); }
+"--" { return token(Symbol.MINUS2); }
+"+=" { return token(Symbol.PLUSEQ); }
+"-=" { return token(Symbol.MINUSEQ); }
+"*=" { return token(Symbol.STAREQ); }
+"/=" { return token(Symbol.SLASHEQ); }
+"!=" { return token(Symbol.NOTEQ); }
+"==" { return token(Symbol.EQEQ); }
+"<=" { return token(Symbol.LTEQ); }
+">=" { return token(Symbol.GTEQ); }
 
 /*character literal*/
-{CharacterLiteral} { generateText(yytext()); return new Symbol(Symbol.CHAR_LIT); }
+{CharacterLiteral} { generateText(yytext()); return token(Symbol.CHAR_LIT); }
 
 /*string literals*/
-{StringLiteral} { generateText(yytext()); return new Symbol(Symbol.STR_LIT); }
+{StringLiteral} { generateText(yytext()); return token(Symbol.STR_LIT); }
 
 /*integer literals*/
-{IntegerLiteral} { ICV = Integer.parseInt(yytext()); return new Symbol(Symbol.INT_LIT); }
+{IntegerLiteral} { ICV = Integer.parseInt(yytext()); return token(Symbol.INT_LIT); }
 
 /*floating point literals*/
-{FloatingPointLiteral} { parseRCV(yytext()); return new Symbol(Symbol.FLOAT_LIT); }
+{FloatingPointLiteral} { parseRCV(yytext()); return token(Symbol.FLOAT_LIT); }
 
 /*identifiers*/
-{Identifier} { return new Symbol(Symbol.ID); }
+{Identifier} { return token(Symbol.ID); }
 
 }//end YYINITIAL

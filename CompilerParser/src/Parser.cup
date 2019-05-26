@@ -1,0 +1,59 @@
+import java.util.*;
+import java.io.*;
+import java_cup.runtime.*;
+
+//PARSER GENERATIONS
+parser code
+    {:
+        private Scanner scanner;
+        private File file;
+        public Parser(File file) {
+            this();
+            this.file = file;
+            try {
+                scanner = new Scanner(new FileReader(file));
+            }
+            catch (Exception e) {
+                throw new Error(e.getClass().getSimpleName() + " Unable to open file \"" + file + "\"" );
+            }
+        }
+    :};
+
+//SCANNER INVOKATION
+scan with
+    {:
+        return scanner.scan();
+    :};
+
+//KEYWORDS
+    //type and variable keywords
+terminal CONST, RECORD, BOOL, CHAR, INT, LONG, FLOAT, DOUBL, STRING, VOID, TRUE, FALSE, EXTERN, AUTO, FUNCTION;
+    //flow control keywords
+terminal BEGIN, END, IF, ELSE, SWITCH, OF, CASE, DEFAULT, FOR, FOREACH, IN, REPEAT, UNTIL, BREAK, CONTINUE, RETURN;
+    //other keywords
+terminal SIZEOF;
+
+//OPERATORS
+terminal SEMI, COL, COMA, DOT, BINEGATE, PLUS, MINUS, STAR, SLASH, PREC, EQ, BIAND, BIOR, HAT, NOT, AND, OR, LT, GT, CURBRACOP,
+ CURBRACCL, BRACKOP, BRACKCL, PRANTOP, PRANTCL, PLUS2,  MINUS2, PLUSEQ, MINUSEQ, STAREQ, SLASHEQ, NOTEQ, EQEQ, LTEQ, GTEQ;
+
+//CHARACTER LITERAL
+terminal String CHAR_LIT;
+
+//STRING LITERAL
+terminal String STR_LIT;
+
+//INTEGER LITERAL
+terminal Integer INT_LIT;
+
+//FLOATING POINT LITERAL
+terminal Double FLOAT_LIT;
+
+//IDENTIFIERS
+terminal String ID;
+
+nonterminal StmtList;
+start with StmtList;
+
+//GRAMMER
+StmtList::= SEMI{:System.out.println("read");:};

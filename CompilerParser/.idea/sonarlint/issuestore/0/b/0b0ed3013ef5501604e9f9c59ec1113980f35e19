@@ -1,0 +1,43 @@
+
+lsquid:S00100ç"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(øàÜúÿÿÿÿ
+_squid:S00112Ş"FDefine and throw a dedicated exception instead of using a generic one.(Î¢›‘
+Jsquid:S1199Ç"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ
+osquid:S00117¼"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ï§Ûøÿÿÿÿ
+osquid:S00117Ö"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ
+osquid:S00117Ë"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÉŞÌñúÿÿÿÿ
+osquid:S00117é"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ï§Ûøÿÿÿÿ
+Jsquid:S1199Õ"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ
+Qsquid:S1133"5Do not forget to remove this deprecated code someday.(×ëß–ûÿÿÿÿ
+_squid:S00112¤"FDefine and throw a dedicated exception instead of using a generic one.(ÈÏ©ç
+isquid:S00117j"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¹ò¨‹
+dsquid:S00112¿"FDefine and throw a dedicated exception instead of using a generic one.(íÑáşÿÿÿÿ
+jsquid:S00117Ê"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µóªĞ
+Osquid:S11970"8Move the array designator from the variable to the type.(æÇ¹Ñ
+fsquid:S00101­"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(’¼€›
+isquid:S00117¾"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ù¬êL
+osquid:S00117Á"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ò®¹’úÿÿÿÿ
+Osquid:S1481É"2Remove this unused "start_valleft" local variable.(ÈÊ‰éıÿÿÿÿ
+asquid:UselessImportCheck
+"8Remove this unused import 'java_cup.runtime.XMLElement'.(ë˜í†ÿÿÿÿÿ
+msquid:S1149ê"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(Šé‹şÿÿÿÿ
+osquid:S00117è"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥ö·¥ÿÿÿÿÿ
+msquid:S1149½"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(Šé‹şÿÿÿÿ
+msquid:S1149½"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(Šé‹şÿÿÿÿ
+Psquid:MissingDeprecatedCheck""(Add the missing @deprecated Javadoc tag.(õšê
+lsquid:S00100º"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–çÃşÿÿÿÿ
+Usquid:MissingDeprecatedCheck"(Add the missing @deprecated Javadoc tag.(×ëß–ûÿÿÿÿ
+Lsquid:S1133""5Do not forget to remove this deprecated code someday.(õšê
+osquid:S00117½"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Šé‹şÿÿÿÿ
+Vsquid:S1161":Add the "@Override" annotation above this method signature(ÙäÊ×ùÿÿÿÿ
+Qsquid:S1161“":Add the "@Override" annotation above this method signature(çğÏ"
+osquid:S00117»"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥ö·¥ÿÿÿÿÿ
+msquid:S1149ê"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(Šé‹şÿÿÿÿ
+osquid:S00117È"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ
+@squid:S1068œ"(Remove this unused "file" private field.(ïÛú
+\squid:CallToDeprecatedMethodŸ".Remove this use of "Parser"; it is deprecated.(•¬ƒùÿÿÿÿ
+osquid:S00117ê"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Šé‹şÿÿÿÿ
+lsquid:S00116]"URename this field "action_obj" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«Ç»{
+osquid:S00117É"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÈÊ‰éıÿÿÿÿ
+isquid:S00117ë"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ù¬êL
+Fsquid:S1905Ë")Remove this unnecessary cast to "Object".(ÉŞÌñúÿÿÿÿ
+Ksquid:S1481Ê"3Remove this unused "start_valright" local variable.(µóªĞ

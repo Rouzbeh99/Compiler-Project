@@ -1,0 +1,5 @@
+
+9squid:S2386U"Make this member "protected".(¥™Íúÿÿÿÿ
+rsquid:S00115B"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(¼Ô›
+dsquid:S00101	"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(‡ğ…
+Psquid:S1118	":Add a private constructor to hide the implicit public one.(‡ğ…

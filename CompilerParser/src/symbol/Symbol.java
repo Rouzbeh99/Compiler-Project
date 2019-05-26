@@ -5,7 +5,7 @@ import symbol.descriptor.Descriptor;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Symbol {
+public class Symbol extends java_cup.runtime.Symbol {
 
     public static final int WHITE_SPACE = 1;
     public static final int COMMENT = 2;
@@ -81,13 +81,15 @@ public class Symbol {
     public static final int INT_LIT = 72;
     public static final int FLOAT_LIT = 73;
     public static final int ID = 74;
-
     private static final Map<String, Descriptor> SYMBOL_TABLE = new HashMap<>();
 
     private int code;
     private SymbolType type;
+    private String value;
 
-    public Symbol(int code) {
+    public Symbol(int code, String value) {
+        super(code);
+        this.value = value;
         type = SymbolType.getByCode(this.code = code);
     }
 
@@ -97,6 +99,10 @@ public class Symbol {
 
     public SymbolType getType() {
         return type;
+    }
+
+    public String getValue() {
+        return value;
     }
 
 }

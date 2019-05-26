@@ -1,0 +1,52 @@
+import java.util.*;
+import java.io.*;
+import java_cup.runtime.*;
+
+action code
+{:
+Hashtable table = new Hashtable();
+:};
+
+/* The code below defines a constructor for the parser
+ *class in which communication with Scanner class is made
+*/
+parser code {:
+private Scanner scanner;
+private File file;
+public parser (File file){
+this();
+this.file = file;
+try {
+Scanner = new Scanner(new FileReader(file));
+}
+catch (IOException exception ) {
+throw new Error( "Unable to open file \"" + file + "\"" );
+    }
+  }
+ :};
+
+ scan with
+ {:
+ return scanner.yylex();
+ :}
+
+ //KEYWORDS
+     //type and variable keywords
+ terminal const, record, bool, char, int, long, float, double, string, void, true, false, extern, auto, function;
+     //flow control keywords
+ terminal begin, end, if, else, switch, of, case, default, for, foreach, in, repeat, until, break, continue, return;
+     //other keywords
+ terminal sizeof;
+
+ //OPERATORS
+ terminal SEMI, COLEN, COMA, DOT, NOT, MINUS, TIMES, DIVIDE, PRECENTAGE, ASSIGN, AND, OR, HAT, not, and, or;
+
+
+ terminal LEFT, RIGHT, NEWLINE, PLUS, MINUS, TIMES, DIVIDE, ASSIGN;
+ terminal String NUMBER;
+ terminal String IDENT;
+
+
+
+
+

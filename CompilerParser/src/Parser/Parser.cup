@@ -2,53 +2,68 @@ import java.util.*;
 import java.io.*;
 import java_cup.runtime.*;
 
-action code
-{:
-Hashtable table = new Hashtable();
-:};
+//PARSER GENERATIONS
+parser code
+    {:
+        private Scanner scanner;
+        private File file;
+        public Parser(File file) {
+            this();
+            this.file = file;
+            try {
+                scanner = new Scanner(new FileReader(file));
+            }
+            catch (Exception e) {
+                throw new Error(e.getClass().getSimpleName() + " Unable to open file \"" + file + "\"" );
+            }
+        }
+    :};
 
-/* The code below defines a constructor for the parser
- *class in which communication with Scanner class is made
-*/
-parser code {:
-private Scanner scanner;
-private File file;
-parser (File file){
-this();
-this.file = file;
-try {
-Scanner = new Scanner(new FileReader(file));
-}
-catch (IOException exception ) {
-throw new Error( "Unable to open file \"" + file + "\"" );
-    }
-  }
- :};
+//SCANNER INVOKATION
+scan with
+    {:
+        return scanner.scan();
+    :};
 
- scan with
- {:
- return scanner.yylex();
- :}
+//KEYWORDS
+    //type and variable keywords
+terminal CONST, RECORD, BOOL, CHAR, INT, LONG, FLOAT, DOUBL, STRING, VOID, TRUE, FALSE, EXTERN, AUTO, FUNCTION;
+    //flow control keywords
+terminal BEGIN, END, IF, ELSE, SWITCH, OF, CASE, DEFAULT, FOR, FOREACH, IN, REPEAT, UNTIL, BREAK, CONTINUE, RETURN;
+    //other keywords
+terminal SIZEOF;
 
- //KEYWORDS
-     //type and variable keywords
- terminal const, record, bool, char, int, long, float, double, string, void, true, false, extern, auto, function;
-     //flow control keywords
- terminal begin, end, if, else, switch, of, case, default, for, foreach, in, repeat, until, break, continue, return;
-     //other keywords
- terminal sizeof;
+//OPERATORS
 
- //OPERATORS
- terminal SEMI, COLEN, COMA, DOT, NOT, MINUS,PLUSPLUS,MINUSMINUS,EPSILON, ASSIGN, AND, OR, HAT,NOT,GTE,GT,
-            LTE,LT,EQ,NEQ,PARANTHESIS_O,PARANTHESIS_C,BRACKET_O,BRACKET_C,BITWISE_AND,BITWISE_ORR,BITWISE_EOR;
+terminal ASSIGN,BITWISE_ORR,BITWISE_EOR,BITWISE_AND,NEQ,GTE,LTE,MODE,TIMES,UMINUS,PLUSPLUS,MINUSMINUS,PARANTHESIS_O,PARANTHESIS_C,
+BRACKET_O,BRACKET_C,SEMICOLEN, COLEN, COMA, DOT, BINEGATE, PLUS, MINUS, STAR, SLASH, PREC, EQ, BIAND, BIOR, HAT, NOT, AND, OR, LT, GT, CURBRACOP,
+ CURBRACCL,EPSILON, BRACKOP, BRACKCL, PRANTOP, PRANTCL, PLUS2,  MINUS2,DIVIDE, PLUSEQ, MINUSEQ, STAREQ, SLASHEQ, NOTEQ, EQEQ, LTEQ, GTEQ;
 
 
- terminal LEFT, RIGHT, NEWLINE, PLUS, MINUS, TIMES, DIVIDE,MODE, ASSIGN,UMINUS;
- terminal String NUMBER;
- terminal String IDENT;
+//CHARACTER LITERAL
+terminal String CHAR_CONST;
 
- nonterminal const_value, variable,arrayDtector,expr,arithmatic,conditional,
-            binary_operator;
+//STRING LITERAL
+terminal String STRING_CONST;
+
+//INTEGER LITERAL
+terminal Integer INT_CONST;
+
+//FLOATING POINT LITERAL
+terminal Double REAL_CONST;
+
+//BOOLEAN LITERAL
+terminal Boolean BOOL_CONST;
+
+//LONG LITERAL
+terminal Long LONG_CONST;
+
+//IDENTIFIERS
+terminal String ID;
+
+nonterminal stmt,assignExp, variable,arrayDtector,arithmatic_expr,conditional_expr
+            ,expr,const_value,block,var_dcl,statement,block_body,cond_statement,else_existence,case_statements
+            ,loop_statement,loop_assignments,loop_var_increment;
 
 /*
  * precedences and associativity
@@ -63,22 +78,24 @@ precedence left BITWISE_AND;
 precedence left EQ,NEQ;
 precedence left GTE,GT,LTE,LT;
 precedence left PLUS,MINUS;
-precedence left TIMES,DIVID,MODE;
+precedence left TIMES,DIVIDE,MODE;
 precedence left NOT;
 precedence left UMINUS;
 precedence left PLUSPLUS,MINUSMINUS,PARANTHESIS_O,PARANTHESIS_C;
 
+start with stmt;
 
- stmt ::=
-                   assignExp COLEN;
+//GRAMMER
+stmt ::=
+                   assignExp SEMICOLEN;
 
  variable ::=
-                   id arrayDtector
+                   ID arrayDtector
                    |MINUSMINUS variable
                    |PLUSPLUS  variable
                    |variable PLUSPLUS
                    |variable MINUSMINUS
-                   |variable DOT id;
+                   |variable DOT ID;
 
 
 
@@ -87,42 +104,87 @@ arrayDtector ::=     EPSILON
                     |BRACKET_O expr BRACKET_C arrayDtector;
 
 
-arithmatic ::=
-                     MINUS
-                    |PLUS
-                    |TIMES
-                    |DIVIDE
-                    |MODE
-                    |BITWISE_AND
-                    |BITWISE_EOR
-                    |BITWISE_ORR;
+arithmatic_expr ::=
+                    expr MINUS expr
+                    |expr PLUS expr
+                    |expr TIMES expr
+                    |expr DIVIDE expr
+                    |expr MODE expr
+                    |expr BITWISE_AND expr
+                    |expr BITWISE_EOR expr
+                    |expr BITWISE_ORR expr;
 
-conditional ::=
-                    AND
-                    |OR
-                    |EQ
-                    |NEQ
-                    |GTE
-                    |GT
-                    |LT
-                    |LTE
-                    |NOT;
+conditional_expr ::=
+                    expr AND expr
+                    |expr OR expr
+                    |expr EQ expr
+                    |expr NEQ expr
+                    |expr GTE expr
+                    |expr GT expr
+                    |expr LT expr
+                    |expr LTE expr
+                    |expr NOT expr;
 
-binary_operator ::=
-                   arithmatic
-                   |conditional;
+
 
 expr            ::=
                     PARANTHESIS_O expr PARANTHESIS_C
                     |variable
-                    |expr binary_operator expr
+                    |arithmatic_expr
+                    |conditional_expr
                     |const_value
                     |NOT expr;
                     // mrthod_call , sizeOf remaining
 
+const_value ::=
+                    LONG_CONST
+                    |INT_CONST
+                    |REAL_CONST
+                    |CHAR_CONST
+                    |STRING_CONST
+                    |BOOL_CONST;
 
 
+block ::=
+                    BEGIN block_body END;
+
+block_body ::=
+                    var_dcl block_body
+                    |statement block_body
+                    |EPSILON;
+
+/*
+ * conditional execution
+*/
 
 
+cond_statement ::=
+                    IF PARANTHESIS_O expr PARANTHESIS_C block else_existence
+                    |SWITCH PARANTHESIS_O ID PARANTHESIS_C OF COLEN BEGIN case_statements DEFAULT COLEN block END;
+
+else_existence ::=
+                    ELSE block
+                    |EPSILON;
+
+case_statements ::=
+                    CASE INT_CONST COLEN block case_statements
+                    |EPSILON;
 
 
+/*
+ * loop executions
+ */
+
+
+loop_statement ::=
+                    FOR PARANTHESIS_O loop_assignments SEMICOLEN expr SEMICOLEN loop_var_increment PARANTHESIS_C block
+                    |REPEAT block UNTIL PARANTHESIS_O expr PARANTHESIS_C
+                    |FOREACH PARANTHESIS_O ID IN ID PARANTHESIS_C block;
+
+loop_assignments ::=
+                    assignExp
+                    |EPSILON;
+loop_var_increment ::=
+                    assignExp
+                    | expr
+                    |EPSILON;

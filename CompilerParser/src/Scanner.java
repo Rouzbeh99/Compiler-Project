@@ -1010,7 +1010,7 @@ public class Scanner {
                     case 74:
                         break;
                     case 2: {
-                        return token(Symbol.SLASH);
+                        return token(Symbol.DIVIDE);
                     }
                     // fall through
                     case 75:
@@ -1065,25 +1065,25 @@ public class Scanner {
                     case 83:
                         break;
                     case 11: {
-                        return token(Symbol.BINEGATE);
+                        return token(Symbol.BINOT);
                     }
                     // fall through
                     case 84:
                         break;
                     case 12: {
-                        return token(Symbol.STAR);
+                        return token(Symbol.MULT);
                     }
                     // fall through
                     case 85:
                         break;
                     case 13: {
-                        return token(Symbol.PREC);
+                        return token(Symbol.MOD);
                     }
                     // fall through
                     case 86:
                         break;
                     case 14: {
-                        return token(Symbol.EQ);
+                        return token(Symbol.ASSIGN);
                     }
                     // fall through
                     case 87:
@@ -1101,7 +1101,7 @@ public class Scanner {
                     case 89:
                         break;
                     case 17: {
-                        return token(Symbol.HAT);
+                        return token(Symbol.BIEXOR);
                     }
                     // fall through
                     case 90:
@@ -1155,7 +1155,7 @@ public class Scanner {
                     case 98:
                         break;
                     case 26: {
-                        return token(Symbol.SLASHEQ);
+                        return token(Symbol.DIVASSIGN);
                     }
                     // fall through
                     case 99:
@@ -1168,25 +1168,25 @@ public class Scanner {
                     case 100:
                         break;
                     case 28: {
-                        return token(Symbol.PLUS2);
+                        return token(Symbol.PREFPLUS2);
                     }
                     // fall through
                     case 101:
                         break;
                     case 29: {
-                        return token(Symbol.PLUSEQ);
+                        return token(Symbol.PLUSASSIGN);
                     }
                     // fall through
                     case 102:
                         break;
                     case 30: {
-                        return token(Symbol.MINUS2);
+                        return token(Symbol.PREFMINUS2);
                     }
                     // fall through
                     case 103:
                         break;
                     case 31: {
-                        return token(Symbol.MINUSEQ);
+                        return token(Symbol.MINUSASSIGN);
                     }
                     // fall through
                     case 104:
@@ -1216,7 +1216,7 @@ public class Scanner {
                     case 108:
                         break;
                     case 36: {
-                        return token(Symbol.STAREQ);
+                        return token(Symbol.MULTASSIGN);
                     }
                     // fall through
                     case 109:
@@ -1386,7 +1386,7 @@ public class Scanner {
                     case 136:
                         break;
                     case 64: {
-                        return new Symbol(Symbol.SIZEOF);
+                        return token(Symbol.SIZEOF);
                     }
                     // fall through
                     case 137:

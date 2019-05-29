@@ -121,23 +121,23 @@ Identifier = [_\w][_\w\d]*
 "return" { return token(Symbol.RETURN); }
 
 /*other keywords*/
-"sizeof" { return new Symbol(Symbol.SIZEOF); }
+"sizeof" { return token(Symbol.SIZEOF); }
 
 /*operators*/
 ";" { return token(Symbol.SEMI); }
 ":" { return token(Symbol.COL); }
 "," { return token(Symbol.COMA); }
 "." { return token(Symbol.DOT); }
-"~" { return token(Symbol.BINEGATE); }
+"~" { return token(Symbol.BINOT); }
 "+" { return token(Symbol.PLUS); }
 "-" { return token(Symbol.MINUS); }
-"*" { return token(Symbol.STAR); }
-"/" { return token(Symbol.SLASH); }
-"%" { return token(Symbol.PREC); }
-"=" { return token(Symbol.EQ); }
+"*" { return token(Symbol.MULT); }
+"/" { return token(Symbol.DIVIDE); }
+"%" { return token(Symbol.MOD); }
+"=" { return token(Symbol.ASSIGN); }
 "&" { return token(Symbol.BIAND); }
 "|" { return token(Symbol.BIOR); }
-"^" { return token(Symbol.HAT); }
+"^" { return token(Symbol.BIEXOR); }
 "not" { return token(Symbol.NOT); }
 "and" { return token(Symbol.AND); }
 "or" { return token(Symbol.OR); }
@@ -149,12 +149,12 @@ Identifier = [_\w][_\w\d]*
 "]" { return token(Symbol.BRACKCL); }
 "(" { return token(Symbol.PRANTOP); }
 ")" { return token(Symbol.PRANTCL); }
-"++" { return token(Symbol.PLUS2); }
-"--" { return token(Symbol.MINUS2); }
-"+=" { return token(Symbol.PLUSEQ); }
-"-=" { return token(Symbol.MINUSEQ); }
-"*=" { return token(Symbol.STAREQ); }
-"/=" { return token(Symbol.SLASHEQ); }
+"++" { return token(Symbol.PREFPLUS2); }
+"--" { return token(Symbol.PREFMINUS2); }
+"+=" { return token(Symbol.PLUSASSIGN); }
+"-=" { return token(Symbol.MINUSASSIGN); }
+"*=" { return token(Symbol.MULTASSIGN); }
+"/=" { return token(Symbol.DIVASSIGN); }
 "!=" { return token(Symbol.NOTEQ); }
 "==" { return token(Symbol.EQEQ); }
 "<=" { return token(Symbol.LTEQ); }

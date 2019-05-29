@@ -24,34 +24,7 @@
     <select />
   </component>
   <component name="FileEditorManager">
-<<<<<<< HEAD
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Parser/Parser.cup">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1922">
-              <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
-              <folding>
-                <element signature="e#46#47#0" expanded="true" />
-                <element signature="e#74#75#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Test.cup">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="59">
-              <caret line="64" column="7" selection-start-line="64" selection-start-column="7" selection-end-line="64" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-=======
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
->>>>>>> e436bea15804bb61dbe6348ca8e1352b3011583e
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -65,39 +38,26 @@
       <list>
         <option value="$PROJECT_DIR$/src/symbol/descriptor/Descriptor.java" />
         <option value="$PROJECT_DIR$/src/Test.cup" />
+        <option value="$PROJECT_DIR$/src/sym.java" />
+        <option value="$PROJECT_DIR$/src/SortedString.java" />
+        <option value="$PROJECT_DIR$/src/Parser.java" />
         <option value="$PROJECT_DIR$/src/symbol/Symbol.java" />
         <option value="$PROJECT_DIR$/src/Scanner.flex" />
         <option value="$PROJECT_DIR$/src/Scanner.java" />
         <option value="$PROJECT_DIR$/src/Parser.cup" />
-        <option value="$PROJECT_DIR$/src/Parser.java" />
-        <option value="$PROJECT_DIR$/src/sym.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
-    <option name="width" value="980" />
-    <option name="height" value="1040" />
+    <option name="x" value="951" />
+    <option name="width" value="978" />
+    <option name="height" value="1039" />
   </component>
-<<<<<<< HEAD
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-120" />
-    <option name="y" value="32" />
-    <option name="width" value="1386" />
-    <option name="height" value="788" />
-  </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-=======
->>>>>>> e436bea15804bb61dbe6348ca8e1352b3011583e
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-<<<<<<< HEAD
-      <pane id="PackagesPane" />
-=======
->>>>>>> e436bea15804bb61dbe6348ca8e1352b3011583e
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -108,42 +68,26 @@
             <path>
               <item name="CompilerParser" type="b2602c69:ProjectViewProjectNode" />
               <item name="CompilerParser" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CompilerParser" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CompilerParser" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CompilerParser" type="b2602c69:ProjectViewProjectNode" />
               <item name="CompilerParser" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-<<<<<<< HEAD
-              <item name="Parser" type="462c0819:PsiDirectoryNode" />
-=======
               <item name="symbol" type="462c0819:PsiDirectoryNode" />
->>>>>>> e436bea15804bb61dbe6348ca8e1352b3011583e
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
-<<<<<<< HEAD
-=======
       <pane id="PackagesPane" />
->>>>>>> e436bea15804bb61dbe6348ca8e1352b3011583e
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-<<<<<<< HEAD
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558908084119" />
-=======
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1558899074659" />
->>>>>>> e436bea15804bb61dbe6348ca8e1352b3011583e
     <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/jflex-full-1.7.0.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -151,7 +95,7 @@
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -193,16 +137,25 @@
       <workItem from="1558860033421" duration="2806000" />
       <workItem from="1558887498800" duration="7603000" />
       <workItem from="1558899552375" duration="537000" />
+      <workItem from="1558932723396" duration="1433000" />
+      <workItem from="1558941846464" duration="167000" />
+      <workItem from="1558943359374" duration="601000" />
+      <workItem from="1558972846600" duration="7434000" />
+      <workItem from="1559018261842" duration="4262000" />
+      <workItem from="1559028841251" duration="3911000" />
+      <workItem from="1559055474104" duration="14999000" />
+      <workItem from="1559117494280" duration="2299000" />
+      <workItem from="1559123773286" duration="2233000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24717000" />
+    <option name="totallyTimeSpent" value="62056000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.15637584" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.17516778" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -210,13 +163,13 @@
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32808024" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3286119" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.53257793" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="SonarLint" order="10" />
@@ -230,14 +183,13 @@
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="SciView" order="6" />
-      <window_info anchor="right" id="Database" order="7" weight="0.3295302" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info anchor="right" id="Theme Preview" order="9" />
-      <window_info anchor="right" x="0" y="0" width="337" height="638" id="Documentation" order="10" side_tool="true" weight="0.3295302" />
-      <window_info anchor="right" id="PsiViewer" order="11" weight="0.32980332" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" x="0" y="0" width="337" height="638" id="Documentation" order="9" side_tool="true" weight="0.3295302" />
+      <window_info anchor="right" id="Database" order="10" weight="0.32732317" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15637584" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17516778" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -245,13 +197,13 @@
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32808024" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.53257793" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="SonarLint" order="10" />
@@ -265,25 +217,16 @@
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="SciView" order="6" />
-      <window_info anchor="right" id="Database" order="7" weight="0.3295302" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info anchor="right" id="Theme Preview" order="9" />
-      <window_info anchor="right" x="0" y="0" width="337" height="638" id="Documentation" order="10" side_tool="true" weight="0.3295302" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" x="0" y="0" width="337" height="638" id="Documentation" order="9" side_tool="true" weight="0.3295302" />
+      <window_info anchor="right" id="Database" order="10" weight="0.32732317" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/Scanner.java" />
-    <entry file="file://$PROJECT_DIR$/src/symbol/Symbol.java" />
-    <entry file="file://$PROJECT_DIR$/src/Scanner.flex" />
-    <entry file="file://$PROJECT_DIR$/src/Scanner/descriptor/Descriptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
-=======
     <entry file="file://$PROJECT_DIR$/src/symbol/descriptor/Descriptor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -314,10 +257,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/sym.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="3" column="54" lean-forward="true" selection-start-line="3" selection-start-column="54" selection-end-line="3" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/SortedString.java" />
+    <entry file="jar://$PROJECT_DIR$/lib/java-cup-11b.jar!/java_cup/Main.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="86" selection-start-line="86" selection-end-line="86" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/symbol/Symbol.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1564">
-          <caret line="92" selection-start-line="92" selection-end-line="92" />
+        <state relative-caret-position="539">
+          <caret line="69" column="32" selection-start-line="69" selection-start-column="32" selection-end-line="69" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -326,58 +284,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Scanner.flex">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="27" column="43" lean-forward="true" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
+        <state relative-caret-position="36">
+          <caret line="152" column="31" selection-start-line="152" selection-start-column="31" selection-end-line="152" selection-end-column="31" />
           <folding>
             <element signature="e#175#176#0" expanded="true" />
             <element signature="e#224#225#0" expanded="true" />
           </folding>
->>>>>>> e436bea15804bb61dbe6348ca8e1352b3011583e
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Scanner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Parser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1885">
-          <caret line="17" column="43" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
-          <folding>
-            <element signature="e#479#480#0" expanded="true" />
-            <element signature="e#503#504#0" expanded="true" />
-            <element signature="e#600#601#0" expanded="true" />
-            <element signature="e#623#624#0" expanded="true" />
-            <element signature="e#755#756#0" expanded="true" />
-            <element signature="e#779#780#0" expanded="true" />
-            <element signature="e#930#931#0" expanded="true" />
-            <element signature="e#958#959#0" expanded="true" />
-            <element signature="e#1261#1262#0" expanded="true" />
-            <element signature="e#1301#1302#0" expanded="true" />
-            <element signature="e#1730#1731#0" expanded="true" />
-            <element signature="e#1766#1767#0" expanded="true" />
-            <element signature="e#2162#2163#0" expanded="true" />
-            <element signature="e#2198#2199#0" expanded="true" />
-            <element signature="e#2945#2946#0" expanded="true" />
-            <element signature="e#2969#2970#0" expanded="true" />
-            <element signature="e#3057#3058#0" expanded="true" />
-            <element signature="e#3081#3082#0" expanded="true" />
-            <element signature="e#3163#3164#0" expanded="true" />
-            <element signature="e#3187#3188#0" expanded="true" />
-            <element signature="e#3273#3274#0" expanded="true" />
-            <element signature="e#3297#3298#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="169">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Parser.cup">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="29" column="20" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
+        <state relative-caret-position="220">
+          <caret line="301" column="5" lean-forward="true" selection-start-line="301" selection-start-column="5" selection-end-line="301" selection-end-column="5" />
           <folding>
             <element signature="e#46#47#0" expanded="true" />
             <element signature="e#83#84#0" expanded="true" />
@@ -385,48 +311,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sym.java">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="59">
-          <caret line="64" column="7" selection-start-line="64" selection-start-column="7" selection-end-line="64" selection-end-column="7" />
-=======
-        <state relative-caret-position="238">
-          <caret line="16" column="40" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
->>>>>>> e436bea15804bb61dbe6348ca8e1352b3011583e
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Parser.java">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="-1922">
-          <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
-=======
-        <state relative-caret-position="221">
-          <caret line="24" column="15" selection-start-line="24" selection-start-column="15" selection-end-line="24" selection-end-column="15" />
->>>>>>> e436bea15804bb61dbe6348ca8e1352b3011583e
+        <state relative-caret-position="102">
+          <caret line="8" column="3" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
           <folding>
-            <element signature="e#600#601#0" expanded="true" />
-            <element signature="e#623#624#0" expanded="true" />
-            <element signature="e#755#756#0" expanded="true" />
-            <element signature="e#779#780#0" expanded="true" />
-            <element signature="e#930#931#0" expanded="true" />
-            <element signature="e#958#959#0" expanded="true" />
-            <element signature="e#1261#1262#0" expanded="true" />
-            <element signature="e#1301#1302#0" expanded="true" />
-            <element signature="e#1730#1731#0" expanded="true" />
-            <element signature="e#1766#1767#0" expanded="true" />
-            <element signature="e#2162#2163#0" expanded="true" />
-            <element signature="e#2198#2199#0" expanded="true" />
-            <element signature="e#2945#2946#0" expanded="true" />
-            <element signature="e#2969#2970#0" expanded="true" />
-            <element signature="e#3057#3058#0" expanded="true" />
-            <element signature="e#3081#3082#0" expanded="true" />
-            <element signature="e#3163#3164#0" expanded="true" />
-            <element signature="e#3187#3188#0" expanded="true" />
-            <element signature="e#3273#3274#0" expanded="true" />
-            <element signature="e#3297#3298#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

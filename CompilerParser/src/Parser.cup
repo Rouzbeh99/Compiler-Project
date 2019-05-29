@@ -2,7 +2,7 @@ import java.util.*;
 import java.io.*;
 import java_cup.runtime.*;
 
-//PARSER GENERATIONS
+//PARSER GENERATION
 parser code
     {:
         private Scanner scanner;
@@ -25,35 +25,372 @@ scan with
         return scanner.scan();
     :};
 
+//TERMINALS
+
 //KEYWORDS
-    //type and variable keywords
 terminal CONST, RECORD, BOOL, CHAR, INT, LONG, FLOAT, DOUBL, STRING, VOID, TRUE, FALSE, EXTERN, AUTO, FUNCTION;
-    //flow control keywords
 terminal BEGIN, END, IF, ELSE, SWITCH, OF, CASE, DEFAULT, FOR, FOREACH, IN, REPEAT, UNTIL, BREAK, CONTINUE, RETURN;
-    //other keywords
 terminal SIZEOF;
 
 //OPERATORS
-terminal SEMI, COL, COMA, DOT, BINEGATE, PLUS, MINUS, STAR, SLASH, PREC, EQ, BIAND, BIOR, HAT, NOT, AND, OR, LT, GT, CURBRACOP,
- CURBRACCL, BRACKOP, BRACKCL, PRANTOP, PRANTCL, PLUS2,  MINUS2, PLUSEQ, MINUSEQ, STAREQ, SLASHEQ, NOTEQ, EQEQ, LTEQ, GTEQ;
+terminal EPSILON, SEMI, COL, COMA, DOT, BINOT, PLUS, MINUS, UMINUS, MULT, DIVIDE, MOD, ASSIGN, BIAND, BIOR, BIEXOR, NOT, AND, OR, LT, GT, CURBRACOP,
+ CURBRACCL, BRACKOP, BRACKCL, PRANTOP, PRANTCL, PREFPLUS2, PREFMINUS2, POSTPLUS2, POSTMINUS2, PLUSASSIGN, MINUSASSIGN, MULTASSIGN, DIVASSIGN, NOTEQ, EQEQ, LTEQ, GTEQ;
 
-//CHARACTER LITERAL
+//LITERALS
 terminal String CHAR_LIT;
-
-//STRING LITERAL
 terminal String STR_LIT;
-
-//INTEGER LITERAL
 terminal Integer INT_LIT;
-
-//FLOATING POINT LITERAL
 terminal Double FLOAT_LIT;
 
-//IDENTIFIERS
 terminal String ID;
 
-nonterminal StmtList;
-start with StmtList;
+//NON TERMINALS
 
-//GRAMMER
-StmtList::= SEMI{:System.out.println("read");:};
+nonterminal program, var_dcl, func_dcl, struct_dcl;
+nonterminal var_dcl_part, var_dcl_cnt, var_dcl_cnt_part, var_dcl_cnt_extension_part, more_var_dcl_part, type, func_dcl_part, arguments, arguments_part, function_array_dcl;
+nonterminal block, block_content, statement, assignment;
+nonterminal cond_stmt, else_part, case_part;
+nonterminal loop_stmt, loop_init_part, loop_cond_part, loop_update_part;
+nonterminal expr, arithmatic_expr, conditional_expr, const_val;
+nonterminal variable, array_part;
+nonterminal function_call, parameters, parameters_part;
+
+//PRECEDENCES FOR REMOVING CONFLICTS
+precedence right MULTASSIGN, DIVASSIGN;
+precedence right PLUSASSIGN, MINUSASSIGN;
+precedence right ASSIGN;
+precedence left OR;
+precedence left AND;
+precedence left BIOR;
+precedence left BIEXOR;
+precedence left BIAND;
+precedence left EQEQ, NOTEQ;
+precedence left GT, GTEQ;
+precedence left LT, LTEQ;
+precedence left PLUS, MINUS;
+precedence left MULT, DIVIDE, MOD;
+precedence right SIZEOF;
+precedence right NOT, BINOT;
+precedence right UMINUS;
+precedence right PREFPLUS2, PREFMINUS2;
+precedence left BRACKOP;
+precedence left PRANTOP;
+precedence left POSTPLUS2, POSTMINUS2;
+
+start with program;
+
+//GRAMMER PRODUCTION RULES
+
+
+//program
+program ::=
+    var_dcl program
+    |
+    func_dcl program
+    |
+    struct_dcl program
+    |
+    EPSILON
+    ;
+
+
+//variable declarations
+var_dcl ::=
+    CONST var_dcl_part
+    |
+    var_dcl_part
+    ;
+
+var_dcl_part ::=
+    type var_dcl_cnt var_dcl_cnt_extension_part
+    ;
+
+var_dcl_cnt ::=
+    variable var_dcl_cnt_part
+    ;
+
+var_dcl_cnt_part ::=
+    ASSIGN expr
+    |
+    EPSILON
+    ;
+
+var_dcl_cnt_extension_part ::=
+    COMA var_dcl_cnt_part var_dcl_cnt_extension_part
+    |
+    EPSILON
+    ;
+
+type ::=
+    BOOL
+    |
+    CHAR
+    |
+    INT
+    |
+    LONG
+    |
+    FLOAT
+    |
+    DOUBL
+    |
+    STRING
+    |
+    VOID
+    |
+    AUTO
+    |
+    ID
+    ;
+
+
+//function declarations
+func_dcl ::=
+    EXTERN type ID SEMI
+    |
+    FUNCTION type ID PRANTOP arguments PRANTCL func_dcl_part
+    ;
+
+func_dcl_part ::=
+    SEMI
+    |
+    block
+    ;
+
+arguments ::=
+    type ID function_array_dcl arguments_part
+    |
+    EPSILON
+    ;
+
+arguments_part ::=
+     COMA arguments
+     |
+     EPSILON
+    ;
+
+function_array_dcl ::=
+    BRACKOP BRACKCL function_array_dcl
+    |
+    EPSILON
+    ;
+
+
+//structur declarations
+struct_dcl ::=
+    RECORD ID BEGIN var_dcl END RECORD
+    ;
+
+more_var_dcl_part ::=
+    var_dcl more_var_dcl_part
+    |
+    EPSILON
+    ;
+
+
+//statements
+block ::=
+    BEGIN block_content END
+    ;
+
+block_content ::=
+    var_dcl block_content
+    |
+    statement block_content
+    |
+    EPSILON
+    ;
+
+statement ::=
+    assignment SEMI
+    |
+    cond_stmt
+    |
+    loop_stmt
+    |
+    BREAK SEMI
+    |
+    CONTINUE SEMI
+    |
+    function_call SEMI
+    |
+    RETURN expr SEMI
+    ;
+
+
+//assignment
+assignment ::=
+    variable ASSIGN expr
+    |
+    variable PLUSASSIGN expr
+    |
+    variable MINUSASSIGN expr
+    |
+    variable MULTASSIGN expr
+    |
+    variable DIVASSIGN expr
+    ;
+
+
+//conditional statements
+cond_stmt ::=
+    IF PRANTOP expr PRANTCL block else_part
+    |
+    SWITCH PRANTOP ID PRANTCL OF COL BEGIN case_part DEFAULT COL block END
+    ;
+
+else_part ::=
+    ELSE block
+    |
+    EPSILON
+    ;
+
+case_part ::=
+    CASE INT_LIT COL block case_part
+    |
+    EPSILON
+    ;
+
+
+//loop statements
+loop_stmt ::=
+    FOR PRANTOP loop_init_part SEMI loop_cond_part SEMI loop_update_part PRANTCL block
+    |
+    REPEAT block UNTIL PRANTOP expr PRANTCL SEMI
+    |
+    FOREACH PRANTOP ID IN ID PRANTCL block
+    ;
+
+loop_init_part ::=
+    assignment
+    |
+    EPSILON
+    ;
+
+loop_cond_part ::=
+    expr
+    |
+    EPSILON
+    ;
+
+loop_update_part ::=
+    assignment
+    |
+    expr//is it meaningful?
+    |
+    EPSILON
+    ;
+
+
+//expressions
+expr ::=
+    arithmatic_expr
+    |
+    conditional_expr
+    |
+    PRANTOP expr PRANTCL
+    |
+    BINOT expr
+    |
+    MINUS expr %prec UMINUS
+    |
+    const_val
+    |
+    variable
+    |
+    function_call
+    |
+    SIZEOF PRANTOP type PRANTCL
+    ;
+
+arithmatic_expr ::=
+    expr MULT expr
+    |
+    expr DIVIDE expr
+    |
+    expr MOD expr
+    |
+    expr PLUS expr
+    |
+    expr MINUS expr
+    |
+    expr BIAND expr
+    |
+    expr BIOR expr
+    |
+    expr BIEXOR expr
+    ;
+
+conditional_expr ::=
+    expr LT expr
+    |
+    expr LTEQ expr
+    |
+    expr GT expr
+    |
+    expr GTEQ expr
+    |
+    expr EQEQ expr
+    |
+    expr NOTEQ expr
+    |
+    expr AND expr
+    |
+    expr OR expr
+    |
+    expr NOT expr
+    ;
+
+const_val ::=
+    TRUE
+    |
+    FALSE
+    |
+    CHAR_LIT
+    |
+    INT_LIT
+    |
+    FLOAT_LIT
+    |
+    STR_LIT
+    ;
+
+
+//variables
+variable ::=
+    ID array_part
+    |
+    variable DOT ID
+    |
+    PREFMINUS2 variable
+    |
+    PREFPLUS2 variable
+    |
+    variable PREFMINUS2 %prec POSTMINUS2
+    |
+    variable PREFPLUS2 %prec POSTPLUS2
+    ;
+
+array_part ::=
+    BRACKOP expr BRACKCL array_part
+    |
+    EPSILON
+    ;
+
+
+//function calls
+function_call ::=
+    ID PRANTOP parameters PRANTCL
+    ;
+
+parameters ::=
+    expr parameters_part
+    |
+    EPSILON
+    ;
+
+parameters_part ::=
+    COMA expr
+    |
+    EPSILON
+    ;

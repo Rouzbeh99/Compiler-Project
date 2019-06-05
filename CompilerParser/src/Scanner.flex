@@ -1,5 +1,3 @@
-import symbol.*;
-
 %%
 
 //Scanner class attributes
@@ -9,10 +7,17 @@ import symbol.*;
 %column
 %public
 
-//Scanner function definitions
-%function scan
-%type Symbol
-
+//Scanner function definitions are compatible with cup
+%cupsym Symbol
+%cup
+//The following comments are the equivalent of %cup
+//%implements java_cup.runtime.Scanner
+//%function next_token
+//%type java_cup.runtime.Symbol
+//%eofval{
+//return new java_cup.runtime.Symbol(<CUPSYM>.EOF);
+//%eofval}
+//%eofclose
 
 //Scanner class code includings
 %{
@@ -71,6 +76,7 @@ Identifier = [_\w][_\w\d]*
 %state MULTIPLELINECOMMENT
 %state STRING
 
+
 %%
 
 
@@ -112,7 +118,7 @@ Identifier = [_\w][_\w\d]*
 "case" { return token(Symbol.CASE); }
 "default" { return token(Symbol.DEFAULT); }
 "for" { return token(Symbol.FOR); }
-"foreach" { return token(Symbol.FOR_EACH); }
+"foreach" { return token(Symbol.FOREACH); }
 "in" { return token(Symbol.IN); }
 "repeat" { return token(Symbol.REPEAT); }
 "until" { return token(Symbol.UNTIL); }

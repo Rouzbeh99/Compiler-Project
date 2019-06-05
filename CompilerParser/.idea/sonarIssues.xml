@@ -3,6 +3,16 @@
   <component name="issues">
     <option name="index">
       <map>
+        <entry key="$PROJECT_DIR$/input.c">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/Compiler.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/Parser.cup">
           <value>
             <set />
@@ -24,6 +34,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/SortedString.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/Symbol.java">
           <value>
             <set />
           </value>

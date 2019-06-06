@@ -25,11 +25,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Compiler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="42" lean-forward="true" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
+            <state relative-caret-position="204">
+              <caret line="12" column="42" lean-forward="true" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/input.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="262">
+              <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -53,11 +62,19 @@
         <option value="$PROJECT_DIR$/src/symbol/Symbol.java" />
         <option value="$PROJECT_DIR$/src/Scanner.flex" />
         <option value="$PROJECT_DIR$/src/Scanner.java" />
+        <option value="$PROJECT_DIR$/src/descriptor/Descriptor.java" />
+        <option value="$PROJECT_DIR$/src/descriptor/FunctionDescriptor.java" />
+        <option value="$PROJECT_DIR$/src/descriptor/VariableDescriptor.java" />
+        <option value="$PROJECT_DIR$/src/descriptor/KeywordDescriptor.java" />
+        <option value="$PROJECT_DIR$/src/descriptor/StructureDescriptor.java" />
+        <option value="$PROJECT_DIR$/src/descriptor/TypeDescriptor.java" />
+        <option value="$PROJECT_DIR$/src/descriptor/ArrayDescriptor.java" />
+        <option value="$PROJECT_DIR$/src/ByteCodeTest.java" />
         <option value="$PROJECT_DIR$/src/Parser.cup" />
         <option value="$PROJECT_DIR$/src/Symbol.java" />
-        <option value="$PROJECT_DIR$/input.c" />
         <option value="$PROJECT_DIR$/src/Parser.java" />
         <option value="$PROJECT_DIR$/src/Compiler.java" />
+        <option value="$PROJECT_DIR$/input.c" />
       </list>
     </option>
   </component>
@@ -67,7 +84,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="950" />
     <option name="width" value="980" />
     <option name="height" value="1040" />
@@ -77,8 +94,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -95,12 +110,14 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559737844864" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559814116520" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/jflex-full-1.7.0.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -111,12 +128,12 @@
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Lenovo\Desktop\CompilerParser" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Lenovo\Desktop\CompilerParser\src" />
       <recent name="C:\Users\Lenovo\Desktop\CompilerParser\lib" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Lenovo\Desktop\CompilerParser" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -131,7 +148,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Compiler">
+    <configuration name="ByteCodeTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ByteCodeTest" />
+      <module name="CompilerParser" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Compiler" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Compiler" />
       <module name="CompilerParser" />
@@ -142,6 +166,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Compiler" />
+        <item itemvalue="Application.ByteCodeTest" />
       </list>
     </recent_temporary>
   </component>
@@ -185,17 +210,22 @@
       <workItem from="1559717019889" duration="5740000" />
       <workItem from="1559736041883" duration="1815000" />
       <workItem from="1559738423470" duration="24000" />
+      <workItem from="1559744968656" duration="3051000" />
+      <workItem from="1559757526238" duration="121000" />
+      <workItem from="1559798776885" duration="606000" />
+      <workItem from="1559802730894" duration="3134000" />
+      <workItem from="1559813532393" duration="415000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78727000" />
+    <option name="totallyTimeSpent" value="86054000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.18322147" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19127516" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -205,7 +235,7 @@
       <window_info anchor="bottom" id="Messages" order="0" weight="0.3286119" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.32719547" />
-      <window_info anchor="bottom" id="Run" order="3" weight="0.3286119" />
+      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.3286119" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -230,7 +260,7 @@
       <window_info anchor="right" id="Database" order="10" weight="0.32684565" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.18322147" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19127516" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -240,7 +270,7 @@
       <window_info anchor="bottom" id="Messages" order="0" weight="0.3286119" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.32719547" />
-      <window_info active="true" anchor="bottom" id="Run" order="3" visible="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.3286119" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -300,50 +330,104 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/symbol/Symbol.java" />
     <entry file="file://$PROJECT_DIR$/src/sym.java" />
-    <entry file="file://$PROJECT_DIR$/src/Descriptor.java">
+    <entry file="file://$PROJECT_DIR$/src/Symbol.java" />
+    <entry file="file://$PROJECT_DIR$/src/Scanner.flex">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="22" selection-start-column="22" selection-end-column="22" />
+        <state relative-caret-position="290">
+          <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/Symbol.java" />
-    <entry file="file://$PROJECT_DIR$/src/Parser.cup">
+    <entry file="file://$PROJECT_DIR$/src/descriptor/Descriptor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+        <state relative-caret-position="68">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/descriptor/FunctionDescriptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="53" selection-start-line="2" selection-start-column="53" selection-end-line="2" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/descriptor/StructureDescriptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="54" selection-start-line="2" selection-start-column="54" selection-end-line="2" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/descriptor/VariableDescriptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/descriptor/ArrayDescriptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/descriptor/TypeDescriptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/descriptor/KeywordDescriptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="54" lean-forward="true" selection-start-line="2" selection-start-column="54" selection-end-line="2" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ByteCodeTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Scanner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+        <state relative-caret-position="102">
+          <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
           <folding>
             <element signature="e#32584#32585#0" expanded="true" />
             <element signature="e#32633#32634#0" expanded="true" />
+            <element signature="e#33292#33293#0" expanded="true" />
+            <element signature="e#33326#33327#0" expanded="true" />
+            <element signature="e#37411#37412#0" expanded="true" />
+            <element signature="e#37448#37449#0" expanded="true" />
+            <element signature="e#37598#37599#0" expanded="true" />
+            <element signature="e#37639#37640#0" expanded="true" />
+            <element signature="e#37759#37760#0" expanded="true" />
+            <element signature="e#37842#37843#0" expanded="true" />
+            <element signature="e#38217#38218#0" expanded="true" />
+            <element signature="e#38267#38268#0" expanded="true" />
+            <element signature="e#38373#38374#0" expanded="true" />
+            <element signature="e#38421#38422#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Scanner.flex">
+    <entry file="file://$PROJECT_DIR$/src/Symbol.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2023">
-          <caret line="121" column="33" lean-forward="true" selection-start-line="121" selection-start-column="33" selection-end-line="121" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/input.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="205">
+          <caret line="177" column="18" selection-start-line="177" selection-start-column="18" selection-end-line="177" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Parser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="6" column="17" lean-forward="true" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        <state relative-caret-position="176">
+          <caret line="1064" column="17" selection-start-line="1064" selection-start-column="17" selection-end-line="1064" selection-end-column="17" />
           <folding>
             <element signature="e#603#604#0" expanded="true" />
             <element signature="e#626#627#0" expanded="true" />
@@ -353,37 +437,40 @@
             <element signature="e#961#962#0" expanded="true" />
             <element signature="e#4211#4212#0" expanded="true" />
             <element signature="e#4251#4252#0" expanded="true" />
-            <element signature="e#66848#66849#0" expanded="true" />
-            <element signature="e#66884#66885#0" expanded="true" />
-            <element signature="e#77545#77546#0" expanded="true" />
-            <element signature="e#77581#77582#0" expanded="true" />
-            <element signature="e#78328#78329#0" expanded="true" />
-            <element signature="e#78352#78353#0" expanded="true" />
-            <element signature="e#78440#78441#0" expanded="true" />
-            <element signature="e#78464#78465#0" expanded="true" />
-            <element signature="e#78546#78547#0" expanded="true" />
-            <element signature="e#78570#78571#0" expanded="true" />
-            <element signature="e#78656#78657#0" expanded="true" />
-            <element signature="e#78680#78681#0" expanded="true" />
+            <element signature="e#47010#47011#0" expanded="true" />
+            <element signature="e#47046#47047#0" expanded="true" />
+            <element signature="e#57747#57748#0" expanded="true" />
+            <element signature="e#57783#57784#0" expanded="true" />
+            <element signature="e#58530#58531#0" expanded="true" />
+            <element signature="e#58554#58555#0" expanded="true" />
+            <element signature="e#58642#58643#0" expanded="true" />
+            <element signature="e#58666#58667#0" expanded="true" />
+            <element signature="e#58748#58749#0" expanded="true" />
+            <element signature="e#58772#58773#0" expanded="true" />
+            <element signature="e#58858#58859#0" expanded="true" />
+            <element signature="e#58882#58883#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Symbol.java">
+    <entry file="file://$PROJECT_DIR$/src/Parser.cup">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2992">
-          <caret line="178" column="21" selection-start-line="178" selection-start-column="21" selection-end-line="178" selection-end-column="21" />
-          <folding>
-            <element signature="e#5358#5359#0" expanded="true" />
-            <element signature="e#5412#5413#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1649">
+          <caret line="97" column="7" lean-forward="true" selection-start-line="97" selection-start-column="7" selection-end-line="97" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Compiler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="42" lean-forward="true" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="42" />
+        <state relative-caret-position="204">
+          <caret line="12" column="42" lean-forward="true" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
         </state>
       </provider>
     </entry>

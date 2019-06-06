@@ -1,126 +1,126 @@
 
-Qsquid:S1199¢"-Extract this nested code block into a method.( ¥»øûÿÿÿÿ8Æà™°-
-Qsquid:S1199È
-"-Extract this nested code block into a method.(üÅåÂøÿÿÿÿ8Æà™°-
-Vsquid:S1197""8Move the array designator from the variable to the type.(¹ğÁ8ò–şµ²-
-Qsquid:S1199…	"-Extract this nested code block into a method.(”¤óˆüÿÿÿÿ8ØõÁÿ¯-
-Š"squid:ClassVariableVisibilityCheckç"OMake ICV a static final constant or non-public and provide accessors if needed.(˜¦ï£øÿÿÿÿ8ò–şµ²-
-Qsquid:S1199ª	"-Extract this nested code block into a method.(Åá•üÿÿÿÿ8ØõÁÿ¯-
-Lsquid:S1199ú	"-Extract this nested code block into a method.(–ãî8Æà™°-
-Lsquid:S1199†
-"-Extract this nested code block into a method.(Ë¶íÄ8Æà™°-
-Lsquid:S1199—	"-Extract this nested code block into a method.(ú¼éÇ8Æà™°-
-Qsquid:S1199Î
-"-Extract this nested code block into a method.(“ÈåÖüÿÿÿÿ8ØõÁÿ¯-
-Lsquid:S1199ì
-"-Extract this nested code block into a method.(€¬ÜØ8Æà™°-
-Qsquid:S1199¤
-"-Extract this nested code block into a method.(ØİÄøÿÿÿÿ8Æà™°-
-ˆ"squid:ClassVariableVisibilityChecké"RMake string a static final constant or non-public and provide accessors if needed.(Áş¬€8ò–şµ²-
-psquid:S3776ï"RRefactor this method to reduce its Cognitive Complexity from 65 to the 15 allowed.(“—n8ò–şµ²-
-\squid:S1197ğ"8Move the array designator from the variable to the type.(µ»ÃËÿÿÿÿÿ8ò–şµ²-
-Lsquid:S1199æ
-"-Extract this nested code block into a method.(£Ê¼ä8Æà™°-
-Nsquid:S00108û")Either remove or fill this block of code.(·ÿ½äûÿÿÿÿ8ò–şµ²-
-jsquid:S3027ö"FPut single-quotes around 'e' to use the faster "indexOf(char)" method.(èÙÜÏşÿÿÿÿ8ò–şµ²-
-Qsquid:S1199¼	"-Extract this nested code block into a method.(É£á©ıÿÿÿÿ8Æà™°-
-Lsquid:S1199ş
-"-Extract this nested code block into a method.(Œ¯Çé8Æà™°-
-Qsquid:S1199„"-Extract this nested code block into a method.(»âğÍıÿÿÿÿ8Æà™°-
-Lsquid:S1199"-Extract this nested code block into a method.(ÔÑáŸ8Æà™°-
-Qsquid:S1199ó"-Extract this nested code block into a method.(•€Éœıÿÿÿÿ8Æà™°-
-†squid:S1192¸"gDefine a constant instead of duplicating this literal "\31\0\1\20\2\0\2\20\1\0\1\20\2\0\1\20" 14 times.(Æ±—ê8ò–şµ²-
-Qsquid:S1199Ú
-"-Extract this nested code block into a method.(·ÆŠÅøÿÿÿÿ8Æà™°-
-Qsquid:S1199à
-"-Extract this nested code block into a method.(Ä¥„ñúÿÿÿÿ8Æà™°-
-Qsquid:S1199«"-Extract this nested code block into a method.(ÿÅÖ²ÿÿÿÿÿ8Æà™°-
-Ksquid:S1199í"-Extract this nested code block into a method.(Ö—Îc8Æà™°-
-Lsquid:S1199É"-Extract this nested code block into a method.(´Ï–à8Æà™°-
-Lsquid:S1199˜
-"-Extract this nested code block into a method.(†èÚö8Æà™°-
-Lsquid:S1199¤	"-Extract this nested code block into a method.(ÜØ¯ì8Æà™°-
-zsquid:S1450Ñ"VRemove the "zzAtBOL" field and declare it as a local variable in the relevant methods.(á±ş²ÿÿÿÿÿ8ò–şµ²-
-Lsquid:S1199®"-Extract this nested code block into a method.(¦½Î©8ò–şµ²-
-‰squid:S1192³"eDefine a constant instead of duplicating this literal "\1\20\2\0\2\20\1\0\1\20\2\0\1\20\1\0" 9 times.(Íˆ‡şÿÿÿÿ8ò–şµ²-
-Osquid:S1068Ñ"+Remove this unused "zzAtBOL" private field.(á±ş²ÿÿÿÿÿ8ò–şµ²-
-tsquid:S1450Æ"URemove the "yychar" field and declare it as a local variable in the relevant methods.(èôê8ò–şµ²-
-}squid:S4144ˆ"_Update this method so that its implementation is not identical to "zzUnpackAction" on line 221.(ª’¼)8ò–şµ²-
-Qsquid:S1199œ"-Extract this nested code block into a method.(‘ÿ°›ùÿÿÿÿ8Æà™°-
-Ksquid:S1199Ô	"-Extract this nested code block into a method.(Ô§ù
-8Æà™°-
-Qsquid:S1199±"-Extract this nested code block into a method.(ê×Êüÿÿÿÿ8Æà™°-
-Qsquid:S1199ö"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8Æà™°-
-bsquid:S1479ú"CReduce the number of non-empty switch cases from 147 to at most 30.(ÿáöô8ò–şµ²-
-Qsquid:S1199¼
-"-Extract this nested code block into a method.(Àº‘Êşÿÿÿÿ8Æà™°-
-Lsquid:S1199ù"-Extract this nested code block into a method.(›¤…Á8Æà™°-
-Ksquid:S1199–"-Extract this nested code block into a method.(ãééw8ØõÁÿ¯-
-o squid:LabelsShouldNotBeUsedCheckÆ";Refactor the code to remove this label and the need for it.(“ÔùÍ8ò–şµ²-
-Wsquid:S1197·"8Move the array designator from the variable to the type.(„î…Õ8ò–şµ²-
-Qsquid:S1199¶
-"-Extract this nested code block into a method.(™Œ¬ªüÿÿÿÿ8Æà™°-
-|
-squid:S135È"YReduce the total number of break and continue statements in this loop to use at most one.(˜ïˆÿÿÿÿÿ8ò–şµ²-
-Lsquid:S1199ø
-"-Extract this nested code block into a method.(¡’ÜÉ8Æà™°-
-Qsquid:S1199È	"-Extract this nested code block into a method.(€ß€ùÿÿÿÿ8Æà™°-
-Msquid:S1066Ì"/Merge this if statement with the enclosing one.(üîŒG8ò–şµ²-
-Lsquid:S1199™"-Extract this nested code block into a method.(îÒ«Â8Æà™°-
-Qsquid:S1199Â	"-Extract this nested code block into a method.(ì¼Â©ûÿÿÿÿ8Æà™°-
-…squid:S1192"fDefine a constant instead of duplicating this literal "\2\0\2\20\1\0\1\20\2\0\1\20\1\0\12\20" 3 times.(¥ƒöã8ò–şµ²-
-Lsquid:S1199ó	"-Extract this nested code block into a method.(¾ø‚©8Æà™°-
-Qsquid:S1199·"-Extract this nested code block into a method.(ÈŞÀşıÿÿÿÿ8Æà™°-
-Qsquid:S1199
-"-Extract this nested code block into a method.(˜ııãüÿÿÿÿ8Æà™°-
-„"squid:ClassVariableVisibilityCheckè"OMake RCV a static final constant or non-public and provide accessors if needed.(³Äõn8ò–şµ²-
-Wsquid:S1197§"8Move the array designator from the variable to the type.(í‚Ù8ò–şµ²-
-5squid:S2176"Rename this class.(À’—”úÿÿÿÿ8ò–şµ²-
-esquid:S00112È"FDefine and throw a dedicated exception instead of using a generic one.(ãŞİ8ò–şµ²-
-Qsquid:S1199‹	"-Extract this nested code block into a method.(°ä¨Éøÿÿÿÿ8Æà™°-
-usquid:S1450œ"VRemove the "zzState" field and declare it as a local variable in the relevant methods.(±çïì8ò–şµ²-
-Qsquid:S1199Ï"-Extract this nested code block into a method.(ÉÎêïúÿÿÿÿ8Æà™°-
-Lsquid:S1199Œ
-"-Extract this nested code block into a method.(ïÕ…›8Æà™°-
-Lsquid:S1199ò
-"-Extract this nested code block into a method.(—Ü—­8ØõÁÿ¯-
-‚squid:S1845é"cRename field "string" to prevent any misunderstanding/clash with field "STRING" defined on line 26.(Áş¬€8ò–şµ²-
-Lsquid:S1199’
-"-Extract this nested code block into a method.(éÜÓÆ8ØõÁÿ¯-
 Qsquid:S1199à	"-Extract this nested code block into a method.(ôÌ¨ˆÿÿÿÿÿ8Æà™°-
+esquid:S00112È"FDefine and throw a dedicated exception instead of using a generic one.(ãŞİ8ò–şµ²-
+Lsquid:S1199Œ"-Extract this nested code block into a method.(ÎŞèº8Æà™°-
 Qsquid:S1199ª
 "-Extract this nested code block into a method.(Üğıÿÿÿÿ8Æà™°-
-Qsquid:S1199€"-Extract this nested code block into a method.(ğÁ–Óûÿÿÿÿ8Æà™°-
-Qsquid:S1199†"-Extract this nested code block into a method.(úÀôãùÿÿÿÿ8Æà™°-
-Qsquid:S1199‘	"-Extract this nested code block into a method.(­ƒíéşÿÿÿÿ8Æà™°-
+Lsquid:S1199¤	"-Extract this nested code block into a method.(ÜØ¯ì8Æà™°-
+Qsquid:S1199Ï"-Extract this nested code block into a method.(ÉÎêïúÿÿÿÿ8Æà™°-
+Qsquid:S1199¼	"-Extract this nested code block into a method.(É£á©ıÿÿÿÿ8Æà™°-
+Qsquid:S1199«"-Extract this nested code block into a method.(ÿÅÖ²ÿÿÿÿÿ8Æà™°-
+5squid:S2176"Rename this class.(À’—”úÿÿÿÿ8ò–şµ²-
+Lsquid:S1199Î	"-Extract this nested code block into a method.(¦–£8Æà™°-
+Ksquid:S1199–"-Extract this nested code block into a method.(ãééw8ØõÁÿ¯-
+Qsquid:S1199Î
+"-Extract this nested code block into a method.(“ÈåÖüÿÿÿÿ8ØõÁÿ¯-
+Qsquid:S1199¼
+"-Extract this nested code block into a method.(Àº‘Êşÿÿÿÿ8Æà™°-
+Qsquid:S1199Â	"-Extract this nested code block into a method.(ì¼Â©ûÿÿÿÿ8Æà™°-
+Qsquid:S1199È
+"-Extract this nested code block into a method.(üÅåÂøÿÿÿÿ8Æà™°-
+bsquid:S1479ú"CReduce the number of non-empty switch cases from 147 to at most 30.(ÿáöô8ò–şµ²-
+Msquid:S1066Ì"/Merge this if statement with the enclosing one.(üîŒG8ò–şµ²-
+Lsquid:S1199¥"-Extract this nested code block into a method.(­Ó–Ô8Æà™°-
+Lsquid:S1199"-Extract this nested code block into a method.(ÔÑáŸ8Æà™°-
+Qsquid:S1199à
+"-Extract this nested code block into a method.(Ä¥„ñúÿÿÿÿ8Æà™°-
+Lsquid:S1199¨"-Extract this nested code block into a method.(·Ûãê8ò–şµ²-
+Qsquid:S1199°	"-Extract this nested code block into a method.(¼€Ö×øÿÿÿÿ8Æà™°-
+Qsquid:S1199·"-Extract this nested code block into a method.(ÈŞÀşıÿÿÿÿ8Æà™°-
+Lsquid:S1199ì	"-Extract this nested code block into a method.(•Ò™ı8ØõÁÿ¯-
 Qsquid:S1199Â
 "-Extract this nested code block into a method.(«×¥Âÿÿÿÿÿ8Æà™°-
-Lsquid:S1199á"-Extract this nested code block into a method.(ò‘8ØõÁÿ¯-
-Lsquid:S1199Ÿ"-Extract this nested code block into a method.(ô‹Êâ8ØõÁÿ¯-
-msquid:S00116è"NRename this field "RCV" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³Äõn8ò–şµ²-
+Lsquid:S1199™"-Extract this nested code block into a method.(îÒ«Â8Æà™°-
+Qsquid:S1199Ú
+"-Extract this nested code block into a method.(·ÆŠÅøÿÿÿÿ8Æà™°-
+Lsquid:S1199Š"-Extract this nested code block into a method.(ºÍù¥8Æà™°-
+psquid:S3776ï"RRefactor this method to reduce its Cognitive Complexity from 65 to the 15 allowed.(“—n8ò–şµ²-
+‰squid:S1192³"eDefine a constant instead of duplicating this literal "\1\20\2\0\2\20\1\0\1\20\2\0\1\20\1\0" 9 times.(Íˆ‡şÿÿÿÿ8ò–şµ²-
+Lsquid:S1199Õ"-Extract this nested code block into a method.(İ…î½8Æà™°-
+Qsquid:S1199†"-Extract this nested code block into a method.(úÀôãùÿÿÿÿ8Æà™°-
 Qsquid:S1199Ô
 "-Extract this nested code block into a method.(íÂ°Èüÿÿÿÿ8Æà™°-
-Lsquid:S1199ç"-Extract this nested code block into a method.(ş³ùÓ8Æà™°-
-Lsquid:S1199“"-Extract this nested code block into a method.(Ó‚ï8Æà™°-
-Lsquid:S1199¥"-Extract this nested code block into a method.(­Ó–Ô8Æà™°-
-Qsquid:S1199æ	"-Extract this nested code block into a method.(­™Üıÿÿÿÿ8Æà™°-
-Lsquid:S1199Ã"-Extract this nested code block into a method.(…ß¾£8Æà™°-
-Qsquid:S1199û"-Extract this nested code block into a method.(·ÿ½äûÿÿÿÿ8Æà™°-
-Lsquid:S1199ì	"-Extract this nested code block into a method.(•Ò™ı8ØõÁÿ¯-
-Qsquid:S1199Û"-Extract this nested code block into a method.(ƒüÿìıÿÿÿÿ8Æà™°-
-Lsquid:S1199	"-Extract this nested code block into a method.(”ŒÀô8Æà™°-
-Lsquid:S1199Õ"-Extract this nested code block into a method.(İ…î½8Æà™°-
-Lsquid:S1199Ú	"-Extract this nested code block into a method.(—âú¨8Æà™°-
-Lsquid:S1199Œ"-Extract this nested code block into a method.(ÎŞèº8Æà™°-
-Lsquid:S1199Š"-Extract this nested code block into a method.(ºÍù¥8Æà™°-
-Qsquid:S1199°	"-Extract this nested code block into a method.(¼€Ö×øÿÿÿÿ8Æà™°-
-Qsquid:S1199½"-Extract this nested code block into a method.(ı´ª¿ûÿÿÿÿ8ØõÁÿ¯-
-Qsquid:S1199¶	"-Extract this nested code block into a method.(ÙšÖ­ùÿÿÿÿ8Æà™°-
-Lsquid:S1199Î	"-Extract this nested code block into a method.(¦–£8Æà™°-
+usquid:S1450œ"VRemove the "zzState" field and declare it as a local variable in the relevant methods.(±çïì8ò–şµ²-
+jsquid:S3027ö"FPut single-quotes around 'e' to use the faster "indexOf(char)" method.(èÙÜÏşÿÿÿÿ8ò–şµ²-
+Qsquid:S1199ª	"-Extract this nested code block into a method.(Åá•üÿÿÿÿ8ØõÁÿ¯-
 Qsquid:S1199°
 "-Extract this nested code block into a method.(Ùµ‘èüÿÿÿÿ8Æà™°-
-Lsquid:S1199¨"-Extract this nested code block into a method.(·Ûãê8ò–şµ²-
+|
+squid:S135È"YReduce the total number of break and continue statements in this loop to use at most one.(˜ïˆÿÿÿÿÿ8ò–şµ²-
+Qsquid:S1199„"-Extract this nested code block into a method.(»âğÍıÿÿÿÿ8Æà™°-
+Lsquid:S1199“"-Extract this nested code block into a method.(Ó‚ï8Æà™°-
+Qsquid:S1199±"-Extract this nested code block into a method.(ê×Êüÿÿÿÿ8Æà™°-
+Lsquid:S1199ş
+"-Extract this nested code block into a method.(Œ¯Çé8Æà™°-
+Qsquid:S1199¶	"-Extract this nested code block into a method.(ÙšÖ­ùÿÿÿÿ8Æà™°-
+Qsquid:S1199æ	"-Extract this nested code block into a method.(­™Üıÿÿÿÿ8Æà™°-
+tsquid:S1450Æ"URemove the "yychar" field and declare it as a local variable in the relevant methods.(èôê8ò–şµ²-
+‚squid:S1845é"cRename field "string" to prevent any misunderstanding/clash with field "STRING" defined on line 26.(Áş¬€8ò–şµ²-
+Qsquid:S1199½"-Extract this nested code block into a method.(ı´ª¿ûÿÿÿÿ8ØõÁÿ¯-
+Qsquid:S1199€"-Extract this nested code block into a method.(ğÁ–Óûÿÿÿÿ8Æà™°-
+†squid:S1192¸"gDefine a constant instead of duplicating this literal "\31\0\1\20\2\0\2\20\1\0\1\20\2\0\1\20" 14 times.(Æ±—ê8ò–şµ²-
+ssquid:S00116ç"NRename this field "ICV" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜¦ï£øÿÿÿÿ8ò–şµ²-
+Qsquid:S1199œ"-Extract this nested code block into a method.(‘ÿ°›ùÿÿÿÿ8Æà™°-
+Qsquid:S1199Û"-Extract this nested code block into a method.(ƒüÿìıÿÿÿÿ8Æà™°-
+}squid:S4144ˆ"_Update this method so that its implementation is not identical to "zzUnpackAction" on line 221.(ª’¼)8ò–şµ²-
+Qsquid:S1199ö"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8Æà™°-
+Osquid:S1068Ñ"+Remove this unused "zzAtBOL" private field.(á±ş²ÿÿÿÿÿ8ò–şµ²-
 Lsquid:S1199€
 "-Extract this nested code block into a method.(™¥­†8Æà™°-
+Lsquid:S1199’
+"-Extract this nested code block into a method.(éÜÓÆ8ØõÁÿ¯-
+Lsquid:S1199ì
+"-Extract this nested code block into a method.(€¬ÜØ8Æà™°-
+Lsquid:S1199ù"-Extract this nested code block into a method.(›¤…Á8Æà™°-
+Lsquid:S1199ç"-Extract this nested code block into a method.(ş³ùÓ8Æà™°-
+Qsquid:S1199ó"-Extract this nested code block into a method.(•€Éœıÿÿÿÿ8Æà™°-
+Vsquid:S1197""8Move the array designator from the variable to the type.(¹ğÁ8ò–şµ²-
+Qsquid:S1199¢"-Extract this nested code block into a method.( ¥»øûÿÿÿÿ8Æà™°-
+Wsquid:S1197·"8Move the array designator from the variable to the type.(„î…Õ8ò–şµ²-
+Lsquid:S1199É"-Extract this nested code block into a method.(´Ï–à8Æà™°-
+Ksquid:S1199Ô	"-Extract this nested code block into a method.(Ô§ù
+8Æà™°-
+Lsquid:S1199æ
+"-Extract this nested code block into a method.(£Ê¼ä8Æà™°-
+Lsquid:S1199ú	"-Extract this nested code block into a method.(–ãî8Æà™°-
+Lsquid:S1199ò
+"-Extract this nested code block into a method.(—Ü—­8ØõÁÿ¯-
+Qsquid:S1199¶
+"-Extract this nested code block into a method.(™Œ¬ªüÿÿÿÿ8Æà™°-
+zsquid:S1450Ñ"VRemove the "zzAtBOL" field and declare it as a local variable in the relevant methods.(á±ş²ÿÿÿÿÿ8ò–şµ²-
+…squid:S1192"fDefine a constant instead of duplicating this literal "\2\0\2\20\1\0\1\20\2\0\1\20\1\0\12\20" 3 times.(¥ƒöã8ò–şµ²-
+Lsquid:S1199˜
+"-Extract this nested code block into a method.(†èÚö8Æà™°-
+Qsquid:S1199…	"-Extract this nested code block into a method.(”¤óˆüÿÿÿÿ8ØõÁÿ¯-
 Ksquid:S1199ÿ"-Extract this nested code block into a method.(ÇÁÄ8Æà™°-
-ssquid:S00116ç"NRename this field "ICV" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(˜¦ï£øÿÿÿÿ8ò–şµ²-
+Qsquid:S1199
+"-Extract this nested code block into a method.(˜ııãüÿÿÿÿ8Æà™°-
+Qsquid:S1199‘	"-Extract this nested code block into a method.(­ƒíéşÿÿÿÿ8Æà™°-
+Nsquid:S00108û")Either remove or fill this block of code.(·ÿ½äûÿÿÿÿ8ò–şµ²-
+Lsquid:S1199ø
+"-Extract this nested code block into a method.(¡’ÜÉ8Æà™°-
+ˆ"squid:ClassVariableVisibilityChecké"RMake string a static final constant or non-public and provide accessors if needed.(Áş¬€8ò–şµ²-
+Lsquid:S1199á"-Extract this nested code block into a method.(ò‘8ØõÁÿ¯-
+Lsquid:S1199—	"-Extract this nested code block into a method.(ú¼éÇ8Æà™°-
+Lsquid:S1199Ÿ"-Extract this nested code block into a method.(ô‹Êâ8ØõÁÿ¯-
+\squid:S1197ğ"8Move the array designator from the variable to the type.(µ»ÃËÿÿÿÿÿ8ò–şµ²-
+Lsquid:S1199†
+"-Extract this nested code block into a method.(Ë¶íÄ8Æà™°-
+Lsquid:S1199Œ
+"-Extract this nested code block into a method.(ïÕ…›8Æà™°-
+Qsquid:S1199û"-Extract this nested code block into a method.(·ÿ½äûÿÿÿÿ8Æà™°-
+Lsquid:S1199Ú	"-Extract this nested code block into a method.(—âú¨8Æà™°-
+Qsquid:S1199È	"-Extract this nested code block into a method.(€ß€ùÿÿÿÿ8Æà™°-
+Lsquid:S1199®"-Extract this nested code block into a method.(¦½Î©8ò–şµ²-
+Lsquid:S1199ó	"-Extract this nested code block into a method.(¾ø‚©8Æà™°-
+Ksquid:S1199í"-Extract this nested code block into a method.(Ö—Îc8Æà™°-
+Š"squid:ClassVariableVisibilityCheckç"OMake ICV a static final constant or non-public and provide accessors if needed.(˜¦ï£øÿÿÿÿ8ò–şµ²-
+o squid:LabelsShouldNotBeUsedCheckÆ";Refactor the code to remove this label and the need for it.(“ÔùÍ8ò–şµ²-
+„"squid:ClassVariableVisibilityCheckè"OMake RCV a static final constant or non-public and provide accessors if needed.(³Äõn8ò–şµ²-
+msquid:S00116è"NRename this field "RCV" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³Äõn8ò–şµ²-
+Qsquid:S1199¤
+"-Extract this nested code block into a method.(ØİÄøÿÿÿÿ8Æà™°-
+Lsquid:S1199Ã"-Extract this nested code block into a method.(…ß¾£8Æà™°-
+Qsquid:S1199‹	"-Extract this nested code block into a method.(°ä¨Éøÿÿÿÿ8Æà™°-
+Wsquid:S1197§"8Move the array designator from the variable to the type.(í‚Ù8ò–şµ²-
+Lsquid:S1199	"-Extract this nested code block into a method.(”ŒÀô8Æà™°-

@@ -176,8 +176,10 @@ public class Symbol extends java_cup.runtime.Symbol {
 
     @Override
     public String toString() {
-        return super.toString() + "  " + value;
+        return "Symbol{" +
+                "code=" + code +
+                ", value='" + value + '\'' +
+                '}';
     }
-
 }
 

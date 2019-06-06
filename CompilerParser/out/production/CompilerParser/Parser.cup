@@ -85,9 +85,9 @@ program ::=
 
 //variable declarations
 var_dcl ::=
-    CONST var_dcl_part
+    CONST var_dcl_part SEMI
     |
-    var_dcl_part
+    var_dcl_part SEMI
     ;
 
 var_dcl_part ::=
@@ -105,7 +105,7 @@ var_dcl_cnt_part ::=
     ;
 
 var_dcl_cnt_extension_part ::=
-    COMA var_dcl_cnt_part var_dcl_cnt_extension_part
+    COMA var_dcl_cnt var_dcl_cnt_extension_part
     |
     /*epsilon*/
     ;

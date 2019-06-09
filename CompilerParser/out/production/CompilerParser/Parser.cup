@@ -167,7 +167,7 @@ function_array_dcl ::=
 
 //structur declarations
 struct_dcl ::=
-    RECORD ID BEGIN var_dcl END RECORD
+    RECORD ID BEGIN var_dcl more_var_dcl_part END RECORD SEMI
     ;
 
 more_var_dcl_part ::=
@@ -290,6 +290,7 @@ expr ::=
     function_call
     |
     SIZEOF PRANTOP type PRANTCL
+
     ;
 
 arithmatic_expr ::=

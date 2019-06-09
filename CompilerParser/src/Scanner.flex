@@ -27,22 +27,20 @@
     public StringBuilder string = new StringBuilder();
 
     private Symbol token(int code){
+//        System.out.println(yytext());
         return new Symbol(code, yytext());
-    }
-
-    private void generateText(String text){
-        StringBuilder temp = new StringBuilder(text);
-        string.setLength(0); string.append(temp);
     }
 
     private void parseRCV(String text){
         int index = text.indexOf("e");
         if(index > 0){
             int base = Integer.parseInt(text.substring(0, index));
-            int exp = Integer.parseInt(text.substring(index));
+            int exp = Integer.parseInt(text.substring(index + 1));
             RCV = base * Math.pow(10, exp);
-        }else
+        }else if(index < 0)
             RCV = Double.parseDouble(text);
+        else
+            throw new NumberFormatException();
     }
 
 %}
@@ -51,15 +49,16 @@
 //Micros
 LineTerminator = \r|\n|\r\n
 EndOfLineComment = ##[^\n\r]+{LineTerminator}
-MultipleLineComment = \/#((#[^\/])+ | [^#]+)*#\/
+MultipleLineComment = \/#[^#]*#+([^\/#][^#]*#+)?*\/
+//MultipleLineComment = \/#((#[^\/])+ | [^#]+)*#\/
 
 
-SimpleCharacter = [^\\]
+SimpleCharacter = [^\n\r\\]
 SpecialCharacter = \\[abfnrtv\\\'\"]
 Character = {SimpleCharacter} | {SpecialCharacter}
 CharacterLiteral = \'{Character}\'
 
-StringLiteral = \"{Character}+\"
+StringLiteral = \"{Character}*\"
 
 IntegerLiteral = [1-9]\d*
 
@@ -167,10 +166,10 @@ Identifier = [_\w][_\w\d]*
 ">=" { return token(Symbol.GTEQ); }
 
 /*character literal*/
-{CharacterLiteral} { generateText(yytext()); return token(Symbol.CHAR_LIT); }
+{CharacterLiteral} { string.setLength(0); string.append(yytext()); return token(Symbol.CHAR_LIT); }
 
 /*string literals*/
-{StringLiteral} { generateText(yytext()); return token(Symbol.STR_LIT); }
+{StringLiteral} { string.setLength(0); string.append(yytext()); return token(Symbol.STR_LIT); }
 
 /*integer literals*/
 {IntegerLiteral} { ICV = Integer.parseInt(yytext()); return token(Symbol.INT_LIT); }

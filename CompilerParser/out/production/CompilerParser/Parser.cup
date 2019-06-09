@@ -384,7 +384,8 @@ parameters ::=
     ;
 
 parameters_part ::=
-    COMA expr
+    COMA parameters
     |
     /*epsilon*/
     ;
+

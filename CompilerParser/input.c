@@ -139,7 +139,7 @@ begin
                 int result = factorial(a[var + 2][var * 3 - 5][var++ / 2 % 3]);
                 f2('\n');
                 f2(true);
-                long l = deepFunction(1,2);##looks like our functions can't take more than two parameters
+                long l = deepFunction(1,2, result, false, 'c',"hello world \n");
             end
         else
             begin

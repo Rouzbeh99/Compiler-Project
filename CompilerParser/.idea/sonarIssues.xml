@@ -8,7 +8,22 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/Add.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/Array.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/ByteCodeTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/CodeGenerator.java">
           <value>
             <set />
           </value>
@@ -49,6 +64,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/Test.cup">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/Test.java">
           <value>
             <set />
           </value>
@@ -99,6 +119,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/symbol/descriptor/Descriptor.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/symbols.txt">
           <value>
             <set />
           </value>

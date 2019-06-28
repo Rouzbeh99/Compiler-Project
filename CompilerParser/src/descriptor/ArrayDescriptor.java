@@ -2,7 +2,14 @@ package descriptor;
 
 public class ArrayDescriptor implements Descriptor {
 
-    private int size;
-    private int type;
+    int size;
+    int baseAddress;
+    Class type;
+
+    public ArrayDescriptor(int size, int baseAddress, Class type) {
+        this.size = size;
+        this.baseAddress = baseAddress;
+        this.type = type;
+    }
 
 }

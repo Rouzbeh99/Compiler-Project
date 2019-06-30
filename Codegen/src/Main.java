@@ -23,7 +23,7 @@ public class Main {
 //            e.printStackTrace();
 //        }
 
-        new Assignment(new Add(new Mult(new IntConstNode(9), new IntConstNode(34))
+        new Assignment(new Add(new Mult(new IntConstNode(9 ), new IntConstNode(34))
                 ,new IntConstNode(2)),new VariableNode("name",new Type("int"),false)).compile();
 
     }

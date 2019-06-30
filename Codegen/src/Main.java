@@ -1,6 +1,9 @@
 import Nodes.ConstNodes.ExpressionNode;
 import Nodes.ConstNodes.IntConstNode;
+import Nodes.DCL.Type;
+import Nodes.DCL.VariableNode;
 import Nodes.Operations.Binary.Add;
+import Nodes.Operations.Binary.Assignment;
 import Nodes.Operations.Binary.Mult;
 
 public class Main {
@@ -21,8 +24,9 @@ public class Main {
 //            e.printStackTrace();
 //        }
 
-        ExpressionNode expressionNode = new ExpressionNode();
-        expressionNode.compile();
+        new Assignment(new Add(new Mult(new IntConstNode(9), new IntConstNode(34))
+                ,new IntConstNode(2)),new VariableNode("name",new Type("int"),false)).compile();
+
     }
 
 }

@@ -9,6 +9,7 @@ public class VariableNode extends ClassNode {
 
     @Override
     public void compile() {
+        System.out.println("push");
         // code to find value in describtor and push it to stack
     }
 }

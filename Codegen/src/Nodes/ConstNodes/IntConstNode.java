@@ -1,7 +1,7 @@
-package Nodes.CostNodes;
+package Nodes.ConstNodes;
 import Nodes.ClassNode;
 
-public class IntConstNode extends ClassNode {
+public class IntConstNode extends ExpressionNode {
     private int value;
 
     public IntConstNode(int value) {
@@ -10,6 +10,7 @@ public class IntConstNode extends ClassNode {
 
     @Override
     public void compile() {
+        System.out.println("load");
         // code to load int const
     }
 }

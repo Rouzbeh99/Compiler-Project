@@ -1,8 +1,9 @@
 package Nodes.DCL;
 
-import Nodes.ClassNode;
 
-public class VariableNode extends ClassNode {
+import Nodes.ExpressionNodes.BlockContent;
+
+public class VariableNode extends BlockContent {
     private String name;
     private Type type;
     private boolean isConst;

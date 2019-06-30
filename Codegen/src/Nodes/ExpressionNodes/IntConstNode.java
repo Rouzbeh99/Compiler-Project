@@ -1,4 +1,4 @@
-package Nodes.ConstNodes;
+package Nodes.ExpressionNodes;
 
 
 public class IntConstNode extends ExpressionNode {

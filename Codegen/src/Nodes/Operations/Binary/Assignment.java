@@ -1,10 +1,10 @@
 package Nodes.Operations.Binary;
 
-import Nodes.ClassNode;
-import Nodes.ConstNodes.ExpressionNode;
+import Nodes.ExpressionNodes.ExpressionNode;
 import Nodes.DCL.VariableNode;
+import Nodes.ExpressionNodes.StatementNode;
 
-public class Assignment extends ClassNode {
+public class Assignment extends StatementNode {
     private ExpressionNode expressionNode;
     private VariableNode variableNode;
 

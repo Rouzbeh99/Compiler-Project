@@ -1,5 +1,4 @@
-import Nodes.ConstNodes.ExpressionNode;
-import Nodes.ConstNodes.IntConstNode;
+import Nodes.ExpressionNodes.IntConstNode;
 import Nodes.DCL.Type;
 import Nodes.DCL.VariableNode;
 import Nodes.Operations.Binary.Add;

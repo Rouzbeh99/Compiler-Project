@@ -1,7 +1,6 @@
 package Nodes.Operations.Binary;
 
-import Nodes.ClassNode;
-import Nodes.ConstNodes.ExpressionNode;
+import Nodes.ExpressionNodes.ExpressionNode;
 
 public class Add extends ExpressionNode {
     private ExpressionNode expression1;

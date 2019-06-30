@@ -1,6 +1,6 @@
 package Nodes.Operations.Binary;
 
-import Nodes.ConstNodes.ExpressionNode;
+import Nodes.ExpressionNodes.ExpressionNode;
 
 public class Mult extends ExpressionNode {
 

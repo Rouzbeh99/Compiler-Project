@@ -1,8 +1,6 @@
-package Nodes.ConstNodes;
+package Nodes.ExpressionNodes;
 
 import Nodes.ClassNode;
-
-import java.util.List;
 
 public class ExpressionNode extends ClassNode {
 

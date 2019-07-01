@@ -13,12 +13,11 @@ public class SymbolTableHandler  {
         symbolTables.push(baseSymtab);
     }
 
-    public void addSymtab(SymbolTable symbolTable){
+    public void addToSymtab(SymbolTable symbolTable){
         symbolTables.push(symbolTable);
     }
 
     public SymbolTable getSymtab(){
         return symbolTables.peek();
     }
-
 }

@@ -19,8 +19,8 @@ public class VariableNode extends BlockContent {
     @Override
     public void compile() {
 
-        System.out.println("push variable");
-        //make a descriptor, fill descriptor with name and type
-        // get descriptor by SymbolTableHandler.symbolTableHandler.getSymtab();
+        // get symboltable by SymbolTableHandler.symbolTableHandler.getSymtab();
+        // make a descriptor , fill descriptor with name and type
+        // add descriptor to symtab
     }
 }

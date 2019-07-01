@@ -10,7 +10,7 @@ public class FunctionNode extends ClassNode {
 
     public FunctionNode(Type returnType, String name) {
         this.symbolTable = new SymbolTable();
-        SymbolTableHandler.symbolTableHandler.addSymtab(symbolTable);
+        SymbolTableHandler.symbolTableHandler.addToSymtab(symbolTable);
         this.returnType = returnType;
         this.name = name;
     }

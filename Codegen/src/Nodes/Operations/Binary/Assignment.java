@@ -4,20 +4,15 @@ import Nodes.ExpressionNodes.ExpressionNode;
 import Nodes.DCL.VariableNode;
 import Nodes.ExpressionNodes.StatementNode;
 
-public class Assignment extends StatementNode {
-    private ExpressionNode expressionNode;
-    private VariableNode variableNode;
+public class Assignment extends BinaryExpression {
 
-    public Assignment(ExpressionNode expressionNode, VariableNode variableNode) {
-        this.expressionNode = expressionNode;
-        this.variableNode = variableNode;
+
+    public Assignment(ExpressionNode expression1, ExpressionNode expression2) {
+        super(expression1, expression2);
     }
 
     @Override
     public void compile() {
-        expressionNode.compile();
-        System.out.println("do assignment");
-        // code to update variableNode's descriptor
+        super.compile();
     }
-
 }

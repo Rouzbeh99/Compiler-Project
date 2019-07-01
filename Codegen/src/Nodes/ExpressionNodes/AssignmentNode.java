@@ -1,6 +1,6 @@
 package Nodes.ExpressionNodes;
 
-public class AssignmentNode extends BlockContent {
+public abstract class  AssignmentNode extends BlockContent {
     private String name;
     private ExpressionNode expressionNode;
 

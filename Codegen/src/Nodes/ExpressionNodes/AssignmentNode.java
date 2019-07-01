@@ -11,6 +11,6 @@ public abstract class  AssignmentNode extends BlockContent {
 
     @Override
     public void compile() {
-        //code to check variable and assign it
+        //code to check variable and assign it if it has super symtab it must also be updated
     }
 }

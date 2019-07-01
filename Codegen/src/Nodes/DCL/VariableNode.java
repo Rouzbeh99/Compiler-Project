@@ -2,6 +2,7 @@ package Nodes.DCL;
 
 
 import Nodes.ExpressionNodes.BlockContent;
+import Nodes.Function.SymbolTableHandler;
 
 public class VariableNode extends BlockContent {
     private String name;
@@ -14,9 +15,12 @@ public class VariableNode extends BlockContent {
         this.isConst = isConst;
     }
 
+
     @Override
     public void compile() {
+
         System.out.println("push variable");
         //make a descriptor, fill descriptor with name and type
+        // get descriptor by SymbolTableHandler.symbolTableHandler.getSymtab();
     }
 }

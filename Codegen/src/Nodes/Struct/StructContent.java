@@ -7,10 +7,18 @@ public class StructContent {
     private boolean isConst;
 
 
-    public StructContent(String type, String name, Object value, boolean isConst) {
+    public StructContent(String type, String name, Object value) {
         this.type = type;
         this.name = name;
         this.value = value;
-        this.isConst = isConst;
+    }
+
+    public boolean isConst() {
+        return isConst;
+    }
+
+    public StructContent setConst(boolean aConst) {
+        isConst = aConst;
+        return this;
     }
 }

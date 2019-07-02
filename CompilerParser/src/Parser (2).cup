@@ -156,7 +156,7 @@ variable_type ::=
 func_dcl ::=
     EXTERN function_type ID SEMI
     |
-    FUNCTION function_type ID PRANTOP arguments PRANTCL func_dcl_part
+    FUNCTION {:type;:} function_type {:name;:}ID {:func = new FunctionNode();:}PRANTOP arguments PRANTCL func_dcl_part
     ;
 
 function_type ::=
@@ -168,11 +168,11 @@ function_type ::=
 func_dcl_part ::=
     SEMI
     |
-    block
+    {:block;:}block {:func.setBlock(block);:}
     ;
 
 arguments ::=
-    variable_type ID function_array_dcl arguments_part
+    variable_type ID function_array_dcl {:func.addToParams(new variable());:} arguments_part
     |
     /*epsilon*/
     ;
@@ -426,7 +426,7 @@ arithmatic_expr ::=
     |
     expr MOD expr
     |
-    expr:e1 PLUS expr:e2 {:new Add(e1,e2).compile();:}
+    expr:e1 PLUS expr:e2 {:new Add(e1,e2);:}
     |
     expr MINUS expr
     |

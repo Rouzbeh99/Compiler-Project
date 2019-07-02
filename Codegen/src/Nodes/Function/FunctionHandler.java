@@ -2,20 +2,23 @@ package Nodes.Function;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Function;
 
 public class FunctionHandler {
     public static final FunctionHandler functionHandler = new FunctionHandler();
-    private List<FunctionNode> functionNodes;
+    private List<FunctionNode> allFunctions;
     private FunctionHandler() {
-        functionNodes = new ArrayList<>();
+        allFunctions = new ArrayList<>();
     }
 
-    public List<FunctionNode> getFunctionNodes() {
-        return functionNodes;
+    public FunctionNode getFunctionByName(String name){
+        for (FunctionNode function : allFunctions) {
+            if(function.getName().equals(name))
+                return function;
+        }
+        return null;
     }
 
     public void addToFunctions(FunctionNode function){
-        this.functionNodes.add(function);
+        this.allFunctions.add(function);
     }
 }

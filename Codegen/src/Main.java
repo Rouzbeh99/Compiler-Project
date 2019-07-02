@@ -1,16 +1,14 @@
-import Nodes.DCL.Type;
+
 import Nodes.ExpressionNodes.Block;
 import Nodes.ExpressionNodes.*;
 import Nodes.Operations.Binary.*;
-import Nodes.DCL.VariableNode;
 
-import java.util.concurrent.locks.Condition;
 
 public class Main {
 
     public static void main(String[] args) {
 
-    Block mainBlock = new Block();
+    /*Block mainBlock = new Block();
     VariableCall var = new VariableCall("sgd");
     Add add = new Add
             (new Div(new IntConstNode(23),var),new IntConstNode(34));
@@ -23,7 +21,8 @@ public class Main {
     Block loopBlock = new Block();
     loopBlock.addToBlock(ifNode);
     mainBlock.addToBlock(new ForLoop(cond,loopBlock));
-    mainBlock.compile();
+    mainBlock.compile();*/
+
 
     }
 

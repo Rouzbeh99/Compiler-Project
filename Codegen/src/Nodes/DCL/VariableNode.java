@@ -1,10 +1,10 @@
 package Nodes.DCL;
 
 
-import Nodes.ExpressionNodes.BlockContent;
-import Nodes.Function.SymbolTableHandler;
+import Nodes.ClassNode;
+import Nodes.ExpressionNodes.ExpressionNode;
 
-public class VariableNode extends BlockContent {
+public class VariableNode extends ExpressionNode {
     private String name;
     private Type type;
     private boolean isConst;
@@ -17,10 +17,12 @@ public class VariableNode extends BlockContent {
 
 
     @Override
-    public void compile() {
+    public ClassNode compile() {
 
         // get symboltable by SymbolTableHandler.symbolTableHandler.getSymtab();
         // make a descriptor , fill descriptor with name and type
         // add descriptor to symtab
+        System.out.println("declare var");
+        return null;
     }
 }

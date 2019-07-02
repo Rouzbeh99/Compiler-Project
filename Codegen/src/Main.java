@@ -3,27 +3,27 @@ import Nodes.ExpressionNodes.Block;
 import Nodes.ExpressionNodes.*;
 import Nodes.Operations.Binary.*;
 import Nodes.DCL.VariableNode;
+
+import java.util.concurrent.locks.Condition;
+
 public class Main {
 
     public static void main(String[] args) {
-//        try (OutputStream r = new FileOutputStream("a.class")) {
-//            ClassWriter writer = new ClassWriter(ClassWriter.COMPUTE_FRAMES);
-//
-//            writer.visit(Opcodes.V1_8, Opcodes.ACC_PUBLIC, "a", null, "java/lang/Object", null);
-//            MethodVisitor main = writer.visitMethod(Opcodes.ACC_PUBLIC | Opcodes.ACC_STATIC, "main", "()V", null, null);
-//            main.visitCode();
-//
-//            main.visitMaxs(1, 1);
-//            main.visitEnd();
-//
-//            r.write(writer.toByteArray());
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-    Block block = new Block();
-    block.addToBlock(new Add
-            (new Div(new IntConstNode(23),new VariableCall("sgd")),new IntConstNode(34))));
 
+    Block mainBlock = new Block();
+    VariableCall var = new VariableCall("sgd");
+    Add add = new Add
+            (new Div(new IntConstNode(23),var),new IntConstNode(34));
+    ExpressionNode cond = new GreaterThan(new VariableCall("f"),new IntConstNode(54));
+    AssignmentNode assignment = new DirectAssignment("sdd",new IntConstNode(1));
+    Block ifBlock = new Block();
+    ifBlock.addToBlock(add);
+    ifBlock.addToBlock(assignment);
+    IFNode ifNode = new IFNode(cond,ifBlock,ifBlock);
+    Block loopBlock = new Block();
+    loopBlock.addToBlock(ifNode);
+    mainBlock.addToBlock(new ForLoop(cond,loopBlock));
+    mainBlock.compile();
 
     }
 

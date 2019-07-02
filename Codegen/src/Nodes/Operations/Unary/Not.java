@@ -1,5 +1,6 @@
 package Nodes.Operations.Unary;
 
+import Nodes.ClassNode;
 import Nodes.ExpressionNodes.ExpressionNode;
 
 public class Not extends UnaryExpression {
@@ -8,7 +9,8 @@ public class Not extends UnaryExpression {
     }
 
     @Override
-    public void compile() {
+    public ClassNode compile() {
         super.compile();
+        return null;
     }
 }

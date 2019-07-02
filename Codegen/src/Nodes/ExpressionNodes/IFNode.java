@@ -1,5 +1,7 @@
 package Nodes.ExpressionNodes;
 
+import Nodes.ClassNode;
+
 public class IFNode extends BlockContent {
     private ExpressionNode condition;
     private Block ifBlock;
@@ -12,7 +14,16 @@ public class IFNode extends BlockContent {
     }
 
     @Override
-    public void compile() {
+    public ClassNode compile() {
         // if code here
+        System.out.println("in if operation");
+        System.out.println("if cond");
+        condition.compile();
+        System.out.println("if block");
+        ifBlock.compile();
+        System.out.println("else block");
+        elseBlock.compile();
+        System.out.println("if operation finished");
+        return null;
     }
 }

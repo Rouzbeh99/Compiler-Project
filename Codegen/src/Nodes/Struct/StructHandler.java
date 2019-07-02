@@ -32,4 +32,9 @@ public class StructHandler extends ClassNode {
     public void setCurrent(Struct current) {
         this.current = current;
     }
+
+    @Override
+    public ClassNode compile() {
+        return null;
+    }
 }

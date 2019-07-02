@@ -18,7 +18,7 @@ public class FunctionNode extends ClassNode {
 
 
     @Override
-    public void compile() {
-
+    public ClassNode compile() {
+        return null;
     }
 }

@@ -1,5 +1,7 @@
 package Nodes.ExpressionNodes;
 
+import Nodes.ClassNode;
+
 public class VariableCall extends ExpressionNode {
     String name;
 
@@ -8,7 +10,9 @@ public class VariableCall extends ExpressionNode {
     }
 
     @Override
-    public void compile() {
+    public ClassNode compile() {
         // search in symtab and ....
+        System.out.println("load var " + name);
+        return null;
     }
 }

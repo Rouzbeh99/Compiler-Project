@@ -1,6 +1,8 @@
 package Nodes.ExpressionNodes;
 
 
+import Nodes.ClassNode;
+
 public class IntConstNode extends ExpressionNode {
     private int value;
 
@@ -9,8 +11,9 @@ public class IntConstNode extends ExpressionNode {
     }
 
     @Override
-    public void compile() {
-        System.out.println("load");
+    public ClassNode compile() {
+        System.out.println("load int " + value);
+        return null;
         // code to load int const
     }
 }

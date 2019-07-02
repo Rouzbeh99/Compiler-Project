@@ -1,5 +1,7 @@
 package Nodes.ExpressionNodes;
 
+import Nodes.ClassNode;
+
 public class RepeatNode extends BlockContent {
     private Block body;
     private ExpressionNode condition;
@@ -10,7 +12,9 @@ public class RepeatNode extends BlockContent {
     }
 
     @Override
-    public void compile() {
+    public ClassNode compile() {
         // code to check the body and run body code
+
+        return null;
     }
 }

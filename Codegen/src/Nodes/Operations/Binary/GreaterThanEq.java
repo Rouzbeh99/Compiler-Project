@@ -1,5 +1,6 @@
 package Nodes.Operations.Binary;
 
+import Nodes.ClassNode;
 import Nodes.ExpressionNodes.ExpressionNode;
 
 public class GreaterThanEq extends BinaryExpression {
@@ -9,7 +10,8 @@ public class GreaterThanEq extends BinaryExpression {
     }
 
     @Override
-    public void compile() {
+    public ClassNode compile() {
         super.compile();
+        return null;
     }
 }

@@ -1,5 +1,6 @@
 package Nodes.Function;
 
+import Nodes.ClassNode;
 import Nodes.ExpressionNodes.ExpressionNode;
 
 import java.util.ArrayList;
@@ -18,7 +19,8 @@ public class FunctionCall extends ExpressionNode {
     }
 
     @Override
-    public void compile() {
+    public ClassNode compile() {
         //
-    }
+        return null
+   ; }
 }

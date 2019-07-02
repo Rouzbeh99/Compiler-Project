@@ -2,6 +2,6 @@ package Nodes.ExpressionNodes;
 
 import Nodes.ClassNode;
 
-public class ExpressionNode extends ClassNode {
+public abstract class ExpressionNode extends BlockContent {
 
 }

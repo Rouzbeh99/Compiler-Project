@@ -15,6 +15,14 @@ public class Block extends ClassNode {
 
     public void addToBlock(BlockContent blockContent){
         this.content.add(blockContent);
+    }
 
+    @Override
+    public ClassNode compile() {
+        System.out.println("in Block");
+        for (BlockContent blockContent : content) {
+            blockContent.compile();
+        }
+        return null;
     }
 }

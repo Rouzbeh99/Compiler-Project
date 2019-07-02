@@ -1,5 +1,6 @@
 package Nodes.ExpressionNodes;
 
+import Nodes.ClassNode;
 import Nodes.DCL.VariableNode;
 
 public class ForeachNode extends BlockContent {
@@ -8,7 +9,8 @@ public class ForeachNode extends BlockContent {
     Block body;
 
     @Override
-    public void compile() {
+    public ClassNode compile() {
         //
+        return null;
     }
 }

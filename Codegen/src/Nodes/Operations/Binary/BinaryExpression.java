@@ -1,5 +1,6 @@
 package Nodes.Operations.Binary;
 
+import Nodes.ClassNode;
 import Nodes.ExpressionNodes.ExpressionNode;
 
 public class BinaryExpression extends ExpressionNode {
@@ -14,8 +15,9 @@ public class BinaryExpression extends ExpressionNode {
     }
 
     @Override
-    public void compile() {
+    public ClassNode compile() {
         expression1.compile();
         expression2.compile();
+        return null;
     }
 }

@@ -5,7 +5,7 @@ import Nodes.ClassNode;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SymbolTable extends ClassNode {
+public class SymbolTable  {
     private List<Descriptor> allAescriptors;
 
     public SymbolTable() {

@@ -1,5 +1,6 @@
 package Nodes.ExpressionNodes;
 
+import Nodes.ClassNode;
 import Nodes.DCL.VariableNode;
 
 import java.util.ArrayList;
@@ -15,7 +16,8 @@ public class SwitchNode extends BlockContent {
     }
 
     @Override
-    public void compile() {
+    public ClassNode compile() {
         // code to invoke cases
+        return null;
     }
 }

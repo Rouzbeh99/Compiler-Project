@@ -1,5 +1,6 @@
 package Nodes.Operations.Unary;
 
+import Nodes.ClassNode;
 import Nodes.ExpressionNodes.ExpressionNode;
 import Nodes.Operations.Binary.BinaryExpression;
 
@@ -9,7 +10,8 @@ public class PostPlusPlus extends BinaryExpression {
     }
 
     @Override
-    public void compile() {
+    public ClassNode compile() {
         super.compile();
+        return null;
     }
 }

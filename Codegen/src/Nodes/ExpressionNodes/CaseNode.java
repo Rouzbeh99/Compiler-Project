@@ -4,7 +4,7 @@ import Nodes.ClassNode;
 
 import java.util.List;
 
-public class CaseNode extends ClassNode {
+public class CaseNode extends ExpressionNode {
     private List<CaseNode> cases;
     private int value;
     private Block block;
@@ -17,7 +17,8 @@ public class CaseNode extends ClassNode {
     }
 
     @Override
-    public void compile() {
+    public ClassNode compile() {
         // switch class invokes this method
+        return null;
     }
 }

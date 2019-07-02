@@ -6,6 +6,5 @@ import org.objectweb.asm.ClassWriter;
 public abstract class ClassNode {
     ClassWriter classWriter;
     ClassVisitor classVisitor;
-    public void compile(){
-    }
+    public abstract ClassNode compile();
 }

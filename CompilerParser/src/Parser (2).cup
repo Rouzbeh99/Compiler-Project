@@ -472,11 +472,11 @@ const_val ::=
 
 //function calls
 function_call ::=
-    {:name;:}ID PRANTOP parameters {:funccall.compile();:} PRANTCL %prec  FUNCPRANTOP
+    {:name;:}ID {:funccall = new funccall(name);:} PRANTOP parameters {: funccall.compile();:} PRANTCL %prec  FUNCPRANTOP
     ;
 
 parameters ::=
-    {:exprnode;:}expr{:funccall = new FunctionCall(exprnode).addtoparams(exrnode);:} parameters_part
+    {:exprnode;:}expr{:funccall.addtoparams(exrnode);:} parameters_part
     |
     /*epsilon*/
     ;

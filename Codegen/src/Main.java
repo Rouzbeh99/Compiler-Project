@@ -1,5 +1,8 @@
-
-
+import Nodes.DCL.Type;
+import Nodes.ExpressionNodes.Block;
+import Nodes.ExpressionNodes.*;
+import Nodes.Operations.Binary.*;
+import Nodes.DCL.VariableNode;
 public class Main {
 
     public static void main(String[] args) {
@@ -17,7 +20,9 @@ public class Main {
 //        } catch (IOException e) {
 //            e.printStackTrace();
 //        }
-
+    Block block = new Block();
+    block.addToBlock(new Add
+            (new Div(new IntConstNode(23),new VariableCall("sgd")),new IntConstNode(34))));
 
 
     }

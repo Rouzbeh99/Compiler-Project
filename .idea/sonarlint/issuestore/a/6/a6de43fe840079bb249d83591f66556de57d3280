@@ -1,0 +1,7 @@
+
+Osquid:S1444",Make this "public static fVisit" field final(ÇöÙùûÿÿÿÿ8ÒüÖ“»-
+Qsquid:S1444".Make this "public static clWriter" field final(¾®ùÿÿÿÿ8Èª˜çº-
+Osquid:S1444",Make this "public static mVisit" field final(‘„øÿÿÿÿ8Èª˜çº-
+Œ"squid:ClassVariableVisibilityCheck"RMake mVisit a static final constant or non-public and provide accessors if needed.(‘„øÿÿÿÿ8Èª˜çº-
+Œ"squid:ClassVariableVisibilityCheck"RMake fVisit a static final constant or non-public and provide accessors if needed.(ÇöÙùûÿÿÿÿ8ÒüÖ“»-
+"squid:ClassVariableVisibilityCheck"TMake clWriter a static final constant or non-public and provide accessors if needed.(¾®ùÿÿÿÿ8Èª˜çº-

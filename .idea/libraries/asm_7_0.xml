@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="asm-7.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/codegen/asm-7.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/codegen/asm-analysis-7.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/codegen/asm-tree-7.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/codegen/asm-util-7.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

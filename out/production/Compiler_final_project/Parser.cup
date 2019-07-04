@@ -1,0 +1,505 @@
+import java.util.*;
+import java.io.*;
+import ast.block.*;
+import ast.block.conditional.*;
+import ast.expr.binary.arithmatic.*;
+import ast.expr.unary.arithmatic.*;
+import ast.expr.Expression;
+import java_cup.runtime.*;
+
+
+parser code
+    {:
+        private Scanner scanner;
+        public Parser(Scanner scanner) {
+            this.scanner = scanner;
+        }
+    :};
+
+scan with {: return scanner.next_token(); :};
+
+
+//TERMINALS
+
+//keywords
+terminal CONST, RECORD, BOOL, CHAR, INT, LONG, FLOAT, DOUBLE, STRING, VOID, TRUE, FALSE, EXTERN, AUTO, FUNCTION,
+BEGIN, END, IF, ELSE, SWITCH, OF, CASE, DEFAULT, FOR, FOREACH, IN, REPEAT, UNTIL, BREAK, CONTINUE, RETURN, SIZEOF;
+
+//operators
+terminal SEMI, COL, COMA, DOT, BINOT, PLUS, MINUS, UMINUS, MULT, DIVIDE, MOD, ASSIGN, BIAND, BIOR, BIEXOR, NOT, AND,
+OR, LT, GT, BRACKOP, BRACKCL, PRANTOP, PRANTCL, CASTPRANTOP, FUNCPRANTOP, PREFPLUS2, PREFMINUS2, POSTPLUS2, POSTMINUS2,
+PLUSASSIGN, MINUSASSIGN, MULTASSIGN, DIVASSIGN, NE, EQ, LE, GE;
+
+//literals
+terminal CHAR_LIT, STR_LIT;
+terminal Integer INT_LIT;
+terminal Double FLOAT_LIT;
+terminal String ID;
+
+//NON TERMINALS
+
+nonterminal program;
+nonterminal program_part;
+
+nonterminal global_var_dcl;
+nonterminal VariableType variable_type;
+
+nonterminal func_dcl;
+nonterminal function_type;
+nonterminal func_dcl_part;
+nonterminal arguments;
+nonterminal arguments_part;
+nonterminal function_array_dcl;
+
+nonterminal struct_dcl;
+nonterminal struct_var_dcl;
+nonterminal struct_more_var_dcl;
+nonterminal struct_var_dcl_part;
+nonterminal StructureType struct_type;
+
+nonterminal block;
+nonterminal BlockContent block_content;
+nonterminal loop_block;
+nonterminal BlockContent loop_block_content;
+
+nonterminal BlockContent var_dcl;
+nonterminal var_dcl_part;
+nonterminal var_dcl_cnt;
+nonterminal var_dcl_cnt_part;
+nonterminal var_dcl_cnt_extension;
+nonterminal String single_var;
+nonterminal array_part;
+
+nonterminal BlockContent statement;
+nonterminal loop_statement;
+
+nonterminal BlockContent cond_stmt;
+nonterminal Block else_part;
+nonterminal case_part;
+
+nonterminal Statement loop_stmt;
+nonterminal Assignment loop_init_part;
+nonterminal Expression loop_cond_part;
+nonterminal Assignment loop_update_part;
+
+nonterminal assignment;
+nonterminal variable;
+nonterminal var_access;
+nonterminal var_access_array_part;
+
+nonterminal Expression expr;
+nonterminal Type casting_type;
+nonterminal Expression arithmatic_expr;
+nonterminal Expression conditional_expr;
+nonterminal Constant const_val;
+
+nonterminal function_call;
+nonterminal parameters;
+nonterminal parameters_part;
+
+
+//PRECEDENCES
+
+precedence right MULTASSIGN, DIVASSIGN;
+precedence right PLUSASSIGN, MINUSASSIGN;
+precedence right ASSIGN;
+precedence left OR;
+precedence left AND;
+precedence left BIOR;
+precedence left BIEXOR;
+precedence left BIAND;
+precedence left EQEQ, NOTEQ;
+precedence left GT, GTEQ;
+precedence left LT, LTEQ;
+precedence left PLUS, MINUS;
+precedence left MULT, DIVIDE, MOD;
+precedence right SIZEOF;
+precedence right NOT, BINOT;
+precedence right CASTPRANTOP;
+precedence right UMINUS;
+precedence left PRANTOP;
+precedence right PREFPLUS2, PREFMINUS2;
+precedence left DOT;
+precedence left BRACKOP;
+precedence left FUNCPRANTOP;
+precedence left POSTPLUS2, POSTMINUS2;
+
+
+start with program;
+
+
+//GRAMMER PRODUCTION RULES
+
+//program
+program ::=
+    program_part program
+    |
+    /*epsilon*/
+    ;
+
+program_part ::=
+    global_var_dcl
+    |
+    func_dcl
+    |
+    struct_dcl
+    ;
+
+
+//global variables
+global_var_dcl ::=
+    variable_type:t ID SEMI {:new GlobalVariableDCL(t, scanner.string.toString()).compile();:}
+    ;
+
+variable_type ::=
+    struct_type:t {:RESULT = t;:}
+    |
+    STRING {:RESULT = VariableType.STRING;:}
+    |
+    ID {:new VariableType(scanner.string.toString());:}
+    ;
+
+
+//functions
+func_dcl ::=
+    EXTERN function_type ID SEMI
+    |
+    FUNCTION function_type ID PRANTOP arguments PRANTCL func_dcl_part
+    ;
+
+function_type ::=
+    variable_type:t {:RESULT = t;:}
+    |
+    VOID
+    ;
+
+func_dcl_part ::=
+    SEMI
+    |
+    block
+    ;
+
+arguments ::=
+    variable_type ID function_array_dcl arguments_part
+    |
+    /*epsilon*/
+    ;
+
+arguments_part ::=
+     COMA arguments
+     |
+     /*epsilon*/
+    ;
+
+function_array_dcl ::=
+    BRACKOP BRACKCL function_array_dcl
+    |
+    /*epsilon*/
+    ;
+
+
+//structurs
+struct_dcl ::=
+    RECORD ID BEGIN struct_var_dcl struct_more_var_dcl END RECORD SEMI
+    ;
+
+struct_more_var_dcl ::=
+    struct_var_dcl struct_more_var_dcl
+    |
+    /*epsilon*/
+    ;
+
+struct_var_dcl ::=
+    CONST struct_var_dcl_part SEMI
+    |
+    struct_var_dcl_part SEMI
+    ;
+
+struct_var_dcl_part ::=
+    struct_type var_dcl_cnt var_dcl_cnt_extension
+    ;
+
+struct_type ::=
+    casting_type:t {:RESULT = t;:}
+    |
+    BOOL {:RESULT = StructureType.BOOL;:}
+    |
+    LONG {:RESULT = StructureType.LONG;:}
+    |
+    AUTO//?
+    ;
+
+
+//blocks
+block ::=
+    BEGIN block_content END
+    ;
+
+block_content ::=
+    var_dcl:cont block_content {:RESULT = cont;:}
+    |
+    statement:cont block_content {:RESULT = cont;:}
+    |
+    /*epsilon*/
+    ;
+
+loop_block ::=
+    BEGIN loop_block_content END
+    ;
+
+loop_block_content ::=
+    var_dcl loop_block_content
+    |
+    loop_statement loop_block_content
+    |
+    /*epsilon*/
+    ;
+
+
+//variables
+var_dcl ::=
+    CONST {:Variables.getInstance.setConstant(true);:} var_dcl_part SEMI {:RESULT = new VariableDcl(Variables.getInstance().getDcls());:}
+    |
+    {:Variables.getInstance.setConstant(false);:} var_dcl_part SEMI {:RESULT = new VariableDcl(Variables.getInstance().getDcls());:}
+    ;
+
+var_dcl_part ::=
+    variable_type:t {:Variables.getInstance().setType(t);:} var_dcl_cnt var_dcl_cnt_extension
+    ;
+
+var_dcl_cnt ::=
+    {:Variables.getInstance().addDscp(new LocalVariableDCL(new VariableDescriptor()));:} single_var:name {:Variables.getInstance().getLastDscp().setName(name);:} var_dcl_cnt_part
+    ;
+
+var_dcl_cnt_part ::=
+    ASSIGN expr
+    |
+    /*epsilon*/
+    ;
+
+var_dcl_cnt_extension ::=
+    COMA var_dcl_cnt var_dcl_cnt_extension
+    |
+    /*epsilon*/
+    ;
+
+single_var ::=
+    ID {:RESULT = scanner.string.toString();:} array_part
+    ;
+
+array_part ::=
+    BRACKOP expr BRACKCL array_part
+    |
+    /*epsilon*/
+    ;
+
+
+//statements
+statement ::=
+    cond_stmt:stmt {:RESULT = stmt;:}
+    |
+    loop_stmt:stmt {:RESULT = stmt;:}
+    |
+    assignment:stmt SEMI {:RESULT = stmt;:}
+    |
+    function_call SEMI
+    |
+    RETURN expr SEMI
+    ;
+
+loop_statement ::=
+    statement
+    |
+    BREAK SEMI {:new Break();:}
+    |
+    CONTINUE SEMI {:new Continue();:}
+    ;
+
+
+//conditionals
+cond_stmt ::=
+    IF PRANTOP expr:e PRANTCL block:ifb else_part:eb {:RESULT = new If(e, ifb, eb);:}
+    |
+    SWITCH PRANTOP ID:id {:id = scanner.string.toString(); Cases.getInstance().init();:} PRANTCL OF COL BEGIN case_part DEFAULT COL block:db END {:RESULT = new Switch(id, db);:}
+    ;
+
+else_part ::=
+    ELSE block:b {:RESULT = b;:}
+    |
+    /*epsilon*/ {:RESULT = null;:}
+    ;
+
+case_part ::=
+    CASE INT_LIT:i {:i = scanner.ICV;:} COL block:b {:Cases.getInstance().addCase(i, b);:} case_part
+    |
+    /*epsilon*/
+    ;
+
+
+//loops
+loop_stmt ::=
+    FOR PRANTOP loop_init_part:in SEMI loop_cond_part:e SEMI loop_update_part:up PRANTCL loop_block:b {:RESULT = new For(in, e, up, b);:}
+    |//in your grammer we shouldn't declare variable in for loops
+    REPEAT loop_block:b UNTIL PRANTOP expr:e PRANTCL SEMI {:RESULT = new Repeat(b, e);:}
+    |
+    FOREACH PRANTOP ID IN ID PRANTCL loop_block
+    ;
+
+loop_init_part ::=
+    assignment:a {:RESULT = a;:}
+    |
+    /*epsilon*/ {:RESULT = null;:}
+    ;
+
+loop_cond_part ::=
+    expr:e {:RESULT = e;:}
+    |
+    /*epsilon*/ {:RESULT = null;:}
+    ;
+
+loop_update_part ::=
+    assignment:a {:RESULT = a;:}
+    |
+    /*epsilon*/ {:RESULT = null;:}
+    ;
+
+
+//assignments
+assignment ::=
+    variable:dscp ASSIGN expr:e {:RESULT = new DirectAssign(dscp, expr);:}
+    |
+    variable:dscp PLUSASSIGN expr:e {:RESULT = new PlusAssign(dscp, expr);:}
+    |
+    variable:dscp MINUSASSIGN expr:e {:RESULT = new MinusAssign(dscp, expr);:}
+    |
+    variable:dscp MULTASSIGN expr:e {:RESULT = new MultiplyAssign(dscp, expr);:}
+    |
+    variable:dscp DIVASSIGN expr:e {:RESULT = new DivisionAssign(dscp, expr);:}
+    ;
+
+variable ::=
+    var_access
+    |
+    variable DOT ID
+    ;
+
+var_access ::=
+    ID:id array_part {:RESULT = new SingleVar().compile();:}
+    ;
+
+var_access_array_part ::=
+    BRACKOP expr BRACKCL array_part {::}
+    |
+    /*epsilon*/
+    ;
+
+//expressions
+expr ::=
+    PRANTOP casting_type:t PRANTCL expr:e {:RESULT = new CastExpr(t, e);:} %prec CASTPRANTOP
+    |
+    arithmatic_expr:e {:RESULT = e;:}
+    |
+    conditional_expr:e {:RESULT = e;:}
+    |
+    PRANTOP expr:e PRANTCL {:RESULT = e;:}
+    |
+    NOT expr:e {:RESULT = new Not(e);:}
+    |
+    BINOT expr:e {:RESULT = new BinaryNot(e);:}
+    |
+    MINUS expr:e {:RESULT = new Uminus(e);:} %prec UMINUS
+    |
+    PREFMINUS2 variable:dscp {:RESULT = new PrefixMinus2(dscp);:}
+    |
+    PREFPLUS2 variable:dscp {:RESULT = new PrefixPlus2(dscp);:}
+    |
+    variable:dscp PREFMINUS2 {:RESULT = new PostfixMinus2(dscp);:} %prec POSTMINUS2
+    |
+    variable:dscp PREFPLUS2 {:RESULT = new PostfixPlus2(dscp);:} %prec POSTPLUS2
+    |
+    const_val {:RESULT = e;:}
+    |
+    variable:dscp {:RESULT = new VariablePush(dscp);:}
+    |
+    function_call
+    |
+    SIZEOF PRANTOP variable_type:t PRANTCL {:RESULT = new SizeOfExpr(t);:}
+    ;
+
+casting_type ::=
+    CHAR {:RESULT = CastingType.CHAR;:}
+    |
+    INT {:RESULT = CastingType.INT;:}
+    |
+    FLOAT {:RESULT = CastingType.FLOAT;:}
+    |
+    DOUBLE {:RESULT = CastingType.DOUBLE;:}
+    ;
+
+arithmatic_expr ::=
+    expr:e1 MULT expr:e2 {:RESULT = new Mult(e1, e2);:}
+    |
+    expr:e1 DIVIDE expr:e2 {:RESULT = new Div(e1, e2);:}
+    |
+    expr:e1 MOD expr:e2 {:RESULT = new Mod(e1, e2);:}
+    |
+    expr:e1 PLUS expr:e2 {:RESULT = new Add(e1, e2);:}
+    |
+    expr:e1 MINUS expr:e2 {:RESULT = new Sub(e1, e2);:}
+    |
+    expr:e1 BIAND expr:e2 {:RESULT = new BinaryAnd(e1, e2);:}
+    |
+    expr:e1 BIOR expr:e2 {:RESULT = new BinaryOr(e1, e2);:}
+    |
+    expr:e1 BIEXOR expr:e2 {:RESULT = new BinaryXor(e1, e2);:}
+    ;
+
+conditional_expr ::=//These expressions can't operate on non-int types
+    expr:e1 LT expr:e2 {:RESULT = new LT(e1, e2);:}
+    |
+    expr:e1 LE expr:e2 {:RESULT = new LE(e1, e2);:}
+    |
+    expr:e1 GT expr:e2 {:RESULT = new GT(e1, e2);:}
+    |
+    expr:e1 GE expr:e2 {:RESULT = new GE(e1, e2);:}
+    |
+    expr:e1 EQ expr:e2 {:RESULT = new EQ(e1, e2);:}
+    |
+    expr:e1 NE expr:e2 {:RESULT = new NE(e1, e2);:}
+    |
+    expr:e1 AND expr:e2 {:RESULT = new BinaryAnd(e1, e2);:}
+    |
+    expr:e1 OR expr:e2 {:RESULT = new BinaryOr(e1, e2);:}
+    ;
+
+const_val ::=
+    TRUE {:RESULT = new BooleanConstant(true);:}
+    |
+    FALSE {:RESULT = new BooleanConstant(false);:}
+    |
+    CHAR_LIT {:RESULT = new CharacterConstants(scanner.string);:}
+    |
+    INT_LIT {:RESULT = new IntegerConstant(scaner.ICV);:}
+    |
+    FLOAT_LIT {:RESULT = new DoubleConstant(scanner.RCV);:}
+    |
+    STR_LIT {:RESULT = new StringConstant(scanner.string);:}
+    ;
+
+
+//function calls
+function_call ::=
+    ID PRANTOP parameters PRANTCL %prec FUNCPRANTOP
+    ;
+
+parameters ::=
+    expr parameters_part
+    |
+    /*epsilon*/
+    ;
+
+parameters_part ::=
+    COMA parameters
+    |
+    /*epsilon*/
+    ;

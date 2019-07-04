@@ -1,323 +1,0 @@
-
-Xsquid:S1133"5Do not forget to remove this deprecated code someday.(×ëß–ûÿÿÿÿ8á‘¾ç²-
-”squid:S1192ô"uDefine a constant instead of duplicating this literal "\123\017\130\043\120\050\135\052\131\074\126\076\110" 3 times.(ÚñÊ8ï¥³ì³-
-™squid:S1192˜"uDefine a constant instead of duplicating this literal "\111\112\137\113\127\114\133\115\136\116\124\001\002" 3 times.(¸£‘Óÿÿÿÿÿ8ï¥³ì³-
-\squid:MissingDeprecatedCheck"(Add the missing @deprecated Javadoc tag.(×ëß–ûÿÿÿÿ8á‘¾ç²-
-™squid:S1192Ì"uDefine a constant instead of duplicating this literal "\002\001\001\000\002\001\001\000\002\001\001\000\002" 6 times.(Ğ‡œÕøÿÿÿÿ8æ¹ö–³-
-vsquid:S00117°"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8æ¹ö–³-
-Qsquid:S1199¯"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8æ¹ö–³-
-Vsquid:S11970"8Move the array designator from the variable to the type.(æÇ¹Ñ8¿¼³ì³-
-isquid:S1192…"JDefine a constant instead of duplicating this literal "const_val" 6 times.(ñÚ½Ê8¿¼³ì³-
-“squid:S1192f"uDefine a constant instead of duplicating this literal "\023\007\007\010\006\011\005\012\017\013\027\014\016" 3 times.( î’8¿¼³ì³-
-osquid:S1192Ş	"KDefine a constant instead of duplicating this literal "assignment" 5 times.(ÆÄ˜ìÿÿÿÿÿ8¿¼³ì³-
-”squid:S1192ö"uDefine a constant instead of duplicating this literal "\124\035\137\036\133\037\131\041\100\042\121\001\001" 3 times.(®èÈ8¿¼³ì³-
-™squid:S1192Š"uDefine a constant instead of duplicating this literal "\110\077\111\112\137\113\127\114\133\115\136\116\124" 4 times.(ÏëÆïşÿÿÿÿ8¿¼³ì³-
-rsquid:S1192„	"NDefine a constant instead of duplicating this literal "block_content" 3 times.(¶†Î¢üÿÿÿÿ8¿¼³ì³-
-gsquid:S1192À"HDefine a constant instead of duplicating this literal "program" 4 times.(Óº¥8¿¼³ì³-
-™squid:S1192ã"uDefine a constant instead of duplicating this literal "\001\001\000\002\001\001\000\002\001\001\000\002\001" 6 times.(®¨Ğßıÿÿÿÿ8¿¼³ì³-
-”squid:S1192ç"uDefine a constant instead of duplicating this literal "\050\135\052\131\074\126\076\110\077\111\112\137\113" 3 times.(»‹£8¿¼³ì³-
-™squid:S1192«"uDefine a constant instead of duplicating this literal "\001\002\000\034\016\123\017\130\043\120\050\135\052" 3 times.(¿ËÍÌıÿÿÿÿ8¿¼³ì³-
-”squid:S1192õ"uDefine a constant instead of duplicating this literal "\077\111\112\137\113\127\114\133\115\136\116\124\001" 4 times.(›‡‘Ä8¿¼³ì³-
-osquid:S1192ì"PDefine a constant instead of duplicating this literal "arithmatic_expr" 8 times.(ï¦í­8¿¼³ì³-
-™squid:S1192Õ"uDefine a constant instead of duplicating this literal "\000\002\001\001\000\002\001\001\000\002\001\001\000" 6 times.(¥ôÊşÿÿÿÿ8¿¼³ì³-
-usquid:S1192€"QDefine a constant instead of duplicating this literal "loop_update_part" 3 times.(¿™ôÿÿÿÿÿ8¿¼³ì³-
-”squid:S1192È"uDefine a constant instead of duplicating this literal "\120\050\135\052\131\074\126\076\110\077\111\112\137" 3 times.(“ÊÛÊ8¿¼³ì³-
-nsquid:S1192Á
-"JDefine a constant instead of duplicating this literal "loop_stmt" 3 times.(Ü¦¢Øÿÿÿÿÿ8¿¼³ì³-
-™squid:S1192¬"uDefine a constant instead of duplicating this literal "\131\074\126\076\110\077\111\112\137\113\127\114\133" 3 times.(Œ´šıÿÿÿÿ8¿¼³ì³-
-™squid:S1192…"uDefine a constant instead of duplicating this literal "\052\131\074\126\076\110\077\111\112\137\113\127\114" 3 times.(ß¶»ğÿÿÿÿÿ8¿¼³ì³-
-psquid:S1192´"QDefine a constant instead of duplicating this literal "conditional_expr" 9 times.(Í÷¿Û8¿¼³ì³-
-™squid:S1192—"uDefine a constant instead of duplicating this literal "\017\130\043\120\050\135\052\131\074\126\076\110\077" 3 times.(ğ¬ Œÿÿÿÿÿ8¿¼³ì³-
-˜squid:S1192d"uDefine a constant instead of duplicating this literal "\007\010\006\011\005\012\017\013\027\014\016\015\026" 3 times.(¨…¯ôşÿÿÿÿ8¿¼³ì³-
-hsquid:S1192»"IDefine a constant instead of duplicating this literal "variable" 6 times.(Ÿ­°ı8¿¼³ì³-
-”squid:S1192ò"uDefine a constant instead of duplicating this literal "\001\000\002\001\001\000\002\001\001\000\002\001\001" 6 times.(ÃÈŞ¡8¿¼³ì³-
-nsquid:S1192Ÿ	"JDefine a constant instead of duplicating this literal "statement" 7 times.(´Å•ğÿÿÿÿÿ8¿¼³ì³-
-”squid:S1192ï"uDefine a constant instead of duplicating this literal "\034\124\035\137\036\133\037\131\041\100\042\121\001" 4 times.(Í‰Ôø8¿¼³ì³-
-Qsquid:S1199½"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199Æ"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199Ï"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199Ø"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199á"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199ê"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199ó"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199ü"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199…"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199—"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199 "-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199©"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199²"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199»"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199Ä"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199Í"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199Ö"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199ß"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199è"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199ñ"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199ú"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199ƒ"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199Œ"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199•"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199§"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199°"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199¹"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199Â"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199Ë"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199Ô"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199İ"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199æ"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199ï"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199ø"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199	"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199Š	"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199“	"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199œ	"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199¥	"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199®	"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199·	"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199À	"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199É	"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199Ò	"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199Û	"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199ä	"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199í	"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199ö	"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199ÿ	"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199ˆ
-"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199‘
-"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199š
-"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199£
-"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199¬
-"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199µ
-"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199¾
-"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199Ç
-"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199Ğ
-"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199Ù
-"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199â
-"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199ë
-"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199ô
-"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199ı
-"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199†"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199˜"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199¡"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199ª"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199³"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199¼"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199Å"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199Î"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199×"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199à"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199é"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199ò"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199û"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199„"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199–"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199Ÿ"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199¨"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199±"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199º"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199Ã"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199Ì"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199Õ"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199Ş"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199ç"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199ğ"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199ù"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199‚"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199‹"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199”"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199¦"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199¯"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199¸"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199Á"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199Ê"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199Ó"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199Ü"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199å"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199î"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199÷"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199€"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199‰"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199’"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199›"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199¤"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Qsquid:S1199­"-Extract this nested code block into a method.(ÒÌâ–øÿÿÿÿ8¿¼³ì³-
-Ssquid:S1133""5Do not forget to remove this deprecated code someday.(õšê8¿¼³ì³-
-Msquid:S1905³")Remove this unnecessary cast to "Object".(ÉŞÌñúÿÿÿÿ8¿¼³ì³-
-Vsquid:S1481±"2Remove this unused "start_valleft" local variable.(ÈÊ‰éıÿÿÿÿ8¿¼³ì³-
-Rsquid:S1481²"3Remove this unused "start_valright" local variable.(µóªĞ8¿¼³ì³-
-Wsquid:MissingDeprecatedCheck""(Add the missing @deprecated Javadoc tag.(õšê8¿¼³ì³-
-gsquid:S1479¬"CReduce the number of non-empty switch cases from 115 to at most 30.(øı×Ãúÿÿÿÿ8¿¼³ì³-
-msquid:S00101•"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(’¼€›8¿¼³ì³-
-ssquid:S00100¢"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–çÃşÿÿÿÿ8¿¼³ì³-
-ssquid:S00100¿"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(øàÜúÿÿÿÿ8¿¼³ì³-
-fsquid:S00112¶"FDefine and throw a dedicated exception instead of using a generic one.(Î¢›‘8¿¼³ì³-
-ksquid:S00112§"FDefine and throw a dedicated exception instead of using a generic one.(íÑáşÿÿÿÿ8¿¼³ì³-
-tsquid:S00116Î"URename this field "action_obj" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«Ç»{8¿¼³ì³-
-qsquid:S00117Û"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¹ò¨‹8¿¼³ì³-
-vsquid:S00117£"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥ö·¥ÿÿÿÿÿ8¿¼³ì³-
-vsquid:S00117¤"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ï§Ûøÿÿÿÿ8¿¼³ì³-
-vsquid:S00117¥"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Šé‹şÿÿÿÿ8¿¼³ì³-
-psquid:S00117¦"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ù¬êL8¿¼³ì³-
-vsquid:S00117©"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ò®¹’úÿÿÿÿ8¿¼³ì³-
-vsquid:S00117±"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÈÊ‰éıÿÿÿÿ8¿¼³ì³-
-qsquid:S00117²"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µóªĞ8¿¼³ì³-
-vsquid:S00117³"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÉŞÌñúÿÿÿÿ8¿¼³ì³-
-vsquid:S00117¾"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117Ç"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117Ğ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117Ù"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117â"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117ë"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117ô"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117ı"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117†"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117˜"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117¡"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117ª"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117³"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117¼"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117Å"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117Î"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117×"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117à"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117é"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117ò"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117û"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117„"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117–"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117Ÿ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117¨"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117±"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117º"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117Ã"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117Ì"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117Õ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117Ş"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117ç"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117ğ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117ù"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117‚	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117‹	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117”	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117¦	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117¯	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117¸	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117Á	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117Ê	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117Ó	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117Ü	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117å	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117î	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117÷	"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117€
-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117‰
-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117’
-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117›
-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117¤
-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117­
-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117¶
-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117¿
-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117È
-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117Ñ
-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117Ú
-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117ã
-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117ì
-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117õ
-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117ş
-"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117‡"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117™"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117¢"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117«"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117´"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117½"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117Æ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117Ï"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117Ø"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117á"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117ê"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117ó"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117ü"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117…"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117—"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117 "QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117©"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117²"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117»"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117Ä"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117Í"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117Ö"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117ß"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117è"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117ñ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117ú"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117ƒ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117Œ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117•"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117§"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117°"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117¹"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117Â"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117Ë"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117Ô"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117İ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117æ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117ï"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117ø"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117Š"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117“"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117œ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117¥"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117®"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘Ğ¹äşÿÿÿÿ8¿¼³ì³-
-vsquid:S00117À"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥ö·¥ÿÿÿÿÿ8¿¼³ì³-
-vsquid:S00117Á"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ï§Ûøÿÿÿÿ8¿¼³ì³-
-vsquid:S00117Â"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Šé‹şÿÿÿÿ8¿¼³ì³-
-psquid:S00117Ã"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ù¬êL8¿¼³ì³-
-hsquid:UselessImportCheck
-"8Remove this unused import 'java_cup.runtime.XMLElement'.(ë˜í†ÿÿÿÿÿ8¿¼³ì³-
-tsquid:S1149¥"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(Šé‹şÿÿÿÿ8¿¼³ì³-
-tsquid:S1149Â"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(Šé‹şÿÿÿÿ8¿¼³ì³-
-tsquid:S1149¥"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(Šé‹şÿÿÿÿ8¿¼³ì³-
-tsquid:S1149Â"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(Šé‹şÿÿÿÿ8¿¼³ì³-
-]squid:S1161":Add the "@Override" annotation above this method signature(ÙäÊ×ùÿÿÿÿ8¿¼³ì³-
-Xsquid:S1161„":Add the "@Override" annotation above this method signature(çğÏ"8¿¼³ì³-

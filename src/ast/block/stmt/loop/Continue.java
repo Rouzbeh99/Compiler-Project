@@ -11,7 +11,11 @@ public class Continue extends Statement {
     @Override
     public void compile() {
         Logger.log("continue");
-        CodeGenerator.mVisit.visitJumpInsn(Opcodes.GOTO, Blocks.getInstance().getCurrent().getStart());
+        try {
+            CodeGenerator.mVisit.visitJumpInsn(Opcodes.GOTO, Blocks.getInstance().getCurrent().getStart());
+        } catch (Exception e) {
+            Logger.error("continue operation should only be used in loops");
+        }
     }
 
 }

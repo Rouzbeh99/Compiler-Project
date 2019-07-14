@@ -92,8 +92,6 @@ nonterminal Type struct_type;
 
 nonterminal Block block;
 nonterminal BlockContent block_content;
-nonterminal Block loop_block;
-nonterminal BlockContent loop_block_content;
 
 nonterminal var_dcl;
 nonterminal var_dcl_part;
@@ -104,8 +102,6 @@ nonterminal DCL single_var;
 nonterminal DCL array_part;
 
 nonterminal statement;
-nonterminal loop_statement;
-
 nonterminal Statement cond_stmt;
 nonterminal Block else_part;
 nonterminal case_part;
@@ -131,7 +127,7 @@ nonterminal parameters;
 nonterminal parameters_part;
 
 nonterminal String id;
-
+nonterminal Integer int_lit;
 
 //PRECEDENCES
 
@@ -330,18 +326,6 @@ block_content ::=
     /*epsilon*/
     ;
 
-loop_block ::=
-    BEGIN {:RESULT = new Block();:} loop_block_content END {:Blocks.getInstance().remove();:}
-    ;
-
-loop_block_content ::=
-    var_dcl loop_block_content
-    |
-    loop_statement loop_block_content
-    |
-    /*epsilon*/
-    ;
-
 
 //variables
 var_dcl ::=
@@ -391,15 +375,11 @@ statement ::=
     |
     function_call:a SEMI {:Blocks.getInstance().getCurrent().addContent(new FunctionCall(a));:}
     |
-    RETURN expr:e SEMI {:Blocks.getInstance().getCurrent().addContent(new Return(e));:}
-    ;
-
-loop_statement ::=
-    statement
-    |
     BREAK SEMI {:Blocks.getInstance().getCurrent().addContent(new Break());:}
     |
     CONTINUE SEMI {:Blocks.getInstance().getCurrent().addContent(new Continue());:}
+    |
+    RETURN expr:e SEMI {:Blocks.getInstance().getCurrent().addContent(new Return(e));:}
     ;
 
 
@@ -417,7 +397,7 @@ else_part ::=
     ;
 
 case_part ::=
-    CASE INT_LIT:i {:i = scanner.ICV;:} COL block:b {:Cases.getInstance().addCase(i, b);:} case_part
+    CASE int_lit:i COL block:b {:Cases.getInstance().addCase(i, b);:} case_part
     |
     /*epsilon*/
     ;
@@ -593,4 +573,8 @@ parameters_part ::=
 
 id ::=
     ID {:RESULT = scanner.current.toString();:}
+    ;
+
+int_lit ::=
+    INT_LIT {:RESULT = scanner.ICV;:}
     ;

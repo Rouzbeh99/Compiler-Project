@@ -92,8 +92,6 @@ nonterminal Type struct_type;
 
 nonterminal Block block;
 nonterminal BlockContent block_content;
-nonterminal Block loop_block;
-nonterminal BlockContent loop_block_content;
 
 nonterminal var_dcl;
 nonterminal var_dcl_part;
@@ -104,8 +102,6 @@ nonterminal DCL single_var;
 nonterminal DCL array_part;
 
 nonterminal statement;
-nonterminal BlockContent loop_statement;
-
 nonterminal Statement cond_stmt;
 nonterminal Block else_part;
 nonterminal case_part;
@@ -217,13 +213,13 @@ variable_type ::=
     |
     AUTO {:RESULT = Type.AUTO;:}
     |
-    id:type {:new Type(type);:}
+    id:type {:RESULT = new Type(type);:}
     ;
 
 
 //functions
 func_dcl ::=
-    EXTERN  function_return_type:t id:id SEMI
+    EXTERN function_return_type id SEMI //todo
     |
     FUNCTION {:FunctionArguments.getInstance().init();:} function_return_type:t id:id PRANTOP arguments PRANTCL func_dcl_part:b {:RESULT = new FunctionDCL(t, id, b);:}
     ;
@@ -319,25 +315,13 @@ struct_type ::=
 
 //blocks
 block ::=
-    BEGIN {:Blocks.getInstance().add(new Block());:} block_content END {:RESULT = Blocks.getInstance().getCurrent();:}
+    BEGIN {:RESULT = new Block();:} block_content END {:Blocks.getInstance().remove();:}
     ;
 
 block_content ::=
     var_dcl block_content
     |
     statement block_content
-    |
-    /*epsilon*/
-    ;
-
-loop_block ::=
-    BEGIN loop_block_content END
-    ;
-
-loop_block_content ::=
-    var_dcl loop_block_content
-    |
-    loop_statement:cont loop_block_content {:Blocks.getInstance().getCurrent().addContent(cont);:}
     |
     /*epsilon*/
     ;
@@ -391,15 +375,11 @@ statement ::=
     |
     function_call:a SEMI {:Blocks.getInstance().getCurrent().addContent(new FunctionCall(a));:}
     |
+    BREAK SEMI {:Blocks.getInstance().getCurrent().addContent(new Break());:}
+    |
+    CONTINUE SEMI {:Blocks.getInstance().getCurrent().addContent(new Continue());:}
+    |
     RETURN expr:e SEMI {:Blocks.getInstance().getCurrent().addContent(new Return(e));:}
-    ;
-
-loop_statement ::=
-    statement
-    |
-    BREAK SEMI {:new Break();:}
-    |
-    CONTINUE SEMI {:new Continue();:}
     ;
 
 
@@ -425,11 +405,11 @@ case_part ::=
 
 //loops
 loop_stmt ::=
-    FOR PRANTOP loop_init_part:in SEMI loop_cond_part:e SEMI loop_update_part:up PRANTCL loop_block:b {:RESULT = new For(in, e, up, b);:}
+    FOR PRANTOP loop_init_part:in SEMI loop_cond_part:e SEMI loop_update_part:up PRANTCL block:b {:RESULT = new For(in, e, up, b);:}
     |
-    REPEAT loop_block:b UNTIL PRANTOP expr:e PRANTCL SEMI {:RESULT = new Repeat(b, e);:}
+    REPEAT block:b UNTIL PRANTOP expr:e PRANTCL SEMI {:RESULT = new Repeat(b, e);:}
     |
-    FOREACH PRANTOP id:i1 IN id:i2 PRANTCL loop_block:b {:RESULT = new Foreach(i1, i2, b);:}
+    FOREACH PRANTOP id:i1 IN id:i2 PRANTCL block:b {:RESULT = new Foreach(i1, i2, b);:}
     ;
 
 loop_init_part ::=
@@ -576,7 +556,7 @@ const_val ::=
 
 //function calls
 function_call ::=
-    id:id {:FunctionAccessData.getInstance().init();:} PRANTOP parameters PRANTCL {:RESULT = new FunctionAccess(); RESULT.setDescriptor(id);:} %prec FUNCPRANTOP
+    id:id {:FunctionAccessData.getInstance().init();:} PRANTOP parameters PRANTCL {:RESULT = new FunctionAccess(FunctionAccessData.getInstance().getParameters()); RESULT.setDescriptor(id);:} %prec FUNCPRANTOP
     ;
 
 parameters ::=

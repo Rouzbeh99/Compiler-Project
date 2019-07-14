@@ -43,7 +43,7 @@ public class CompleteDCL extends BlockContent {
             return Opcodes.FSTORE;
         else if (type == LONG)
             return Opcodes.LSTORE;
-        else if (type == INT || type == CHAR || type == BOOL)
+        else if (type == INT)
             return Opcodes.ISTORE;
         else
             return Opcodes.ASTORE;

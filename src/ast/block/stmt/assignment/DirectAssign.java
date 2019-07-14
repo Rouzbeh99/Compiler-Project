@@ -40,7 +40,7 @@ public class DirectAssign extends Assignment {
         expr.compile();
         expr.doCastCompile(descriptor.getType());
         if (descriptor instanceof GlobalVariableDescriptor)
-            mVisit.visitFieldInsn(Opcodes.PUTFIELD, CodeGenerator.GENERATED_CLASS, descriptor.getName(), descriptor.getType().typeName());
+            mVisit.visitFieldInsn(Opcodes.PUTSTATIC, CodeGenerator.GENERATED_CLASS, descriptor.getName(), descriptor.getType().typeName());
         else
             mVisit.visitVarInsn(determineOp(descriptor.getType()), descriptor.getStackIndex());
     }

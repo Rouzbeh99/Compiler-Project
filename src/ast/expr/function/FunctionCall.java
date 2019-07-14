@@ -16,6 +16,7 @@ public class FunctionCall extends Expression {
 
     @Override
     public Type getResultType() {
+        access.compile();
         return ((FunctionDescriptor) access.getDescriptor()).getReturnType();
     }
 

@@ -11,7 +11,11 @@ public class Break extends Statement {
     @Override
     public void compile() {
         Logger.log("break");
-        CodeGenerator.mVisit.visitJumpInsn(Opcodes.GOTO, Blocks.getInstance().getCurrent().getEnd());
+        try {
+            CodeGenerator.mVisit.visitJumpInsn(Opcodes.GOTO, Blocks.getInstance().getCurrent().getEnd());
+        } catch (Exception e) {
+            Logger.error("break operation should only be used in loops");
+        }
     }
 
 }

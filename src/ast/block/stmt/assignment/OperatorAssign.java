@@ -42,7 +42,7 @@ public abstract class OperatorAssign extends Assignment {
         int strCode = determineOp(descriptor.getType());
         CodeGenerator.mVisit.visitInsn(opcode);
         if (descriptor instanceof GlobalVariableDescriptor)
-            mVisit.visitFieldInsn(Opcodes.PUTFIELD, CodeGenerator.GENERATED_CLASS, descriptor.getName(), descriptor.getType().typeName());
+            mVisit.visitFieldInsn(Opcodes.PUTSTATIC, CodeGenerator.GENERATED_CLASS, descriptor.getName(), descriptor.getType().typeName());
         else
             mVisit.visitVarInsn(strCode, descriptor.getStackIndex());
     }

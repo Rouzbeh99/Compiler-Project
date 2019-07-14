@@ -22,9 +22,18 @@ public class Switch extends Statement {
     private Access access;
     private Block defaultBlock;
 
+    private int min;
+    private int max;
+    private Label[] labels;
+    private List<Block> caseBlocks;
+
     public Switch(Access access, Block defaultBlock) {
         this.access = access;
         this.defaultBlock = defaultBlock;
+        min = Cases.getInstance().getMin();
+        max = Cases.getInstance().getMax();
+        labels = Cases.getInstance().getLabels(defaultBlock.getStart());
+        caseBlocks = Cases.getInstance().getCaseBlocks();
     }
 
     @Override
@@ -33,14 +42,12 @@ public class Switch extends Statement {
         access.compile();
         checkOperation();
 
-        Cases cs = Cases.getInstance();
         Label defaultLabel = defaultBlock.getStart();
 
         access.push();
-        mVisit.visitTableSwitchInsn(cs.getMin(), cs.getMax(), defaultLabel, cs.getLabels(defaultLabel));
+        mVisit.visitTableSwitchInsn(min, max, defaultLabel, labels);
         Label endCase = defaultBlock.getEnd();
 
-        List<Block> caseBlocks = cs.getCaseBlocks();
         for (Block block : caseBlocks) {
             block.init();
             block.markStart();

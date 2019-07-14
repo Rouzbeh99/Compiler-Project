@@ -7,6 +7,7 @@ import ast.type.Type;
 import cg.Logger;
 import org.objectweb.asm.Opcodes;
 import symtab.dscp.AbstractDescriptor;
+import symtab.dscp.variable.VariableDescriptor;
 
 import static ast.type.Type.*;
 
@@ -22,10 +23,17 @@ public abstract class DualOperation extends UnaryExpression {
     DualOperation(Access access) {
         super();
         this.access = access;
-        descriptor = (AbstractDescriptor) access.getDescriptor();
+    }
+
+    @Override
+    public Type getResultType() {
+        access.compile();
+        return ((VariableDescriptor) access.getDescriptor()).getType();
     }
 
     private void checkOperation() {
+        access.compile();
+        descriptor = (VariableDescriptor) access.getDescriptor();
         if (descriptor.isConst())
             Logger.error("constant variables can't be changed");
         if (!(access instanceof VariableAccess))

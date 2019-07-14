@@ -16,8 +16,10 @@ public class VariableAccess extends Access {
     public void compile() {
         Logger.log("variable access");
         descriptor = TableStack.getInstance().find(id);
-        if (!(descriptor instanceof VariableDescriptor))
+        if (!(descriptor instanceof VariableDescriptor)) {
+            System.err.println(descriptor == null);
             Logger.error("variable not declared");
+        }
     }
 
     @Override

@@ -37,7 +37,6 @@ public class FunctionAccess extends Access {
         Logger.log("function access invoke");
         FunctionDescriptor descriptor = (FunctionDescriptor) this.descriptor;
         parameters.forEach(Expression::compile);
-        System.err.println(descriptor.getParameterTypes()[0].typeName());
         CodeGenerator.mVisit.visitMethodInsn(Opcodes.INVOKESTATIC, CodeGenerator.GENERATED_CLASS, descriptor.getName(), descriptor.getDescriptor(), false);
     }
 

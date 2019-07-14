@@ -36,7 +36,7 @@ public class Foreach extends Statement {
     public void compile() {
         Logger.log("foreach loop");
         initLoop();
-        determineOp(loopArray.getType());
+        determineOp(Type.toSimple(loopArray.getType()));
         mVisit.visitInsn(Opcodes.ICONST_0);
         mVisit.visitVarInsn(Opcodes.ISTORE, loopCounter.getStackIndex());
 
@@ -55,7 +55,8 @@ public class Foreach extends Statement {
         body.compile();
         body.markStart();
         mVisit.visitIincInsn(loopCounter.getStackIndex(), 1);
-        mVisit.visitJumpInsn(Opcodes.GOTO, loopStart);
+//        mVisit.visitJumpInsn(Opcodes.GOTO, loopStart);
+
         body.markEnd();
         Blocks.getInstance().remove();
     }

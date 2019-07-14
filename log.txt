@@ -1,7 +1,366 @@
 compiling program
 Initializing code generator
+declaring struct field
+declaring struct field
+declaring struct field
+declaring struct field
+declaring struct field
+declaring struct field
+declaring struct field
+declaring struct field
+initializing struct variable value in constructor
+boolean constant
+initializing struct variable value in constructor
+boolean constant
+initializing struct variable value in constructor
+double constant
+initializing struct variable value in constructor
+double constant
+initializing struct variable value in constructor
+double constant
+initializing struct variable value in constructor
+double constant
+initializing struct variable value in constructor
+character constant
+initializing struct variable value in constructor
+writing structures class code to the output file
+global variable declaration
+global variable declaration
+global variable declaration
+declaring struct field
+initializing struct variable value in constructor
+writing structures class code to the output file
+global variable declaration
+global variable declaration
 function declaration
+function declaration
+if
+less than equal
+variable access
+variable push
+variable access
+loading variable access
+variable access
+integer constant
+return statement
+integer constant
+return statement
+multiply
+variable access
+function access compile
+variable access
+variable push
+variable access
+loading variable access
+variable access
+expression function call
+function access compile
+variable access
+function access invoke
+subtraction
+variable access
+variable push
+variable access
+loading variable access
+variable access
+integer constant
+function access compile
+variable access
+variable access
+function access compile
+variable access
+function declaration
+complete local variable declaration
+variable declaration
+integer constant
+complete local variable declaration
+variable declaration
+integer constant
+complete local variable declaration
+variable declaration
+double constant
+complete local variable declaration
+variable declaration
+complete local variable declaration
+variable declaration
+boolean constant
+complete local variable declaration
+variable declaration
+double constant
+complete local variable declaration
+variable declaration
+character constant
+complete local variable declaration
+variable declaration
+character constant
+direct assignment
+variable access
+integer constant
+complete local variable declaration
+variable declaration
+boolean constant
+complete local variable declaration
+struct declaration
+complete local variable declaration
+struct declaration
+direct assignment
+variable access
+subtraction
+multiply
+add
+double constant
+integer constant
+integer constant
+integer constant
+multiply assignment
+struct access
+loading structure access
+integer constant
+direct assignment
+variable access
+struct access
+variable push
+struct access
+loading structure access
+struct access
+complete local variable declaration
+variable declaration
+string constant
 complete local variable declaration
 array declaration
 integer constant
-foreach loop
+complete local variable declaration
+array declaration
+add
+integer constant
+integer constant
+direct assignment
+variable access
+array access
+variable push
+array access
+loading array access
+integer constant
+array access
+minus assignment
+array access
+integer constant
+loading array access
+integer constant
+double constant
+complete local variable declaration
+variable declaration
+add
+variable access
+variable access
+variable access
+array access
+struct access
+add
+variable access
+variable access
+variable access
+array access
+add
+variable access
+variable access
+variable access
+variable push
+variable access
+loading variable access
+variable access
+remainder
+variable access
+variable access
+multiply
+variable access
+variable push
+variable access
+loading variable access
+variable access
+integer constant
+variable access
+subtraction
+variable access
+postfix minus minus
+variable access
+variable access
+loading variable access
+variable access
+integer constant
+variable access
+variable access
+variable access
+variable access
+variable access
+variable access
+variable push
+array access
+loading array access
+integer constant
+array access
+variable access
+variable access
+variable access
+array access
+variable push
+struct access
+loading structure access
+struct access
+variable access
+variable access
+variable access
+array access
+struct access
+function call statement
+function access compile
+function access invoke
+integer constant
+add
+boolean constant
+multiply
+integer constant
+subtraction
+integer constant
+integer constant
+character constant
+integer constant
+repeat
+direct assignment
+variable access
+integer constant
+direct assignment
+variable access
+binary and
+multiply
+integer constant
+integer constant
+integer constant
+variable push
+variable access
+loading variable access
+if
+binary and
+boolean constant
+boolean constant
+direct assignment
+variable access
+double constant
+direct assignment
+variable access
+double constant
+direct assignment
+variable access
+double constant
+for loop
+direct assignment
+variable access
+unary minus
+integer constant
+grater than
+variable access
+variable push
+variable access
+loading variable access
+variable access
+integer constant
+plus assignment
+variable access
+loading variable access
+integer constant
+complete local variable declaration
+variable declaration
+integer constant
+multiply assignment
+variable access
+loading variable access
+add
+integer constant
+integer constant
+switch-case
+variable access
+loading variable access
+complete local variable declaration
+variable declaration
+boolean constant
+if
+equality
+variable access
+variable push
+variable access
+loading variable access
+variable access
+integer constant
+complete local variable declaration
+variable declaration
+integer constant
+complete local variable declaration
+variable declaration
+double constant
+complete local variable declaration
+variable declaration
+add
+function access compile
+expression function call
+function access compile
+function access invoke
+integer constant
+function access compile
+integer constant
+function access compile
+function call statement
+function access compile
+function access invoke
+integer constant
+direct assignment
+variable access
+variable access
+binary and
+variable access
+integer constant
+postfix plus plus
+variable access
+variable access
+loading variable access
+variable access
+variable access
+function call statement
+function access compile
+variable access
+function access invoke
+variable push
+variable access
+loading variable access
+function call statement
+function access compile
+variable access
+function access invoke
+variable push
+variable access
+loading variable access
+complete local variable declaration
+variable declaration
+variable push
+variable access
+loading variable access
+variable access
+function call statement
+function access compile
+variable access
+function access invoke
+variable push
+variable access
+loading variable access
+complete local variable declaration
+variable declaration
+expression function call
+function access compile
+function access invoke
+string constant
+function access compile
+global variable declaration
+function declaration
+declaring struct field
+initializing struct variable value in constructor
+writing structures class code to the output file
+Writing the generated code into the executable output file

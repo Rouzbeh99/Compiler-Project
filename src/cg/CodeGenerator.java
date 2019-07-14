@@ -31,6 +31,59 @@ public class CodeGenerator {
         mVisit.visitInsn(RETURN);
         mVisit.visitMaxs(1, 1);
         mVisit.visitEnd();
+
+        mVisit = mainClw.visitMethod(ACC_PUBLIC | ACC_STATIC, "print", "(I)V", null, null);
+        mVisit.visitCode();
+        mVisit.visitFieldInsn(GETSTATIC, "java/lang/System", "out", "Ljava/io/PrintStream;");
+        mVisit.visitVarInsn(ILOAD, 0);
+        mVisit.visitMethodInsn(INVOKEVIRTUAL, "java/io/PrintStream", "println", "(I)V", false);
+        mVisit.visitInsn(RETURN);
+        mVisit.visitMaxs(1, 1);
+        mVisit.visitEnd();
+
+        mVisit = mainClw.visitMethod(ACC_PUBLIC | ACC_STATIC, "print", "(J)V", null, null);
+        mVisit.visitCode();
+        mVisit.visitFieldInsn(GETSTATIC, "java/lang/System", "out", "Ljava/io/PrintStream;");
+        mVisit.visitVarInsn(LLOAD, 0);
+        mVisit.visitMethodInsn(INVOKEVIRTUAL, "java/io/PrintStream", "println", "(J)V", false);
+        mVisit.visitInsn(RETURN);
+        mVisit.visitMaxs(1, 1);
+        mVisit.visitEnd();
+
+        mVisit = mainClw.visitMethod(ACC_PUBLIC | ACC_STATIC, "print", "(F)V", null, null);
+        mVisit.visitCode();
+        mVisit.visitFieldInsn(GETSTATIC, "java/lang/System", "out", "Ljava/io/PrintStream;");
+        mVisit.visitVarInsn(FLOAD, 0);
+        mVisit.visitMethodInsn(INVOKEVIRTUAL, "java/io/PrintStream", "println", "(F)V", false);
+        mVisit.visitInsn(RETURN);
+        mVisit.visitMaxs(1, 1);
+        mVisit.visitEnd();
+
+        mVisit = mainClw.visitMethod(ACC_PUBLIC | ACC_STATIC, "print", "(D)V", null, null);
+        mVisit.visitCode();
+        mVisit.visitFieldInsn(GETSTATIC, "java/lang/System", "out", "Ljava/io/PrintStream;");
+        mVisit.visitVarInsn(DLOAD, 0);
+        mVisit.visitMethodInsn(INVOKEVIRTUAL, "java/io/PrintStream", "println", "(D)V", false);
+        mVisit.visitInsn(RETURN);
+        mVisit.visitMaxs(1, 1);
+        mVisit.visitEnd();
+
+        mVisit = mainClw.visitMethod(ACC_PUBLIC | ACC_STATIC, "print", "(Ljava/lang/String;)V", null, null);
+        mVisit.visitCode();
+        mVisit.visitFieldInsn(GETSTATIC, "java/lang/System", "out", "Ljava/io/PrintStream;");
+        mVisit.visitVarInsn(ALOAD, 1);
+        mVisit.visitMethodInsn(INVOKEVIRTUAL, "java/io/PrintStream", "println", "(Ljava/lang/String;)V", false);
+        mVisit.visitInsn(RETURN);
+        mVisit.visitMaxs(1, 1);
+        mVisit.visitEnd();
+
+        mVisit = mainClw.visitMethod(ACC_PUBLIC | ACC_STATIC, "len", "(Ljava/lang/String;)I", null, null);
+        mVisit.visitCode();
+        mVisit.visitVarInsn(ALOAD, 0);
+        mVisit.visitMethodInsn(INVOKEVIRTUAL, "java/lang/String", "length", "()I", false);
+        mVisit.visitInsn(IRETURN);
+        mVisit.visitMaxs(1, 1);
+        mVisit.visitEnd();
     }
 
     public static void writeFinalClassCode() {

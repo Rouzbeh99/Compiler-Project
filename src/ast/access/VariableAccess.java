@@ -26,9 +26,9 @@ public class VariableAccess extends Access {
     public void push() {
         Logger.log("loading variable access");
         VariableDescriptor descriptor = (VariableDescriptor) this.descriptor;
-        if (descriptor instanceof GlobalVariableDescriptor)
+        if (descriptor instanceof GlobalVariableDescriptor) {
             CodeGenerator.mVisit.visitFieldInsn(Opcodes.GETSTATIC, CodeGenerator.GENERATED_CLASS, descriptor.getName(), descriptor.getType().typeName());
-        else
+        } else
             CodeGenerator.mVisit.visitVarInsn(determineOp(descriptor.getType()), descriptor.getStackIndex());
     }
 

@@ -1,46 +1,7 @@
 compiling program
 Initializing code generator
-global variable declaration
 function declaration
-complete local variable declaration
-variable declaration
-add
-integer constant
-multiply
-integer constant
-integer constant
-direct assignment
-variable access
-integer constant
-complete local variable declaration
-variable declaration
-add
-variable access
-variable access
-variable push
-variable access
-loading variable access
-variable access
-variable push
-variable access
-loading variable access
-variable access
-variable access
-variable access
-plus assignment
-variable access
-loading variable access
-integer constant
 complete local variable declaration
 array declaration
 integer constant
-direct assignment
-array access
-integer constant
-variable push
-variable access
-loading variable access
-variable access
-complete local variable declaration
-variable declaration
 foreach loop

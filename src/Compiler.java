@@ -4,7 +4,7 @@ import java.io.FileReader;
 
 public class Compiler {
 
-    private static final String INPUT_FILE = "codegen.txt";
+    private static final String INPUT_FILE = "inputFiles/codegen.c";
 
     public static void main(String[] args) throws Exception {
         Scanner scanner = new Scanner(new FileReader(INPUT_FILE));

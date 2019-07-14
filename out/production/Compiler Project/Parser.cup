@@ -127,7 +127,7 @@ nonterminal parameters;
 nonterminal parameters_part;
 
 nonterminal String id;
-
+nonterminal Integer int_lit;
 
 //PRECEDENCES
 
@@ -397,7 +397,7 @@ else_part ::=
     ;
 
 case_part ::=
-    CASE INT_LIT:i {:i = scanner.ICV;:} COL block:b {:Cases.getInstance().addCase(i, b);:} case_part
+    CASE int_lit:i COL block:b {:Cases.getInstance().addCase(i, b);:} case_part
     |
     /*epsilon*/
     ;
@@ -573,4 +573,8 @@ parameters_part ::=
 
 id ::=
     ID {:RESULT = scanner.current.toString();:}
+    ;
+
+int_lit ::=
+    INT_LIT {:RESULT = scanner.ICV;:}
     ;

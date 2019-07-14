@@ -12,7 +12,7 @@ public class Type {
     public static final Type FLOAT = new Type("F");
     public static final Type DOUBLE = new Type("D");
     public static final Type VOID = new Type("V");
-    public static final Type STRING = new Type("java/lang/String");
+    public static final Type STRING = new Type("Ljava/lang/String;");
     public static final Type AUTO = new Type("A");
     public static final Type BOOL_ARRAY = new Type("[Z");
     public static final Type CHAR_ARRAY = new Type("[C");

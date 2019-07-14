@@ -1,11 +1,11 @@
 package ast.expr.binary.arithmatic;
 
-import ast.Node;
 import ast.expr.Expression;
 import ast.type.Type;
-import ast.type.VariableType;
 import cg.Logger;
 import org.objectweb.asm.Opcodes;
+
+import static ast.type.Type.*;
 
 public class BinaryXor extends ArithmeticBinaryExpr {
 
@@ -14,16 +14,16 @@ public class BinaryXor extends ArithmeticBinaryExpr {
     }
 
     @Override
-    public Node compile() {
+    public void compile() {
         Logger.log("binary xor");
-        return super.compile();
+        super.compile();
     }
 
     @Override
     public int determineOp(Type type) {
-        if (type == VariableType.LONG && (expr1.getType() == VariableType.LONG && expr2.getType() == VariableType.LONG))
+        if (type == LONG)
             return Opcodes.LXOR;
-        else if (type == VariableType.INT)
+        else if (type == INT)
             return Opcodes.IXOR;
         else
             Logger.error("type mismatch");

@@ -1,14 +1,13 @@
 package ast.expr.unary.arithmatic;
 
-import ast.Node;
 import ast.expr.Expression;
 import ast.expr.unary.UnaryExpression;
 import ast.type.Type;
-import ast.type.TypeChecker;
-import ast.type.VariableType;
 import cg.CodeGenerator;
 import cg.Logger;
 import org.objectweb.asm.Opcodes;
+
+import static ast.type.Type.*;
 
 public class BinaryNot extends UnaryExpression {
 
@@ -17,21 +16,19 @@ public class BinaryNot extends UnaryExpression {
     }
 
     @Override
-    public Node compile() {
+    public void compile() {
         Logger.log("binary not");
-        Expression e = (Expression) expr.compile();
-        Type resultType = TypeChecker.unaryExprTypeCheck(e.getType());
-        int opcode = determineOp(resultType);
+        Type resultType = getResultType();
+        expr.compile();
         CodeGenerator.mVisit.visitVarInsn(Opcodes.LDC, -1);
-        CodeGenerator.mVisit.visitInsn(opcode);
-        return new UnaryExpression(resultType);
+        CodeGenerator.mVisit.visitInsn(determineOp(resultType));
     }
 
     @Override
     public int determineOp(Type type) {
-        if (type == VariableType.INT)
+        if (type == INT)
             return Opcodes.IXOR;
-        else if (type == VariableType.LONG)
+        else if (type == LONG)
             return Opcodes.LXOR;
         else
             Logger.error("type mismatch");

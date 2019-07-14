@@ -1,83 +1,56 @@
 package ast.block.stmt.assignment;
 
-import ast.Node;
+import ast.access.Access;
+import ast.access.ArrayAccess;
+import ast.access.StructureAccess;
+import ast.access.VariableAccess;
+import ast.block.BlockContent;
 import ast.expr.Expression;
 import ast.type.Type;
 import cg.CodeGenerator;
 import cg.Logger;
 import org.objectweb.asm.Opcodes;
-import symtab.dscp.VariableDescriptor;
+import symtab.dscp.AbstractDescriptor;
 
-import static ast.type.CastingType.*;
-import static ast.type.StructureType.BOOL;
-import static ast.type.StructureType.LONG;
-import static ast.type.VariableType.STRING;
+import static ast.type.Type.*;
 
-public class Assignment implements Node {
+public abstract class Assignment extends BlockContent {
 
-    protected VariableDescriptor descriptor;
+    protected Access access;
     protected Expression expr;
-    protected int castCode;
-    protected int ldrCode;
-    protected int strCode;
+    protected AbstractDescriptor descriptor;
 
-    public Assignment(VariableDescriptor descriptor, Expression expr) {
-        this.descriptor = descriptor;
+    public Assignment(Access access, Expression expr) {
+        this.access = access;
         this.expr = expr;
     }
 
-    @Override
-    public Node compile() {
-        Type t1 = descriptor.getType();
-        Type t2 = ((Expression) expr.compile()).getType();
-        determineCodes(t1, t2);
-        if (castCode != 0)
-            CodeGenerator.mVisit.visitInsn(castCode);
-        return null;
+    void checkOperation() {
+        if (descriptor.isConst() ||
+                ((access instanceof StructureAccess) && (((StructureAccess) access)).getStructureVar().isConst()))
+            Logger.error("constant variables can't be changed");
     }
 
-    public void determineCodes(Type t1, Type t2) {
-        if (t1 == STRING && t2 == STRING) {
-            ldrCode = Opcodes.ALOAD;
-            strCode = Opcodes.ASTORE;
-        } else if (t1 == DOUBL) {
-            ldrCode = Opcodes.DLOAD;
-            strCode = Opcodes.DSTORE;
-            if (t2 == FLOAT)
-                castCode = Opcodes.F2D;
-            else if (t2 == LONG)
-                castCode = Opcodes.L2D;
-            else if (t2 == INT)
-                castCode = Opcodes.I2D;
-        } else if (t1 == FLOAT) {
-            ldrCode = Opcodes.FLOAT;
-            strCode = Opcodes.FSTORE;
-            if (t2 == DOUBL)
-                castCode = Opcodes.D2F;
-            else if (t2 == LONG)
-                castCode = Opcodes.L2F;
-            else if (t2 == INT)
-                castCode = Opcodes.I2F;
-        } else if (t1 == LONG) {
-            ldrCode = Opcodes.LLOAD;
-            strCode = Opcodes.LSTORE;
-            if (t2 == DOUBL)
-                castCode = Opcodes.D2L;
-            else if (t2 == FLOAT)
-                castCode = Opcodes.F2L;
-            else if (t2 == INT)
-                castCode = Opcodes.I2L;
-        } else if (t1 == INT || t1 == BOOL || t1 == CHAR) {
-            ldrCode = Opcodes.ILOAD;
-            strCode = Opcodes.ISTORE;
-            if (t2 == DOUBL)
-                castCode = Opcodes.D2I;
-            else if (t2 == FLOAT)
-                castCode = Opcodes.F2I;
-            else if (t2 == LONG)
-                castCode = Opcodes.L2I;
-        } else
-            Logger.error("type mismatch");
+    public int determineOp(Type type) {
+        boolean varAccess = access instanceof VariableAccess;
+        if (type == DOUBLE)
+            return varAccess ? Opcodes.DSTORE : Opcodes.DASTORE;
+        else if (type == FLOAT)
+            return varAccess ? Opcodes.FSTORE : Opcodes.FASTORE;
+        else if (type == LONG)
+            return varAccess ? Opcodes.LSTORE : Opcodes.LASTORE;
+        else if (type == INT)
+            return varAccess ? Opcodes.ISTORE : Opcodes.IASTORE;
+        else
+            return varAccess ? Opcodes.ASTORE : Opcodes.AASTORE;
+    }
+
+    void arrayStoreInit() {
+        CodeGenerator.mVisit.visitVarInsn(Opcodes.ALOAD, descriptor.getStackIndex());
+        Expression indexExpr = ((ArrayAccess) access).getIndex();
+        if (indexExpr.getResultType() != INT)
+            Logger.error("arrays can only be accessed using integer values");
+        indexExpr.compile();
     }
 
 }

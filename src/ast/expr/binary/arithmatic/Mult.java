@@ -1,12 +1,11 @@
 package ast.expr.binary.arithmatic;
 
-import ast.Node;
 import ast.expr.Expression;
-import ast.type.StructureType;
 import ast.type.Type;
-import ast.type.VariableType;
 import cg.Logger;
 import org.objectweb.asm.Opcodes;
+
+import static ast.type.Type.*;
 
 public class Mult extends ArithmeticBinaryExpr {
 
@@ -15,18 +14,18 @@ public class Mult extends ArithmeticBinaryExpr {
     }
 
     @Override
-    public Node compile() {
+    public void compile() {
         Logger.log("multiply");
-        return super.compile();
+        super.compile();
     }
 
     @Override
     public int determineOp(Type type) {
-        if (type == VariableType.DOUBL)
+        if (type == DOUBLE)
             return Opcodes.DMUL;
-        else if (type == VariableType.FLOAT)
+        else if (type == FLOAT)
             return Opcodes.FMUL;
-        else if (type == VariableType.LONG)
+        else if (type == LONG)
             return Opcodes.LMUL;
         else
             return Opcodes.IMUL;

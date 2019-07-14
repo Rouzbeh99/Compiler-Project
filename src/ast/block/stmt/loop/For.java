@@ -1,14 +1,15 @@
 package ast.block.stmt.loop;
 
-import ast.Assignment;
-import ast.Node;
 import ast.block.Block;
 import ast.block.stmt.Statement;
+import ast.block.stmt.assignment.Assignment;
 import ast.expr.Expression;
-import cg.CodeGenerator;
+import ast.expr.constant.BooleanConstant;
 import cg.Logger;
 import org.objectweb.asm.Label;
 import org.objectweb.asm.Opcodes;
+
+import static cg.CodeGenerator.mVisit;
 
 public class For extends Statement {
 
@@ -25,26 +26,30 @@ public class For extends Statement {
     }
 
     @Override
-    public Node compile() {
+    public void compile() {
         Logger.log("for loop");
-
-        init.compile();
+        if (init != null)
+            init.compile();
+        block.init();
         Label loopStart = new Label();
         Label loopBody = new Label();
-        CodeGenerator.mVisit.visitLabel(loopStart);
-        condition.compile();
-        CodeGenerator.mVisit.visitJumpInsn(Opcodes.IFEQ, block.getEnd());
-        CodeGenerator.mVisit.visitJumpInsn(Opcodes.GOTO, loopBody);
+        mVisit.visitLabel(loopStart);
+        if (condition != null)
+            condition.compile();
+        else
+            new BooleanConstant(true).compile();
+        mVisit.visitJumpInsn(Opcodes.IFEQ, block.getEnd());
+        mVisit.visitJumpInsn(Opcodes.GOTO, loopBody);
 
         block.markStart();
-        update.compile();
-        CodeGenerator.mVisit.visitJumpInsn(Opcodes.GOTO, loopStart);
+        if (update != null)
+            update.compile();
+        mVisit.visitJumpInsn(Opcodes.GOTO, loopStart);
 
-        CodeGenerator.mVisit.visitLabel(loopBody);
+        mVisit.visitLabel(loopBody);
         block.compile();
+        mVisit.visitJumpInsn(Opcodes.GOTO, block.getStart());
         block.markEnd();
-        CodeGenerator.mVisit.visitJumpInsn(Opcodes.GOTO, block.getStart());
-        return this;
     }
 
 }

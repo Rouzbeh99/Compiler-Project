@@ -1,23 +1,29 @@
 package symtab;
 
-import ast.type.VariableType;
+import ast.type.Type;
 import cg.Logger;
+import symtab.dscp.AbstractDescriptor;
 import symtab.dscp.KeywordDescriptor;
-import symtab.dscp.VariableDescriptor;
+import symtab.dscp.function.FunctionDescriptor;
+import symtab.dscp.function.Functions;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import static ast.type.Type.DOUBLE;
+import static ast.type.Type.LONG;
+
 public class TableStack {
 
     private static final TableStack instance = new TableStack();
     private final List<SymbolTable> SYM_TAB_STACK = new ArrayList<>();
-    private int mainStackIndex = 1;
-    private int functionStackIndex = 0;
-    private boolean inFuncDCL = false;
-    private static final String[] KEYWORDS = {
+    private final SymbolTable GLOBALS;
+    private FunctionDescriptor currentFunection;
+    private int stackIndex;
+
+    private final String[] KEYWORDS = {
             "const",
             "record",
             "bool",
@@ -86,9 +92,8 @@ public class TableStack {
             "<=",
             ">="};
 
-    static {
-        instance.SYM_TAB_STACK
-                .add(new SymbolTable(Arrays.stream(KEYWORDS).collect(Collectors.toMap(key -> key, key -> new KeywordDescriptor()))));
+    {
+        GLOBALS = new SymbolTable(Arrays.stream(KEYWORDS).collect(Collectors.toMap(key -> key, key -> new KeywordDescriptor())));
     }
 
     private TableStack() {
@@ -98,12 +103,12 @@ public class TableStack {
         return instance;
     }
 
-    public SymbolTable getBase() {
-        return SYM_TAB_STACK.get(0);
+    private SymbolTable getTop() {
+        return SYM_TAB_STACK.get(SYM_TAB_STACK.size() - 1);
     }
 
-    public SymbolTable getTop() {
-        return SYM_TAB_STACK.get(SYM_TAB_STACK.size() - 1);
+    public FunctionDescriptor currentFunction() {
+        return currentFunection;
     }
 
     public void pushSymbolTable(SymbolTable symbolTable) {
@@ -114,28 +119,33 @@ public class TableStack {
         SYM_TAB_STACK.remove(SYM_TAB_STACK.size() - 1);
     }
 
-    public void addVariable(VariableDescriptor descriptor) {
-        if (getTop().contains(descriptor.getName()) || getBase().contains(descriptor.getName()))
-            Logger.error("variable name already exists");
+    public void addGlobal(AbstractDescriptor descriptor) {
+        GLOBALS.put(descriptor);
+    }
 
-        int increment = descriptor.getType() == VariableType.DOUBL || descriptor.getType() == VariableType.LONG ? 2 : 1;
-        if (inFuncDCL) {
-            descriptor.setStackIndex(functionStackIndex);
-            functionStackIndex += increment;
-        } else {
-            descriptor.setStackIndex(mainStackIndex);
-            mainStackIndex += increment;
-        }
+    public void newFunction(FunctionDescriptor descriptor, boolean isMain) {
+        stackIndex = isMain ? 1 : 0;
+        currentFunection = descriptor;
+        descriptor.getParameters().forEach(this::addVariable);
+    }
+
+    public void addVariable(AbstractDescriptor descriptor) {
+        if (getTop().contains(descriptor.getName()) ||
+                Functions.getInstance().containsName(descriptor.getName()))
+            Logger.error("variable name already exists");
+        descriptor.setStackIndex(stackIndex);
+        Type type = descriptor.getType();
+        stackIndex += type == LONG || type == DOUBLE ? 2 : 1;
         getTop().put(descriptor);
     }
 
-    public VariableDescriptor findVariable(String id) {
+    public AbstractDescriptor find(String id) {
         for (int i = SYM_TAB_STACK.size() - 1; i >= 0; i--) {
             SymbolTable table = SYM_TAB_STACK.get(i);
             if (table.contains(id))
                 return table.get(id);
         }
-        return null;
+        return GLOBALS.contains(id) ? GLOBALS.get(id) : null;
     }
 
 }

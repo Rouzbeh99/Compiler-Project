@@ -1,6 +1,6 @@
 package ast.block.stmt;
 
-import ast.Node;
+import ast.block.BlockContent;
 
-public abstract class Statement implements Node {
+public abstract class Statement extends BlockContent {
 }

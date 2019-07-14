@@ -1,6 +1,5 @@
 package ast.block.stmt.loop;
 
-import ast.Node;
 import ast.block.Block;
 import ast.block.stmt.Statement;
 import ast.expr.Expression;
@@ -19,14 +18,14 @@ public class Repeat extends Statement {
     }
 
     @Override
-    public Node compile() {
+    public void compile() {
         Logger.log("repeat");
+        block.init();
         block.markStart();
         block.compile();
         expr.compile();
-        block.markEnd();
         CodeGenerator.mVisit.visitJumpInsn(Opcodes.IFEQ, block.getStart());
-        return this;
+        block.markEnd();
     }
 
 }

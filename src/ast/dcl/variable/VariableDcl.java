@@ -1,22 +1,26 @@
 package ast.dcl.variable;
 
-import ast.Node;
-import ast.block.BlockContent;
+import ast.dcl.DCL;
+import ast.type.TypeChecker;
+import cg.Logger;
+import symtab.TableStack;
+import symtab.dscp.variable.VariableDescriptor;
 
-import java.util.List;
+public class VariableDCL extends DCL {
 
-public class VariableDcl extends BlockContent {
-
-    private List<LocalVariableDCL> dcls;
-
-    public VariableDcl(List<LocalVariableDCL> dcls) {
-        this.dcls = dcls;
+    public VariableDCL() {
+        descriptor = new VariableDescriptor();
+        descriptor.setConst(Variables.getInstance().isConstant());
+        descriptor.setType(Variables.getInstance().getType());
     }
 
     @Override
-    public Node compile() {
-        dcls.forEach(LocalVariableDCL::compile);
-        return null;
+    public void compile() {
+        Logger.log("variable declaration");
+        if (TypeChecker.isValidVariableType(descriptor.getType()))
+            TableStack.getInstance().addVariable(descriptor);
+        else
+            new StructDCL(descriptor).compile();
     }
 
 }

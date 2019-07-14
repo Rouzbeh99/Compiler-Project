@@ -1,29 +1,27 @@
 package ast.expr.unary;
 
-import ast.Node;
 import ast.expr.Expression;
 import ast.type.Type;
+import ast.type.TypeChecker;
 
-public class UnaryExpression extends Expression {
+public abstract class UnaryExpression extends Expression {
 
     protected Expression expr;
+    private Type resultType;
 
-    public UnaryExpression(Type type) {
-        super(type);
+    protected UnaryExpression() {
     }
 
     public UnaryExpression(Expression expr) {
         this.expr = expr;
+        resultType = expr.getResultType();
     }
 
-    @Override
-    public Node compile() {
-        return null;
-    }
+    public abstract int determineOp(Type resultType);
 
     @Override
-    public int determineOp(Type type) {
-        return 0;
+    public Type getResultType() {
+        return TypeChecker.unaryExprTypeCheck(resultType);
     }
 
 }

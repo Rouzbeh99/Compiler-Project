@@ -1,38 +1,38 @@
 package ast.block.stmt.assignment;
 
-import ast.Node;
+import ast.access.Access;
 import ast.expr.Expression;
 import ast.type.Type;
-import ast.type.VariableType;
 import cg.Logger;
 import org.objectweb.asm.Opcodes;
-import symtab.dscp.VariableDescriptor;
+
+import static ast.type.Type.*;
 
 public class PlusAssign extends OperatorAssign {
 
-    public PlusAssign(VariableDescriptor descriptor, Expression expr) {
-        super(descriptor, expr);
+    public PlusAssign(Access access, Expression expr) {
+        super(access, expr);
     }
 
     @Override
-    public Node compile() {
+    public void compile() {
         Logger.log("plus assignment");
-        return super.compile();
+        super.compile();
     }
 
     @Override
-    public void determineCodes(Type t1, Type t2) {
-        super.determineCodes(t1, t2);
-        if (t1 == VariableType.DOUBL)
+    public int determineOp(Type type) {
+        if (type == DOUBLE)
             opcode = Opcodes.DADD;
-        else if (t1 == VariableType.FLOAT)
+        else if (type == FLOAT)
             opcode = Opcodes.FADD;
-        else if (t1 == VariableType.LONG)
+        else if (type == LONG)
             opcode = Opcodes.LADD;
-        else if (t1 == VariableType.INT | t1 == VariableType.BOOL || t1 == VariableType.CHAR)
+        else if (type == INT)
             opcode = Opcodes.IADD;
         else
             Logger.error("type mismatch");
+        return super.determineOp(type);
     }
 
 }

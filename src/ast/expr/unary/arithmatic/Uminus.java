@@ -1,14 +1,13 @@
 package ast.expr.unary.arithmatic;
 
-import ast.Node;
 import ast.expr.Expression;
 import ast.expr.unary.UnaryExpression;
 import ast.type.Type;
-import ast.type.TypeChecker;
-import ast.type.VariableType;
 import cg.CodeGenerator;
 import cg.Logger;
 import org.objectweb.asm.Opcodes;
+
+import static ast.type.Type.*;
 
 public class Uminus extends UnaryExpression {
 
@@ -17,21 +16,20 @@ public class Uminus extends UnaryExpression {
     }
 
     @Override
-    public Node compile() {
+    public void compile() {
         Logger.log("unary minus");
-        Expression e = (Expression) expr.compile();
-        Type resultType = TypeChecker.unaryExprTypeCheck(e.getType());
+        Type resultType = getResultType();
+        expr.compile();
         CodeGenerator.mVisit.visitInsn(determineOp(resultType));
-        return new UnaryExpression(resultType);
     }
 
     @Override
     public int determineOp(Type type) {
-        if (type == VariableType.DOUBL)
+        if (type == DOUBLE)
             return Opcodes.DNEG;
-        else if (type == VariableType.FLOAT)
+        else if (type == FLOAT)
             return Opcodes.FNEG;
-        else if (type == VariableType.LONG)
+        else if (type == LONG)
             return Opcodes.LNEG;
         else
             return Opcodes.INEG;

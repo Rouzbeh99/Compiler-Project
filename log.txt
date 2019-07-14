@@ -1,3 +1,0 @@
-Initializing code generator
-Writing the generated code into the executable output file
-Code generation finished

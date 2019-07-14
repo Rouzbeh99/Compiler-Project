@@ -24,10 +24,13 @@
 
     public int ICV;
     public double RCV;
-    public StringBuilder string = new StringBuilder();
+    public StringBuilder string;
+    public StringBuilder current;
 
     private Symbol token(int code){
-//        System.out.println(yytext());//debug
+        current = string;
+        string = new StringBuilder(yytext());
+        System.out.println(yytext());//debug
         return new Symbol(code, yytext());
     }
 
@@ -64,7 +67,7 @@ IntegerLiteral = [1-9]\d*
 
 DecimalFloatingPointAfterDot = \.\d+
 DecimalFloatingPointBeforeAfterDot = \d+\.\d*
-DecimalFloatingPointSicentific = e(\+ | -)\d+
+DecimalFloatingPointSicentific = e(\+ | -)?\d+
 FloatingPointLiteral = (({DecimalFloatingPointAfterDot} | {DecimalFloatingPointBeforeAfterDot}){DecimalFloatingPointSicentific}?) | ({IntegerLiteral}{DecimalFloatingPointSicentific})
 
 Identifier = [_\w][_\w\d]*
@@ -164,10 +167,10 @@ Identifier = [_\w][_\w\d]*
 ">=" { return token(Symbol.GTEQ); }
 
 /*character literal*/
-{CharacterLiteral} { string.setLength(0); string.append(yytext()); return token(Symbol.CHAR_LIT); }
+{CharacterLiteral} { return token(Symbol.CHAR_LIT); }
 
 /*string literals*/
-{StringLiteral} { string.setLength(0); string.append(yytext()); return token(Symbol.STR_LIT); }
+{StringLiteral} { return token(Symbol.STR_LIT); }
 
 /*integer literals*/
 {IntegerLiteral} { ICV = Integer.parseInt(yytext()); return token(Symbol.INT_LIT); }

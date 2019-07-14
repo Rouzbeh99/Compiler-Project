@@ -1,12 +1,12 @@
 package ast.expr.binary.arithmatic;
 
 
-import ast.Node;
 import ast.expr.Expression;
 import ast.type.Type;
-import ast.type.VariableType;
 import cg.Logger;
 import org.objectweb.asm.Opcodes;
+
+import static ast.type.Type.*;
 
 public class Add extends ArithmeticBinaryExpr {
 
@@ -15,18 +15,18 @@ public class Add extends ArithmeticBinaryExpr {
     }
 
     @Override
-    public Node compile() {
+    public void compile() {
         Logger.log("add");
-        return super.compile();
+        super.compile();
     }
 
     @Override
     public int determineOp(Type type) {
-        if (type == VariableType.DOUBL)
+        if (type == DOUBLE)
             return Opcodes.DADD;
-        else if (type == VariableType.FLOAT)
+        else if (type == FLOAT)
             return Opcodes.FADD;
-        else if (type == VariableType.LONG)
+        else if (type == LONG)
             return Opcodes.LADD;
         else
             return Opcodes.IADD;

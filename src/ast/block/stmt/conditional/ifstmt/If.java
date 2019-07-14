@@ -1,6 +1,5 @@
 package ast.block.stmt.conditional.ifstmt;
 
-import ast.Node;
 import ast.block.Block;
 import ast.block.stmt.Statement;
 import ast.expr.Expression;
@@ -21,21 +20,23 @@ public class If extends Statement {
     }
 
     @Override
-    public Node compile() {
+    public void compile() {
         Logger.log("if");
-
         expr.compile();
         CodeGenerator.mVisit.visitJumpInsn(Opcodes.IFEQ, ifBlock.getEnd());
+        ifBlock.init();
+        ifBlock.markStart();
         ifBlock.compile();
         if (elseBlock == null)
             ifBlock.markEnd();
         else {
             CodeGenerator.mVisit.visitJumpInsn(Opcodes.GOTO, elseBlock.getEnd());
             ifBlock.markEnd();
+            elseBlock.init();
+            elseBlock.markStart();
             elseBlock.compile();
             elseBlock.markEnd();
         }
-        return this;
     }
 
 }

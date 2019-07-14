@@ -30,28 +30,27 @@ public class Cases {
     public void addCase(int ca, Block block) {
         if (jumpTable.containsKey(ca))
             Logger.error("invalid case");
-
         jumpTable.put(ca, block);
         max = Math.max(max, ca);
         min = Math.min(min, ca);
     }
 
-    public int getMax() {
+    int getMax() {
         return max;
     }
 
-    public int getMin() {
+    int getMin() {
         return min;
     }
 
-    public Label[] getLabels(Label defaultLabel) {
+    Label[] getLabels(Label defaultLabel) {
         Label[] labels = new Label[max - min + 1];
         for (int i = min; i <= max; i++)
             labels[i - min] = jumpTable.containsKey(i) ? jumpTable.get(i).getStart() : defaultLabel;
         return labels;
     }
 
-    public List<Block> getCaseBlocks() {
+    List<Block> getCaseBlocks() {
         List<Block> blockList = new ArrayList<>();
         jumpTable.forEach((i, b) -> blockList.add(b));
         return blockList;

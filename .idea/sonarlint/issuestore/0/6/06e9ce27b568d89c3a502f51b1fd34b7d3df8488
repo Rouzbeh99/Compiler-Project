@@ -1,4 +1,0 @@
-
-nsquid:S1149	"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(¹€¹”8¶Ž¥²»-
-3squid:S1700	"Rename field "BLOCKS"(¹€¹”8¶Ž¥²»-
-psquid:S00116	"QRename this field "BLOCKS" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¹€¹”8­ñ¾²»-

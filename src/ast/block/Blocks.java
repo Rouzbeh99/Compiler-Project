@@ -23,6 +23,10 @@ public class Blocks {
         BLOCKS.pop();
     }
 
+    public int size() {
+        return BLOCKS.size();
+    }
+
     public Block getCurrent() {
         return BLOCKS.peek();
     }

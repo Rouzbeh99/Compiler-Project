@@ -6,6 +6,7 @@ import org.objectweb.asm.Label;
 import symtab.SymbolTable;
 import symtab.TableStack;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -13,12 +14,7 @@ public class Block implements Node {
 
     private Label start = new Label();
     private Label end = new Label();
-    private List<BlockContent> contents;
-
-    public Block() {
-        Blocks.getInstance().add(this);
-        TableStack.getInstance().pushSymbolTable(new SymbolTable(new HashMap<>()));
-    }
+    private List<BlockContent> contents = new ArrayList<>();
 
     public Label getStart() {
         return start;
@@ -32,14 +28,17 @@ public class Block implements Node {
         contents.add(content);
     }
 
+    public void init() {
+        TableStack.getInstance().pushSymbolTable(new SymbolTable(new HashMap<>()));
+    }
+
     public void markStart() {
         CodeGenerator.mVisit.visitLabel(start);
     }
 
     @Override
-    public Node compile() {
+    public void compile() {
         contents.forEach(Node::compile);
-        return null;
     }
 
     public void markEnd() {

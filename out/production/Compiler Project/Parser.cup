@@ -223,7 +223,7 @@ variable_type ::=
 
 //functions
 func_dcl ::=
-    EXTERN function_return_type id SEMI //todo
+    EXTERN  function_return_type:t id:id SEMI
     |
     FUNCTION {:FunctionArguments.getInstance().init();:} function_return_type:t id:id PRANTOP arguments PRANTCL func_dcl_part:b {:RESULT = new FunctionDCL(t, id, b);:}
     ;

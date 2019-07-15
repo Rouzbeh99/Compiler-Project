@@ -20,15 +20,15 @@ public class FunctionAccessData {
     }
 
     public void init() {
-        parameters.clear();
+        parameters = new ArrayList<>();
     }
 
     public void addParameter(Expression expr) {
         parameters.add(expr);
     }
 
-    public Type[] getParameters() {
-        return parameters.stream().map(Expression::getResultType).toArray(Type[]::new);
+    public List<Expression> getParameters() {
+        return parameters;
     }
 
 }

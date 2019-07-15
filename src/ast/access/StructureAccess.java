@@ -32,11 +32,12 @@ public class StructureAccess extends Access {
         descriptor = TableStack.getInstance().find(id);
         if (!(descriptor instanceof StructureDescriptor))
             Logger.error("structure type doesn't exist");
-        structureVar = ((StructureDescriptor) descriptor).get(id);
+        structureVar = ((StructureDescriptor) descriptor).get(varId);
     }
 
     @Override
     public void push() {
+        System.err.println("here");
         Logger.log("loading structure access");
         StructureDescriptor descriptor = (StructureDescriptor) this.descriptor;
         CodeGenerator.mVisit.visitVarInsn(Opcodes.ALOAD, descriptor.getStackIndex());

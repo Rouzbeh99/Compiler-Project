@@ -1,6 +1,7 @@
 package ast.block.stmt.loop;
 
 import ast.block.Block;
+import ast.block.Blocks;
 import ast.block.stmt.Statement;
 import ast.block.stmt.assignment.Assignment;
 import ast.expr.Expression;
@@ -30,6 +31,7 @@ public class For extends Statement {
         Logger.log("for loop");
         if (init != null)
             init.compile();
+        Blocks.getInstance().add(block);
         block.init();
         Label loopStart = new Label();
         Label loopBody = new Label();
@@ -50,6 +52,7 @@ public class For extends Statement {
         block.compile();
         mVisit.visitJumpInsn(Opcodes.GOTO, block.getStart());
         block.markEnd();
+        Blocks.getInstance().remove();
     }
 
 }

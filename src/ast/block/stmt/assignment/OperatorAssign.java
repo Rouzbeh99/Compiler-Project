@@ -39,28 +39,32 @@ public abstract class OperatorAssign extends Assignment {
         access.push();
         expr.compile();
         expr.doCastCompile(descriptor.getType());
+        int strCode = determineOp(descriptor.getType());
         CodeGenerator.mVisit.visitInsn(opcode);
         if (descriptor instanceof GlobalVariableDescriptor)
             mVisit.visitFieldInsn(Opcodes.PUTFIELD, CodeGenerator.GENERATED_CLASS, descriptor.getName(), descriptor.getType().typeName());
         else
-            mVisit.visitVarInsn(determineOp(descriptor.getType()), descriptor.getStackIndex());
+            mVisit.visitVarInsn(strCode, descriptor.getStackIndex());
     }
 
     private void arrayOperatorAssign() {
         Type type = Type.toSimple(descriptor.getType());
         arrayStoreInit();
-        access.compile();
+        access.push();
         expr.compile();
         expr.doCastCompile(type);
+        int strCode = determineOp(type);
         mVisit.visitInsn(opcode);
-        mVisit.visitInsn(determineOp(type));
+        mVisit.visitInsn(strCode);
     }
 
     private void structOperatorAssign() {
         VariableDescriptor structVar = ((StructureAccess) access).getStructureVar();
-        access.compile();
+        mVisit.visitVarInsn(Opcodes.ALOAD, descriptor.getStackIndex());
+        access.push();
         expr.compile();
         expr.doCastCompile(structVar.getType());
+        determineOp(structVar.getType());
         mVisit.visitInsn(opcode);
         mVisit.visitFieldInsn(Opcodes.PUTFIELD, descriptor.getType().typeName(), structVar.getName(), structVar.getType().typeName());
     }

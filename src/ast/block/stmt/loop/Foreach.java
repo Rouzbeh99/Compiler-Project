@@ -57,6 +57,7 @@ public class Foreach extends Statement {
         mVisit.visitIincInsn(loopCounter.getStackIndex(), 1);
         mVisit.visitJumpInsn(Opcodes.GOTO, loopStart);
         body.markEnd();
+        Blocks.getInstance().remove();
     }
 
     private void determineOp(Type type) {
@@ -79,6 +80,7 @@ public class Foreach extends Statement {
     }
 
     private void initLoop() {
+        Blocks.getInstance().add(body);
         body.init();
         loopArray = (ArrayDescriptor) TableStack.getInstance().find(array);
         loopTemp = new VariableDescriptor();

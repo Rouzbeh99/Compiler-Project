@@ -16,11 +16,12 @@ public class VariableDCL extends DCL {
 
     @Override
     public void compile() {
-        Logger.log("variable declaration");
-        if (TypeChecker.isValidVariableType(descriptor.getType()))
+        if (TypeChecker.isValidVariableType(descriptor.getType())) {
+            Logger.log("variable declaration");
             TableStack.getInstance().addVariable(descriptor);
-        else
+        } else {
             new StructDCL(descriptor).compile();
+        }
     }
 
 }

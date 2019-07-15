@@ -1,11 +1,14 @@
 package symtab.dscp.struct;
 
 import ast.type.Type;
+import cg.Logger;
 import symtab.dscp.AbstractDescriptor;
 
+import javax.swing.text.html.Option;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 public class Structures {
@@ -34,8 +37,12 @@ public class Structures {
     }
 
     public StructureDescriptor newDescriptor(Type type) {
-        System.out.println("here");
-        return Objects.requireNonNull(ALL_STRUCTURE_TYPES.stream().filter(d -> d.getType().equals(type)).findFirst().orElse(null)).clone();
+        Optional<StructureDescriptor> descriptor = ALL_STRUCTURE_TYPES.stream().filter(d -> d.getType().equals(type)).findFirst();
+        if (descriptor.isPresent())
+            return descriptor.get();
+        else
+            Logger.error("No structure type found");
+        return null;
     }
 
 }

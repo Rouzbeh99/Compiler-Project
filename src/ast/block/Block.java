@@ -16,6 +16,10 @@ public class Block implements Node {
     private Label end = new Label();
     private List<BlockContent> contents = new ArrayList<>();
 
+    public Block() {
+        Blocks.getInstance().add(this);
+    }
+
     public Label getStart() {
         return start;
     }
@@ -43,7 +47,6 @@ public class Block implements Node {
 
     public void markEnd() {
         CodeGenerator.mVisit.visitLabel(end);
-        Blocks.getInstance().remove();
         TableStack.getInstance().popSymbolTable();
     }
 

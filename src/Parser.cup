@@ -104,7 +104,7 @@ nonterminal DCL single_var;
 nonterminal DCL array_part;
 
 nonterminal statement;
-nonterminal BlockContent loop_statement;
+nonterminal loop_statement;
 
 nonterminal Statement cond_stmt;
 nonterminal Block else_part;
@@ -217,7 +217,7 @@ variable_type ::=
     |
     AUTO {:RESULT = Type.AUTO;:}
     |
-    id:type {:new Type(type);:}
+    id:type {:RESULT = new Type(type);:}
     ;
 
 
@@ -319,7 +319,7 @@ struct_type ::=
 
 //blocks
 block ::=
-    BEGIN {:Blocks.getInstance().add(new Block());:} block_content END {:RESULT = Blocks.getInstance().getCurrent();:}
+    BEGIN {:RESULT = new Block();:} block_content END {:Blocks.getInstance().remove();:}
     ;
 
 block_content ::=
@@ -331,13 +331,13 @@ block_content ::=
     ;
 
 loop_block ::=
-    BEGIN loop_block_content END
+    BEGIN {:RESULT = new Block();:} loop_block_content END {:Blocks.getInstance().remove();:}
     ;
 
 loop_block_content ::=
     var_dcl loop_block_content
     |
-    loop_statement:cont loop_block_content {:Blocks.getInstance().getCurrent().addContent(cont);:}
+    loop_statement loop_block_content
     |
     /*epsilon*/
     ;
@@ -397,9 +397,9 @@ statement ::=
 loop_statement ::=
     statement
     |
-    BREAK SEMI {:new Break();:}
+    BREAK SEMI {:Blocks.getInstance().getCurrent().addContent(new Break());:}
     |
-    CONTINUE SEMI {:new Continue();:}
+    CONTINUE SEMI {:Blocks.getInstance().getCurrent().addContent(new Continue());:}
     ;
 
 
@@ -425,11 +425,11 @@ case_part ::=
 
 //loops
 loop_stmt ::=
-    FOR PRANTOP loop_init_part:in SEMI loop_cond_part:e SEMI loop_update_part:up PRANTCL loop_block:b {:RESULT = new For(in, e, up, b);:}
+    FOR PRANTOP loop_init_part:in SEMI loop_cond_part:e SEMI loop_update_part:up PRANTCL block:b {:RESULT = new For(in, e, up, b);:}
     |
-    REPEAT loop_block:b UNTIL PRANTOP expr:e PRANTCL SEMI {:RESULT = new Repeat(b, e);:}
+    REPEAT block:b UNTIL PRANTOP expr:e PRANTCL SEMI {:RESULT = new Repeat(b, e);:}
     |
-    FOREACH PRANTOP id:i1 IN id:i2 PRANTCL loop_block:b {:RESULT = new Foreach(i1, i2, b);:}
+    FOREACH PRANTOP id:i1 IN id:i2 PRANTCL block:b {:RESULT = new Foreach(i1, i2, b);:}
     ;
 
 loop_init_part ::=
@@ -576,7 +576,7 @@ const_val ::=
 
 //function calls
 function_call ::=
-    id:id {:FunctionAccessData.getInstance().init();:} PRANTOP parameters PRANTCL {:RESULT = new FunctionAccess(); RESULT.setDescriptor(id);:} %prec FUNCPRANTOP
+    id:id {:FunctionAccessData.getInstance().init();:} PRANTOP parameters PRANTCL {:RESULT = new FunctionAccess(FunctionAccessData.getInstance().getParameters()); RESULT.setDescriptor(id);:} %prec FUNCPRANTOP
     ;
 
 parameters ::=

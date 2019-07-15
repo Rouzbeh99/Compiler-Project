@@ -55,6 +55,7 @@ public class DirectAssign extends Assignment {
 
     private void structDirectAssign() {
         VariableDescriptor structVar = ((StructureAccess) access).getStructureVar();
+        mVisit.visitVarInsn(Opcodes.ALOAD, descriptor.getStackIndex());
         expr.compile();
         expr.doCastCompile(structVar.getType());
         mVisit.visitFieldInsn(Opcodes.PUTFIELD, descriptor.getType().typeName(), structVar.getName(), structVar.getType().typeName());

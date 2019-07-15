@@ -23,7 +23,7 @@ public class StructDCL extends DCL {
         TableStack.getInstance().addVariable(descriptor);
         mVisit.visitTypeInsn(Opcodes.NEW, descriptor.getType().typeName());
         mVisit.visitInsn(Opcodes.DUP);
-        mVisit.visitMethodInsn(Opcodes.INVOKESPECIAL, descriptor.getName(), "<init>", "()V", false);
+        mVisit.visitMethodInsn(Opcodes.INVOKESPECIAL, descriptor.getType().typeName(), "<init>", "()V", false);
         mVisit.visitVarInsn(Opcodes.ASTORE, descriptor.getStackIndex());
     }
 

@@ -11,6 +11,8 @@ import org.objectweb.asm.Opcodes;
 import symtab.TableStack;
 import symtab.dscp.array.ArrayDescriptor;
 
+import java.util.Optional;
+
 import static ast.type.Type.*;
 
 public class ArrayDCL extends DCL {
@@ -32,16 +34,17 @@ public class ArrayDCL extends DCL {
         expr.compile();
         TableStack.getInstance().addVariable(descriptor);
         CodeGenerator.mVisit.visitVarInsn(Opcodes.NEWARRAY, determinePrimitiveType(descriptor.getType()));
+        CodeGenerator.mVisit.visitVarInsn(Opcodes.ASTORE, descriptor.getStackIndex());
     }
 
     private int determinePrimitiveType(Type type) {
-        if (type == DOUBLE)
+        if (type == DOUBLE_ARRAY)
             return Opcodes.T_DOUBLE;
-        else if (type == FLOAT)
+        else if (type == FLOAT_ARRAY)
             return Opcodes.T_FLOAT;
-        else if (type == LONG)
+        else if (type == LONG_ARRAY)
             return Opcodes.T_LONG;
-        else if (type == INT || type == CHAR || type == BOOL)
+        else if (type == INT_ARRAY)
             return Opcodes.T_INT;
         else
             Logger.log("unsupported array type");

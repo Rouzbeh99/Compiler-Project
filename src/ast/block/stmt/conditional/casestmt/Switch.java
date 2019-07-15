@@ -30,11 +30,13 @@ public class Switch extends Statement {
     @Override
     public void compile() {
         Logger.log("switch-case");
+        access.compile();
         checkOperation();
 
         Cases cs = Cases.getInstance();
         Label defaultLabel = defaultBlock.getStart();
-        access.compile();
+
+        access.push();
         mVisit.visitTableSwitchInsn(cs.getMin(), cs.getMax(), defaultLabel, cs.getLabels(defaultLabel));
         Label endCase = defaultBlock.getEnd();
 

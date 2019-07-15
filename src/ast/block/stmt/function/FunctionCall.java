@@ -22,6 +22,7 @@ public class FunctionCall extends BlockContent {
     public void compile() {
         Logger.log("function call statement");
         access.compile();
+        access.push();
         Type returnType = ((FunctionDescriptor) access.getDescriptor()).getReturnType();
         if (returnType != VOID)
             CodeGenerator.mVisit.visitInsn(!(returnType == DOUBLE || returnType == LONG) ? Opcodes.POP : Opcodes.POP2);

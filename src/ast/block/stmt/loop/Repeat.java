@@ -1,6 +1,7 @@
 package ast.block.stmt.loop;
 
 import ast.block.Block;
+import ast.block.Blocks;
 import ast.block.stmt.Statement;
 import ast.expr.Expression;
 import cg.CodeGenerator;
@@ -20,12 +21,14 @@ public class Repeat extends Statement {
     @Override
     public void compile() {
         Logger.log("repeat");
+        Blocks.getInstance().add(block);
         block.init();
         block.markStart();
         block.compile();
         expr.compile();
         CodeGenerator.mVisit.visitJumpInsn(Opcodes.IFEQ, block.getStart());
         block.markEnd();
+        Blocks.getInstance().remove();
     }
 
 }

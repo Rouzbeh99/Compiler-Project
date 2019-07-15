@@ -38,7 +38,7 @@ public class ArrayAccess extends Access {
         if (index.getResultType() != INT)
             Logger.error("arrays can only be accessed using integer types");
         index.compile();
-        CodeGenerator.mVisit.visitInsn(determineOp(descriptor.getType()));
+        CodeGenerator.mVisit.visitInsn(determineOp(Type.toSimple(descriptor.getType())));
     }
 
     @Override
@@ -52,7 +52,8 @@ public class ArrayAccess extends Access {
         else if (type == INT)
             return Opcodes.IALOAD;
         else
-            return Opcodes.AALOAD;
+            Logger.error("unable to create non primitive array");
+        return 0;
     }
 
 }

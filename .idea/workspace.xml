@@ -1,20 +1,205 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ChangeListManager">
+    <list default="true" id="f357c40c-c6c9-4ffe-ae70-b43a804d29b3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Compiler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parser.cup" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Scanner.flex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Scanner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Symbol.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/Node.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/access/Access.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/access/ArrayAccess.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/access/FunctionAccess.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/access/FunctionAccessData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/access/StructureAccess.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/access/VariableAccess.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/block/Block.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/block/BlockContent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/block/Blocks.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/block/stmt/Statement.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/block/stmt/assignment/Assignment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/block/stmt/assignment/DirectAssign.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/block/stmt/assignment/DivisionAssign.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/block/stmt/assignment/MinusAssign.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/block/stmt/assignment/MultiplyAssign.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/block/stmt/assignment/OperatorAssign.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/block/stmt/assignment/PlusAssign.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/block/stmt/conditional/casestmt/Cases.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/block/stmt/conditional/casestmt/Switch.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/block/stmt/conditional/ifstmt/If.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/block/stmt/function/FunctionCall.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/block/stmt/function/Return.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/block/stmt/loop/Break.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/block/stmt/loop/Continue.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/block/stmt/loop/For.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/block/stmt/loop/Foreach.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/block/stmt/loop/Repeat.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/dcl/CompleteDCL.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/dcl/DCL.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/dcl/array/ArrayDCL.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/dcl/variable/StructDCL.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/dcl/variable/VariableDcl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/dcl/variable/Variables.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/expr/Expression.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/expr/binary/BinaryExpression.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/expr/binary/arithmatic/Add.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/expr/binary/arithmatic/ArithmeticBinaryExpr.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/expr/binary/arithmatic/BinaryAnd.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/expr/binary/arithmatic/BinaryOr.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/expr/binary/arithmatic/BinaryXor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/expr/binary/arithmatic/Div.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/expr/binary/arithmatic/Mod.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/expr/binary/arithmatic/Mult.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/expr/binary/arithmatic/Sub.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/expr/binary/logical/EQ.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/expr/binary/logical/GE.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/expr/binary/logical/GT.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/expr/binary/logical/LE.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/expr/binary/logical/LT.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/expr/binary/logical/LogicalBinaryExpr.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/expr/binary/logical/NE.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/expr/constant/BooleanConstant.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/expr/constant/CharConstant.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/expr/constant/Constant.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/expr/constant/DoubleConstant.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/expr/constant/IntegerConstant.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/expr/constant/StringConstant.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/expr/function/FunctionCall.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/expr/other/Casting.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/expr/other/SizeOf.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/expr/other/Variable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/expr/unary/UnaryExpression.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/expr/unary/arithmatic/BinaryNot.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/expr/unary/arithmatic/Uminus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/expr/unary/arithmatic/dual/DualOperation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/expr/unary/arithmatic/dual/PostOperation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/expr/unary/arithmatic/dual/PostfixMinus2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/expr/unary/arithmatic/dual/PostfixPlus2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/expr/unary/arithmatic/dual/PreOperation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/expr/unary/arithmatic/dual/PrefixMinus2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/expr/unary/arithmatic/dual/PrefixPlus2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/expr/unary/logical/Not.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/program/Program.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/program/ProgramContent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/program/function/FunctionArguments.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/program/function/FunctionDCL.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/program/global/GlobalVarDCL.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/program/structure/StructVarDCL.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/program/structure/StructureDCL.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/program/structure/Structures.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/type/Type.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ast/type/TypeChecker.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cg/CodeGenerator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cg/Logger.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/symtab/SymbolTable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/symtab/TableStack.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/symtab/dscp/AbstractDescriptor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/symtab/dscp/Descriptor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/symtab/dscp/KeywordDescriptor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/symtab/dscp/array/ArrayDescriptor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/symtab/dscp/function/FunctionDescriptor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/symtab/dscp/function/Functions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/symtab/dscp/struct/StructureDescriptor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/symtab/dscp/struct/Structures.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/symtab/dscp/variable/GlobalVariableDescriptor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/symtab/dscp/variable/VariableDescriptor.java" beforeDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <dirStrings>
+      <dir>D:\University\Compiler-Project\src\ast\access</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/ast/access/Access.java" />
+        <option value="$PROJECT_DIR$/src/ast/access/PrintFuncAccess.java" />
+        <option value="$PROJECT_DIR$/src/Parser.cup" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="15" />
     <option name="y" value="30" />
     <option name="width" value="1890" />
     <option name="height" value="960" />
   </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Compiler-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Compiler-Project" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Compiler-Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Compiler-Project" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/java-cup-11b.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
   </component>
   <component name="RunManager">
     <configuration name="Compiler" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -29,5 +214,228 @@
         <item itemvalue="Application.Compiler" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f357c40c-c6c9-4ffe-ae70-b43a804d29b3" name="Default Changelist" comment="" />
+      <created>1563130874121</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1563130874121</updated>
+      <workItem from="1563130875340" duration="634000" />
+      <workItem from="1563147689963" duration="701000" />
+      <workItem from="1563148415420" duration="1792000" />
+      <workItem from="1563150233898" duration="73000" />
+      <workItem from="1563150331931" duration="262000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="3462000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25910932" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3285968" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.3285968" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Maven" order="6" />
+      <window_info anchor="right" id="Capture Analysis" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="ASMPlugin" order="9" weight="0.32955465" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/ast/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ast/access/ArrayAccess.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="563">
+          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ast/access/FunctionAccessData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ast/access/StructureAccess.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-192">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ast/access/VariableAccess.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-483">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ast/block/Block.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="46" column="50" lean-forward="true" selection-start-line="46" selection-start-column="50" selection-end-line="46" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ast/dcl/DCL.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ast/expr/binary/logical/GE.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ast/dcl/CompleteDCL.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="36" column="5" lean-forward="true" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ast/block/Blocks.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="8" column="54" lean-forward="true" selection-start-line="8" selection-start-column="54" selection-end-line="8" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ast/block/BlockContent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/symtab/TableStack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2248">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/symtab/dscp/function/FunctionDescriptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="17" column="31" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ast/access/PrintFuncAccess.java" />
+    <entry file="file://$PROJECT_DIR$/src/ast/expr/constant/DoubleConstant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="27" column="50" selection-start-line="27" selection-start-column="46" selection-end-line="27" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ast/program/function/FunctionArguments.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="35" column="35" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cg/CodeGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ast/program/function/FunctionDCL.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ast/access/Access.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ast/access/FunctionAccess.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/symtab/SymbolTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Scanner.flex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" column="8" lean-forward="true" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Parser.cup">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="490">
+          <caret line="225" column="45" selection-start-line="225" selection-start-column="45" selection-end-line="225" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Compiler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>

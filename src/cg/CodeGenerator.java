@@ -68,14 +68,14 @@ public class CodeGenerator {
         mVisit.visitMaxs(1, 1);
         mVisit.visitEnd();
 
-        mVisit = mainClw.visitMethod(ACC_PUBLIC | ACC_STATIC, "print", "(Ljava/lang/String;)V", null, null);
+       /* mVisit = mainClw.visitMethod(ACC_PUBLIC | ACC_STATIC, "print", "(Ljava/lang/String;)V", null, null);
         mVisit.visitCode();
         mVisit.visitFieldInsn(GETSTATIC, "java/lang/System", "out", "Ljava/io/PrintStream;");
         mVisit.visitVarInsn(ALOAD, 1);
         mVisit.visitMethodInsn(INVOKEVIRTUAL, "java/io/PrintStream", "println", "(Ljava/lang/String;)V", false);
         mVisit.visitInsn(RETURN);
         mVisit.visitMaxs(1, 1);
-        mVisit.visitEnd();
+        mVisit.visitEnd();*/
 
         mVisit = mainClw.visitMethod(ACC_PUBLIC | ACC_STATIC, "len", "(Ljava/lang/String;)I", null, null);
         mVisit.visitCode();
